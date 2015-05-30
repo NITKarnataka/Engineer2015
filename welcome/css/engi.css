@@ -1,0 +1,12 @@
+.cb-slideshow li	{
+	opacity: 0.25;
+}
+
+@font-face {
+  font-family: 'fontengi';
+  src: url('../fonts/engifont/spaceage.eot?') format('eot'), url('../fonts/engifont/spaceage.woff') format('woff'), url('../fonts/engifont/spaceage.ttf') format('truetype');
+}
+
+.engifont	{
+	font-family: 'fontengi';
+}
