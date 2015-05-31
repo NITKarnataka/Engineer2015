@@ -1,0 +1,90 @@
+h1	{
+font-family: 'Lobster', cursive !important;
+}
+
+.arrow
+{
+	position:fixed;
+	right:0px;
+	bottom:0px;
+	z-index:3 !important;
+	margin:1%;
+	opacity:0.5;
+
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Opera, Chrome, and Safari */
+}
+
+
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#ring	{
+	 opacity:0.7;
+	 width:500px !important;
+	 height:500px !important;
+}
+
+#ring {
+	height:500px;
+	
+	animation-name: rotate; 
+    animation-duration: 10s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  
+	-webkit-animation-name: rotate;
+    -webkit-animation-duration: 10s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+	
+	-webkit-animation-name: rotate; 
+    -webkit-animation-duration: 10s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+	
+	-moz-animation-name: rotate; 
+    -moz-animation-duration: 10s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+	
+}
+
+
+#ring:hover {
+	transition:all 1s;
+	opacity:1;
+}
+
+
+
+/*
+#penrose	{
+	height:150px;
+	margin-top:180px;
+}
+*/
+
+#penrose:hover {
+	transition:all 1s;
+	transform:rotate(-360deg);
+	-webkit-transform: rotate(-360deg);
+	-moz-transform: rotate(-360deg);
+	-o-transform:rotate(-360deg);
+}
+
+
+
+
+@font-face {
+  font-family: 'fontengi';
+  src: url('../fonts/engifont/spaceage.eot?') format('eot'), url('../fonts/engifont/spaceage.woff') format('woff'), url('../fonts/engifont/spaceage.ttf') format('truetype');
+}
