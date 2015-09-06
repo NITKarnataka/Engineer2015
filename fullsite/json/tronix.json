@@ -1,0 +1,50 @@
+[
+	{
+        "name": "Tronix Events",
+        "description": [
+            "cool"
+        ]
+    },
+    {
+        "name": "Symphony",
+        "pic": "symphony.svg",
+        "link": "symphony",
+        "description": "Symphony requires participants to control a musical fountains water flow and lights, so that the fountain dances to the tunes of the music"
+    },
+    {
+        "name": "Foxhunt",
+        "pic": "foxhunt.svg",
+        "link": "foxhunt",
+        "description": "Foxhunt, is a fun filled package on the lines of a traditional English activity involving tracking and chasing a fox by trained hounds."
+    },
+    {
+        "name": "Trade Off",
+        "pic": "tradeoff.svg",
+        "link": "tradeoff",
+        "description": "This event challenges you to solve basic analog and digital problems at the lowest level of abstraction in the most intuitive manner"
+    },
+    {
+        "name": "Simplicity",
+        "pic": "simplicity.svg",
+        "link": "simplicity",
+        "description": "It is an event which tests the MATLAB skill of the participants."
+    },
+    {
+        "name": "Trailblazer",
+        "pic": "trailblazer.svg",
+        "link": "trailblazer",
+        "description": "It is a simple event based on the line follower robotics. You are required to build a line follower robot."
+    },
+    {
+        "name": "Automata",
+        "pic": "automata.svg",
+        "link": "automata",
+        "description": "This is an ultimate image processing event in which the participants build an autonomous robot and guide it, with only the help of images acquired from an overhead camera."
+    },
+    {
+        "name": "Waltz",
+        "pic": "waltz.svg",
+        "link": "waltz",
+        "description": "It is the one of a kind event where the robot follows the wall according the problem statement and solves the maze given by the committee."
+    }
+]

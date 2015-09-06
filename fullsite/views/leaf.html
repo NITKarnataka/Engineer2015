@@ -1,0 +1,66 @@
+<div ng-controller="LeafController" id="animatedModal" class="animated animatedModal-on zoomIn" style="position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; overflow-y: auto; z-index: 9999; opacity: 1; animation-duration: 0.6s; background-color: rgb(57, 190, 185);">
+	<div id="closebt-container" class="close-animatedModal">
+		<img class="closebt" src="/img/1.png" ng-click="closeLeaf()">
+	</div>
+	<div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+			<P>asd</p><P>asd</p><P>asd</p><P>asd</p><P>asd</p><P>asd</p><P>asd</p>
+	</div>
+</div>
+<style>
+.zoomIn {
+	-webkit-animation-name: zoomIn;
+	animation-name: zoomIn;
+}
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+#closebt-container {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+	height: 52px!important;
+}
+.bounceOut {
+	-webkit-animation-name: bounceOut;
+	animation-name: bounceOut;
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+}
+</style>
+<style>
+
+
+.closebt {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor:pointer;
+	
+}
+img.closebt{
+	width: 50px!important;
+    display: inline!important;
+}
+.closebt:hover {
+	transform:rotate(90deg);
+}
+
+</style>
+<style>
+#modal-container {
+	position:relative;
+	margin-top:100px;
+	overflow:hidden;
+}
+
+</style>
+<style>
+@-webkit-keyframes zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);-ms-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}.zoomIn{-webkit-animation-name:zoomIn;animation-name:zoomIn}@-webkit-keyframes zoomInDown{0%{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);transform:scale3d(.475,.475,.475) translate3d(0,60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}
+@-webkit-keyframes zoomOut{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}100%{opacity:0}}@keyframes zoomOut{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);-ms-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}100%{opacity:0}}.zoomOut{-webkit-animation-name:zoomOut;animation-name:zoomOut}
+</style>

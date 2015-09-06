@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ENGINEER</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="plugins/parallax/parallax.css"/>
+
+		<link rel="stylesheet" href="plugins/mlpm/jquery.multilevelpushmenu.css" />
+
+		<link rel="stylesheet" href="css/avgrund.css">
+
+		<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+
+		
+
+		<!-- multi level push menu libraries -->
+		
+
+		
+	</head>
+	<body ng-app="Engi" ng-controller = "MainController" class="avgrund-ready">
+		<div id="container" class="wrapper">
+			<div ng-include="'views/sidepanel.html'"></div>
+
+			<div id="scene" class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+				<div class="layer" data-depth="0.10">
+					<div class="background"></div>
+				</div>
+				<div class="layer circle1" id="id1" data-depth="0.12" ng-click="showModal('events')"></div>
+				<div class="layer circle2" id="id2" data-depth="0.12" ng-click="showModal('workshops')"></div>
+				<div class="layer circle3" id="id3" data-depth="0.12" ng-click="showModal('techspeaks')"></div>
+				<div class="layer circle4" id="id4" data-depth="0.12" ng-click="showModal('technites')"></div>
+				<div class="layer circle5" id="id5" data-depth="0.12" ng-click="showModal('mainshow')"></div>
+				<div class="layer circle6" id="id6" data-depth="0.12" ng-click="showModal('about')"></div>
+				<div class="layer title" data-depth="0.12"><h1><span>think. create. engineer</span></h1></div>
+				<div class="layer stationary" data-depth="0.0">
+						<img class="rotater" src="./img/1.png"/>
+						<img class="rotater anti" src="./img/2.png"/>
+						<img class="rotater" src="./img/3.png"/>
+						<img class="rotater anti" src="./img/4.png"/>
+						<img class="rotater" src="./img/5.png"/>
+						<img class="rotater anti" src="./img/6.png"/>
+						<img class="rotater" src="./img/7.png"/>
+						<img class="only" src="./img/9.png"/>
+				</div>
+				<div class="layer 50p 100w" data-depth="0">
+					<div ng-include="'views/countdown.html'"></div>
+				</div>
+				<div class="layer" data-depth="0.20"><div id="particles-js"></div></div>
+			</div>
+		</div>
+		<div class="avgrund-overlay"></div>
+		<div ng-view autoscroll="false"></div>
+		<div ng-if="misc.showLeaf" ng-include="'/views/leaf.html'"></div>
+		
+
+
+
+
+
+
+
+
+		
+		<!-- jquery -->
+		<script src="plugins/jquery/jquery.min.js"></script>
+		
+		<!-- modernizr -->
+		<script type="text/javascript" src="plugins/modernizer/modernizer.min.js"></script>
+		
+
+		<!-- particles -->
+		<script src="plugins/particles/particles.min.js"></script>
+		<script src="plugins/particles/particle.config.js"></script>
+
+		<!-- parallax  -->
+		<script src="plugins/parallax/libraries.min.js"></script>
+		<script src="plugins/parallax/jquery.parallax.min.js"></script>
+		<script src="plugins/parallax/parallax.custom.js"></script>
+		
+
+		<!-- countdown -->
+		<script src="plugins/countdown/kinect.js"> </script>
+		<script src="plugins/countdown/jquery.final-countdown.min.js"></script>
+
+		<!-- multi level menu libs -->
+		<script src="plugins/mlpm/jquery.multilevelpushmenu.min.js"></script>
+
+		<!-- angular libs -->
+		<script src="plugins/angular/angular.min.js"></script>
+		<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
+		<script type="text/javascript" src="plugins/angular/animate.min.js"></script>
+
+		<!-- angular custom code -->
+		<script src="ng/app.js"></script>
+		<script type="text/javascript" src="ng/ctrl/EventsController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/LeafController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/FormFillController.js"></script>
+
+		<!-- scripts  -->
+		<script type="text/javascript" src="/js/custom.js"></script>
+	</body>
+</html>

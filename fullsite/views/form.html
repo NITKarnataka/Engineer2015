@@ -1,0 +1,231 @@
+<div ng-controller = "FormController" class="formfiller">
+	<div class="col-md-12">	
+		<div class="row">
+			<div class="col-md-12">
+				<h2>thumbs output</h2>
+				<hr/>
+				{{thumb}}
+				<h2>mainpage output</h2>
+				<hr/>
+				{{mainpage}}
+				<h2>THUMBS</h2>
+				<hr/>
+				<div class="row">
+					<div class="col-md-4">
+						<input type="text" placeholder="Thumb Name" ng-model="thumb.name" class="form-group">
+					</div>
+					<div class="col-md-4">
+						<input type="text" placeholder="Thumb Link" ng-model="thumb.link" class="form-group">
+					</div>
+					<div class="col-md-4">
+						<input type="text" placeholder="Thumb pic" ng-model="thumb.pic" class="form-group">
+					</div>
+					<div class="col-md-12">
+						<textarea class="form-control col-md-12 form-group" rows="3" placeholder="Main Description" ng-model="thumb.description" ></textarea>
+					</div>
+				</div>
+				<h2>MAIN PAGE</h2>
+				<hr/>
+				<div class="col-md-4">
+					<input type="text" placeholder="Thumb Name" ng-model="mainpage.name" class="form-group">
+				</div>
+				<div class="col-md-4">
+					<input type="text" placeholder="Thumb Name w/o spaces" ng-model="mainpage.link" class="form-group">
+				</div>
+				<div class="col-md-4">
+					<input type="text" placeholder="Banner pic" ng-model="mainpage.banner" class="form-group">
+				</div>
+				<div class="clearfix"></div>
+				<h2>MAIN PAGE - DESC</h2>
+				<div ng-repeat="draft in mainpage.subdesc" class="form-group">
+					<div class="col-md-12">
+						<textarea class="form-control form-group" rows="1" placeholder="Sub Title" ng-model="draft.subtitle" ></textarea>
+					</div>
+					<div class="col-md-12">
+						<textarea class="form-control form-group" rows="2" placeholder="Sub Description" ng-model="draft.subdescription" ></textarea>
+					</div>
+					<div class="col-md-12">
+						<textarea class="form-control form-group" rows="1" placeholder="Sub Image" ng-model="draft.subimage" ></textarea>
+					</DIV>
+					<div class="row">
+						<div class="col-md-2">
+							<button class="btn btn-block btn-primary input-block" ng-click="addMoreDesc()">Add More</button>
+						</div>
+						<div class="col-md-2" ng-if="$index">
+							<button class="btn btn-block btn-danger input-block" ng-click="DeleteDesc($index)">Delete</button>
+						</div>
+						<div class="clearfix form-group"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<hr/>
+				<h2>MAIN PAGE - IMAGES BOTTOM</h2>
+				<hr/>
+				<div ng-repeat='imagelink in mainpage.subimage'>
+					<div class="col-md-6">
+						<input type="text" placeholder="Image title" ng-model="imagelink.title" class="form-group">
+					</div>
+					<div class="col-md-6">
+						<input type="text" placeholder="Image Description" ng-model="imagelink.link" class="form-group">
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-2">
+						<button class="btn btn-block btn-primary input-block" ng-click="addMoreImages()">Add More</button>
+					</div>
+					<div class="col-md-2" ng-if="$index">
+						<button class="btn btn-block btn-danger input-block" ng-click="DeleteImages($index)">Delete</button>
+					</div>
+					<div class="clearfix form-group"></div>
+				</div>
+				<div class="clearfix"></div>
+				<h2>Rules/lists</h2>
+				<hr/>
+				<div class="col-md-12">
+					<input type="text" placeholder="List heading" ng-model="mainpage.list.title" class="form-group">
+				</div>
+				<div ng-repeat='rules in mainpage.list.items track by $index'>
+					<div class="col-md-12">
+						<input type="text" placeholder="List item" ng-model="mainpage.list.items[$index]" class="form-group">
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-2">
+						<button class="btn btn-block btn-primary input-block" ng-click="addMoreLists()">Add More</button>
+					</div>
+					<div class="col-md-2" ng-if="$index">
+						<button class="btn btn-block btn-danger input-block" ng-click="DeleteLists($index)">Delete</button>
+					</div>
+					<div class="clearfix form-group"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	.formfiller{
+		WIDTH: 100%;
+	    HEIGHT: 100%;
+	    Z-INDEX: 999999999999999999999999999999999999999999999100000000000319; 
+	    background-color: white;
+	    color: black;
+	    position: absolute;
+	    overflow: scroll;
+	}
+	.row{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	@media (min-width: 1200px){
+	.container {
+	    width: 1100px !important;
+	}
+	@media (min-width: 1200px){
+	.container {
+	    width: 1170px;
+	}
+	@media (min-width: 992px){
+	.container {
+	    width: 970px;
+	}
+	@media (min-width: 768px){
+	.container {
+	    width: 750px;
+	}
+	.container {
+	    padding-right: 15px;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+	textarea.form-control {
+	    height: auto;
+	}
+	.form-group {
+	    margin-bottom: 15px;
+	}
+	.form-control {
+	    display: block;
+	    width: 100%;
+	    height: 34px;
+	    padding: 6px 12px;
+	    font-size: 14px;
+	    line-height: 1.42857143;
+	    color: #555;
+	    background-color: #fff;
+	    background-image: none;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	}
+	.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	    color: #fff;
+	    background-color: #3276b1;
+	    border-color: #285e8e;
+	}
+	.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+	    color: #fff;
+	    background-color: #d2322d;
+	    border-color: #ac2925;
+	}
+	input[type="text"], input[type='number'], input[type='email'], input[type="date"] {
+	    width: 100%;
+	    height: 30px;
+	    padding: 0px 10px;
+	}
+	.form-group {
+	    margin-bottom: 15px;
+	}
+	input, button, select, textarea {
+	    font-family: inherit;
+	    font-size: inherit;
+	    line-height: inherit;
+	}
+	input {
+	    line-height: normal;
+	}
+	button, input, optgroup, select, textarea {
+	    margin: 0;
+	    font: inherit;
+	    color: inherit;
+	}
+	* {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+
+	input:not([type="image" i]), textarea {
+	    box-sizing: border-box;
+	}
+	input:not([type]), input[type="email" i], input[type="number" i], input[type="password" i], input[type="tel" i], input[type="url" i], input[type="text" i] {
+	    padding: 1px 0px;
+	}
+	.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	    color: #fff;
+	    background-color: #3276b1;
+	    border-color: #285e8e;
+	}
+	.btn-primary {
+	    color: #fff;
+	    background-color: #428bca;
+	    border-color: #357ebd;
+	}.btn-danger {
+	    color: #fff;
+	    background-color: #d9534f;
+	    border-color: #d43f3a;
+	}
+	.formfiller h2 {
+	    text-align: left;
+	    font-size: 30px;
+	}
+	.clearfix:after{
+		clear: both;
+	}
+	.clearfix:before{
+		    display: table;
+    content: " ";
+	}
+</style>
