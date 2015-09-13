@@ -11,13 +11,13 @@ html, body {
 	visibility: hidden;
 	opacity: 0;
 	filter: alpha(opacity=0);
-	    top: 8%!important;
-    left: 10%!important;
-    bottom: 8%!important;
-    right: 10%!important;
-    width:80%!important;
-    height:80%!important;
-    margin:auto!important;
+	top: 8%!important;
+	left: 10%!important;
+	bottom: 8%!important;
+	right: 10%!important;
+	width:80%!important;
+	height:80%!important;
+	margin:auto!important;
 	z-index: 1000;
 	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .5);
 
@@ -35,7 +35,7 @@ html, body {
 }
 .avgrund-overlay {
 	background: rgba(199, 161, 161, 0) url('http://tympanus.net/Development/FullscreenImageBlurEffect/images/pattern.png') repeat top left;
-    background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
 	width: 100%;
 	position: relative;
 	top: -1500px;
@@ -55,11 +55,11 @@ body.avgrund-ready,
 	-o-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 
-	-webkit-transition: 0.3s all ease-out;
-	-moz-transition: 0.3s all ease-out;
-	-ms-transition: 0.3s all ease-out;
-	-o-transition: 0.3s all ease-out;
-	transition: 0.3s all ease-out;
+	-webkit-transition: .2s all ease-out;
+	-moz-transition: .2s all ease-out;
+	-ms-transition: .2s all ease-out;
+	-o-transition: .2s all ease-out;
+	transition: .2s all ease-out;
 }
 
 .avgrund-active {
@@ -115,13 +115,15 @@ body.avgrund-ready,
 }
 
 /* Optional close button styles */
-.avgrund-close {
+.avgrund-close {    
 	display: block;
-	color: #555;
-	font-size: 13px;
+	color: #E8E8E8;
+	font-size: 26px;
 	text-decoration: none;
 	text-transform: uppercase;
 	position: absolute;
-	top: 6px;
-	right: 10px;
+	top: 6%;
+	right: 8.5%;
+	z-index: 10000000;
+	opacity: 0;
 }

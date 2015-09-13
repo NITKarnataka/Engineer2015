@@ -8,94 +8,232 @@
 				<h2>mainpage output</h2>
 				<hr/>
 				{{mainpage}}
-				<h2>THUMBS</h2>
+				<h2>members</h2>
 				<hr/>
-				<div class="row">
-					<div class="col-md-4">
-						<input type="text" placeholder="Thumb Name" ng-model="thumb.name" class="form-group">
-					</div>
-					<div class="col-md-4">
-						<input type="text" placeholder="Thumb Link" ng-model="thumb.link" class="form-group">
-					</div>
-					<div class="col-md-4">
-						<input type="text" placeholder="Thumb pic" ng-model="thumb.pic" class="form-group">
-					</div>
-					<div class="col-md-12">
-						<textarea class="form-control col-md-12 form-group" rows="3" placeholder="Main Description" ng-model="thumb.description" ></textarea>
-					</div>
-				</div>
-				<h2>MAIN PAGE</h2>
-				<hr/>
+				{{members}}
+				<h2>edits</h2>
+				{{edits}}
+				<h2>Edit</h2>
 				<div class="col-md-4">
-					<input type="text" placeholder="Thumb Name" ng-model="mainpage.name" class="form-group">
-				</div>
-				<div class="col-md-4">
-					<input type="text" placeholder="Thumb Name w/o spaces" ng-model="mainpage.link" class="form-group">
-				</div>
-				<div class="col-md-4">
-					<input type="text" placeholder="Banner pic" ng-model="mainpage.banner" class="form-group">
+					<input type="text" placeholder="File Name" ng-model="editName" class="form-group">
+					<button class="btn btn-block btn-primary input-block" ng-click="makeEditable(editName)">{{showEdit}}</button>
 				</div>
 				<div class="clearfix"></div>
-				<h2>MAIN PAGE - DESC</h2>
-				<div ng-repeat="draft in mainpage.subdesc" class="form-group">
-					<div class="col-md-12">
-						<textarea class="form-control form-group" rows="1" placeholder="Sub Title" ng-model="draft.subtitle" ></textarea>
+				<hr/>
+				<div ng-if="showEdit">
+					<div ng-repeat="edit in edits">
+						<h2>Main Page</h2>
+						<hr/>
+						<div class="col-md-4">
+							<input type="text" placeholder="Thumb Name" ng-model="edit.name" class="form-group">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="Thumb Name w/o spaces" ng-model="edit.link" class="form-group">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="Banner pic" ng-model="edit.banner" class="form-group">
+						</div>
+						<div class="clearfix"></div>
+						<h2>MAIN PAGE - DESC</h2>
+						<div ng-repeat="draft in edit.subdesc" class="form-group">
+							<div class="col-md-12">
+								<textarea class="form-control form-group" rows="1" placeholder="Sub Title" ng-model="draft.subtitle" ></textarea>
+							</div>
+							<div class="col-md-12">
+								<textarea class="form-control form-group" rows="2" placeholder="Sub Description" ng-model="draft.subdescription" ></textarea>
+							</div>
+							<div class="col-md-12">
+								<textarea class="form-control form-group" rows="1" placeholder="Sub Image" ng-model="draft.subimage" ></textarea>
+							</div>
+							<div class="row">
+								<div class="col-md-2">
+									<button class="btn btn-block btn-primary input-block" ng-click="addMoreDescEdit($parent.$index)">Add More</button>
+								</div>
+								<div class="col-md-2" ng-if="$index">
+									<button class="btn btn-block btn-danger input-block" ng-click="DeleteDescEdit($parent.$parent.$index,$index)">Delete</button>
+								</div>
+								<div class="clearfix form-group"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<hr/>
+						<h2>MAIN PAGE - IMAGES BOTTOM</h2>
+						<hr/>
+						<div ng-repeat='imagelink in edit.subimage'>
+							<h2>Images</h2>
+							<hr/>
+							<div class="col-md-6">
+								<input type="text" placeholder="Image title" ng-model="imagelink.title" class="form-group">
+							</div>
+							<div class="col-md-6">
+								<input type="text" placeholder="Image Description" ng-model="imagelink.link" class="form-group">
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-md-2">
+								<button class="btn btn-block btn-primary input-block" ng-click="addMoreImagesEdit($parent.$index)">Add More</button>
+							</div>
+							<div class="col-md-2" ng-if="$index">
+								<button class="btn btn-block btn-danger input-block" ng-click="DeleteImagesEdit($parent.$parent.$index,$index)">Delete</button>
+							</div>
+							<div class="clearfix form-group"></div>
+						</div>
+						<div class="clearfix"></div>
+						<h2>Rules/lists</h2>
+						<hr/>
+						<div ng-repeat='item in edit.list'>
+							<div class="col-md-12">
+								<input type="text" placeholder="List heading" ng-model="item.title" class="form-group">
+							</div>
+							<div ng-repeat='rules in item.items track by $index' class="form-group">
+								<div class="col-md-12 form-group">
+									<input type="text" placeholder="List item" ng-model="item.items[$index]" class="form-group">
+								</div>
+								<div class="col-md-2 form-group">
+									<button class="btn btn-block btn-primary input-block" ng-click="addMoreListItemsEdit($parent.$parent.$index,$parent.$index)">Add More rule</button>
+								</div>
+								<div class="col-md-2 form-group" ng-if="$index">
+									<button class="btn btn-block btn-danger input-block" ng-click="DeleteListItemsEdit($parent.$parent.$parent.$index,$parent.$parent.$index , $index)">Delete rule</button>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-md-2">
+								<button class="btn btn-block btn-primary input-block" ng-click="addMoreListsEdit($parent.$index)">Add More LISTS</button>
+							</div>
+							<div class="col-md-2" ng-if="$parent.$index">
+								<button class="btn btn-block btn-danger input-block" ng-click="DeleteListsEdit($parent.$parent.$index,$parent.$index)">Delete LIST</button>
+							</div>
+							<div class="clearfix form-group"></div>
+						</div>
 					</div>
-					<div class="col-md-12">
-						<textarea class="form-control form-group" rows="2" placeholder="Sub Description" ng-model="draft.subdescription" ></textarea>
-					</div>
-					<div class="col-md-12">
-						<textarea class="form-control form-group" rows="1" placeholder="Sub Image" ng-model="draft.subimage" ></textarea>
-					</DIV>
+				</div>
+				<div ng-if="!showEdit">
+
+					<h2>THUMBS</h2>
+					<hr/>
 					<div class="row">
+						<div class="col-md-4">
+							<input type="text" placeholder="Thumb Name" ng-model="thumb.name" class="form-group">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="Thumb Link" ng-model="thumb.link" class="form-group">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="Thumb pic" ng-model="thumb.pic" class="form-group">
+						</div>
+						<div class="col-md-12">
+							<textarea class="form-control col-md-12 form-group" rows="3" placeholder="Main Description" ng-model="thumb.description" ></textarea>
+						</div>
+					</div>
+					<h2>MAIN PAGE</h2>
+					<hr/>
+					<div class="col-md-4">
+						<input type="text" placeholder="Thumb Name" ng-model="mainpage.name" class="form-group">
+					</div>
+					<div class="col-md-4">
+						<input type="text" placeholder="Thumb Name w/o spaces" ng-model="mainpage.link" class="form-group">
+					</div>
+					<div class="col-md-4">
+						<input type="text" placeholder="Banner pic" ng-model="mainpage.banner" class="form-group">
+					</div>
+					<div class="clearfix"></div>
+					<h2>MAIN PAGE - DESC</h2>
+					<div ng-repeat="draft in mainpage.subdesc" class="form-group">
+						<div class="col-md-12">
+							<textarea class="form-control form-group" rows="1" placeholder="Sub Title" ng-model="draft.subtitle" ></textarea>
+						</div>
+						<div class="col-md-12">
+							<textarea class="form-control form-group" rows="2" placeholder="Sub Description" ng-model="draft.subdescription" ></textarea>
+						</div>
+						<div class="col-md-12">
+							<textarea class="form-control form-group" rows="1" placeholder="Sub Image" ng-model="draft.subimage" ></textarea>
+						</div>
+						<div class="row">
+							<div class="col-md-2">
+								<button class="btn btn-block btn-primary input-block" ng-click="addMoreDesc()">Add More</button>
+							</div>
+							<div class="col-md-2" ng-if="$index">
+								<button class="btn btn-block btn-danger input-block" ng-click="DeleteDesc($index)">Delete</button>
+							</div>
+							<div class="clearfix form-group"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					
+					<hr/>
+					<h2>MAIN PAGE - IMAGES BOTTOM</h2>
+					<hr/>
+					<div ng-repeat='imagelink in mainpage.subimage'>
+						<div class="col-md-6">
+							<input type="text" placeholder="Image title" ng-model="imagelink.title" class="form-group">
+						</div>
+						<div class="col-md-6">
+							<input type="text" placeholder="Image Description" ng-model="imagelink.link" class="form-group">
+						</div>
+						<div class="clearfix"></div>
 						<div class="col-md-2">
-							<button class="btn btn-block btn-primary input-block" ng-click="addMoreDesc()">Add More</button>
+							<button class="btn btn-block btn-primary input-block" ng-click="addMoreImages()">Add More</button>
 						</div>
 						<div class="col-md-2" ng-if="$index">
-							<button class="btn btn-block btn-danger input-block" ng-click="DeleteDesc($index)">Delete</button>
+							<button class="btn btn-block btn-danger input-block" ng-click="DeleteImages($index)">Delete</button>
 						</div>
 						<div class="clearfix form-group"></div>
 					</div>
 					<div class="clearfix"></div>
-				</div>
-				
-				<hr/>
-				<h2>MAIN PAGE - IMAGES BOTTOM</h2>
-				<hr/>
-				<div ng-repeat='imagelink in mainpage.subimage'>
-					<div class="col-md-6">
-						<input type="text" placeholder="Image title" ng-model="imagelink.title" class="form-group">
+					<h2>Rules/lists</h2>
+					<hr/>
+					<div ng-repeat='item in mainpage.list'>
+						<div class="col-md-12">
+							<input type="text" placeholder="List heading" ng-model="item.title" class="form-group">
+						</div>
+						<div ng-repeat='rules in item.items track by $index' class="form-group">
+							<div class="col-md-12 form-group">
+								<input type="text" placeholder="List item" ng-model="item.items[$index]" class="form-group">
+							</div>
+							<div class="col-md-2 form-group">
+								<button class="btn btn-block btn-primary input-block" ng-click="addMoreListItems($parent.$index)">Add More rule</button>
+							</div>
+							<div class="col-md-2 form-group" ng-if="$index">
+								<button class="btn btn-block btn-danger input-block" ng-click="DeleteListItems( $parent.$parent.$index , $index)">Delete rule</button>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-2">
+							<button class="btn btn-block btn-primary input-block" ng-click="addMoreLists()">Add More LISTS</button>
+						</div>
+						<div class="col-md-2" ng-if="$index">
+							<button class="btn btn-block btn-danger input-block" ng-click="DeleteLists($parent.$index)">Delete LIST</button>
+						</div>
+						<div class="clearfix form-group"></div>
 					</div>
-					<div class="col-md-6">
-						<input type="text" placeholder="Image Description" ng-model="imagelink.link" class="form-group">
+					<h2>Members</h2>
+					<div ng-repeat='member in members track by $index' class="form-group">
+						<div class="col-md-3 form-group">
+							<input type="text" placeholder="Member Name" ng-model="member.name" class="form-group">
+						</div>
+						<div class="col-md-3 form-group">
+							<input type="text" placeholder="Member email" ng-model="member.email" class="form-group">
+						</div>
+						<div class="col-md-3 form-group">
+							<input type="text" placeholder="Member pic" ng-model="member.pic" class="form-group">
+						</div>
+						<div class="col-md-3 form-group">
+							<input type="text" placeholder="Member post" ng-model="member.post" class="form-group">
+						</div>
+						<div class="col-md-3 form-group">
+							<input type="text" placeholder="Comittee comes under" ng-model="member.classie" class="form-group">
+						</div>
+						<div class="col-md-3 form-group">
+							<input type="text" placeholder="Member comittee" ng-model="member.comittee" class="form-group">
+						</div>
+						<div class="col-md-3 form-group">
+							<button class="btn btn-block btn-primary input-block" ng-click="addMoreMembers()">Add More Members</button>
+						</div>
+						<div class="col-md-3 form-group" ng-if="$index">
+							<button class="btn btn-block btn-danger input-block" ng-click="deleteMembers($index)">Delete</button>
+						</div>
+						<div class="clearfix"></div>
 					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-2">
-						<button class="btn btn-block btn-primary input-block" ng-click="addMoreImages()">Add More</button>
-					</div>
-					<div class="col-md-2" ng-if="$index">
-						<button class="btn btn-block btn-danger input-block" ng-click="DeleteImages($index)">Delete</button>
-					</div>
-					<div class="clearfix form-group"></div>
-				</div>
-				<div class="clearfix"></div>
-				<h2>Rules/lists</h2>
-				<hr/>
-				<div class="col-md-12">
-					<input type="text" placeholder="List heading" ng-model="mainpage.list.title" class="form-group">
-				</div>
-				<div ng-repeat='rules in mainpage.list.items track by $index'>
-					<div class="col-md-12">
-						<input type="text" placeholder="List item" ng-model="mainpage.list.items[$index]" class="form-group">
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-2">
-						<button class="btn btn-block btn-primary input-block" ng-click="addMoreLists()">Add More</button>
-					</div>
-					<div class="col-md-2" ng-if="$index">
-						<button class="btn btn-block btn-danger input-block" ng-click="DeleteLists($index)">Delete</button>
-					</div>
-					<div class="clearfix form-group"></div>
 				</div>
 			</div>
 		</div>

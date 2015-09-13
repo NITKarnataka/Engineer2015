@@ -1,0 +1,35 @@
+<div class="background-leaf" style="background-image: url('{{page.banner}}');">
+	<div id="closebt-container" class="close-animatedModal">
+		<img class="closebt" src="./img/closebt.svg" ng-click="closeLeaf()">
+	</div>
+</div>
+<div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+	<h4>{{page.name}}</h4>
+	<div>
+		<div ng-repeat="desc in page.subdesc">
+			<h5>{{desc.subtitle}}</h5>
+			<p>{{desc.subdescription}}</p>
+			<div ng-if="desc.subimage">
+				<img ng-src="{{desc.subimage}}" style="height:150px;width:auto"/>
+			</div>
+		</div>
+	</div>
+	<div ng-if="page.list.length" ng-repeat="item in page.list">
+		<h5>{{item.title}}</h5>
+		<ul>
+			<li ng-repeat="rules in item.items">{{rules}}</li>
+		</ul>
+	</div>
+	<div class="row form-group">
+		<div class="col-md-12">
+			<h5 ng-if="page.subimage.length!=0">Gallery</h5>
+		</div>
+		<div class="col-md-3" ng-if="page.subimage.length" ng-repeat="images in page.subimage">
+			<img ng-src="{{images.link}}" style="height:150px;width:auto"/>
+			<h5>{{images.title}}</h5>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div ng-if="showRegisterForm==true"==true ng-include="'./views/RegisterForm.html'"></div>
+	<div ng-if="showCAForm==true" ng-include="'./views/CAForm.html'"></div>	
+</div>

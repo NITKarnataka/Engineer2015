@@ -1,0 +1,120 @@
+
+/* Grid */
+.grid {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	list-style: none;
+}
+
+.grid__item {
+	width: 100%;
+	height: 84%;
+}
+
+
+.grid__item-title {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 1em;
+	padding: 1em 0;
+	font-weight: bold;
+}
+
+.grid__item-title code {
+	color: #aaa;
+	font-weight: normal;
+	font-size: 0.85em;
+}
+
+
+.grid__img img {
+	max-width: 100%;
+	display: block;
+}
+
+.grid__img--border .tilt__back,
+.grid__img--border .tilt__front {
+	border: 1px solid #333;
+}
+
+.grid__img--border .tilt {
+	overflow: visible;
+} 
+
+/* Examples custom styles */
+.grid--examples {
+	max-width: 830px;
+	height: 100%;
+}
+
+
+.grid--examples .grid__img {
+	position: relative;
+	height: 0;
+	padding-bottom: 93%;
+	overflow: hidden;
+}
+
+.grid--examples .tilt {
+	position: absolute;
+	top: 0;
+	height: 185px;
+}
+
+#member-details{
+	position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    pointer-events: none;
+    color: white
+}
+.grid__item:hover #member-details{
+
+    border: 1px solid white;
+    transition:border 1s ease;
+}
+.tilt__back::before {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    z-index: -2;
+    display: block;
+    content: '';
+    height: 22px;
+    width: 100%;
+    background: url('http://www.kikk.be/2015/files/templates/kikk2015/public/assets/images/floating-card-shadow.png') no-repeat;
+    background-size: 100%;
+}
+.member-details{
+	height: 220px;
+}
+.tilt__back::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,.3);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.member-details h5{
+    margin: 4px 0;
+    line-height: 18px;
+}
+.member-details p {
+	margin:0;
+	line-height: 16px;
+}
+.bottom-right{
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+}

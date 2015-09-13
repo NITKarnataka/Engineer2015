@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>ENGINEER</title>
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="fonts/font-awesome.min.css">
 
 		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
 
@@ -21,8 +21,9 @@
 
 		
 	</head>
-	<body ng-app="Engi" ng-controller = "MainController" class="avgrund-ready">
-		<div id="container" class="wrapper">
+	<body ng-app="Engi" ng-controller = "MainController">
+		<div id="container" class="wrapper avgrund-ready">
+
 			<div ng-include="'views/sidepanel.html'"></div>
 
 			<div id="scene" class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
@@ -36,7 +37,7 @@
 				<div class="layer circle5" id="id5" data-depth="0.12" ng-click="showModal('mainshow')"></div>
 				<div class="layer circle6" id="id6" data-depth="0.12" ng-click="showModal('about')"></div>
 				<div class="layer title" data-depth="0.12"><h1><span>think. create. engineer</span></h1></div>
-				<div class="layer stationary" data-depth="0.0">
+				<!--<div class="layer stationary" data-depth="0.0">
 						<img class="rotater" src="./img/1.png"/>
 						<img class="rotater anti" src="./img/2.png"/>
 						<img class="rotater" src="./img/3.png"/>
@@ -45,25 +46,19 @@
 						<img class="rotater anti" src="./img/6.png"/>
 						<img class="rotater" src="./img/7.png"/>
 						<img class="only" src="./img/9.png"/>
-				</div>
-				<div class="layer 50p 100w" data-depth="0">
+				</div>-->
+				<div class="layer" data-depth="0">
 					<div ng-include="'views/countdown.html'"></div>
 				</div>
-				<div class="layer" data-depth="0.20"><div id="particles-js"></div></div>
+				<div class="layer" data-depth="0.0"><div id="particles-js"></div></div>
 			</div>
 		</div>
 		<div class="avgrund-overlay"></div>
 		<div ng-view autoscroll="false"></div>
-		<div ng-if="misc.showLeaf" ng-include="'/views/leaf.html'"></div>
+
+
+
 		
-
-
-
-
-
-
-
-
 		
 		<!-- jquery -->
 		<script src="plugins/jquery/jquery.min.js"></script>
@@ -74,7 +69,7 @@
 
 		<!-- particles -->
 		<script src="plugins/particles/particles.min.js"></script>
-		<script src="plugins/particles/particle.config.js"></script>
+		<script src="plugins/particles/particle.config.js"></script> 
 
 		<!-- parallax  -->
 		<script src="plugins/parallax/libraries.min.js"></script>
@@ -94,13 +89,19 @@
 		<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
 		<script type="text/javascript" src="plugins/angular/animate.min.js"></script>
 
+
 		<!-- angular custom code -->
 		<script src="ng/app.js"></script>
 		<script type="text/javascript" src="ng/ctrl/EventsController.js"></script>
 		<script type="text/javascript" src="ng/ctrl/LeafController.js"></script>
-		<script type="text/javascript" src="ng/ctrl/FormFillController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/OtherController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/RegisterController.js"></script>
 
-		<!-- scripts  -->
-		<script type="text/javascript" src="/js/custom.js"></script>
+
+		<script type="text/javascript" src="ng/ctrl/FormFillController.js"></script>
+		
+
+		<!-- scripts  
+		<script type="text/javascript" src="/js/custom.js"></script>-->
 	</body>
 </html>

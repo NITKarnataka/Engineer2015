@@ -8,7 +8,7 @@
     {
         "name": "Perfect Machine",
         "pic": "perfectmachine.svg",
-        "link": "#/events/mechanical/perfectmachine",
+        "link": "perfectmachine",
         "description": "Participants design a robot which is made to complete some specified tasks"
     },
     {

@@ -50,14 +50,15 @@
 
 	<script type="text/javascript">
 	$('document').ready(function() {
-		'use strict'; 
+		'use strict';
+		var today = new Date();
 		$('.countdown').final_countdown({
-			'start': 1362139200,
-			'end': 1444262400,
-			'now': 1441485862        
+			'start': 1441627200,
+			'end': 1444305600,
+			'now':  today.getTime() / 1000        
 		});
-		$('.stationary img').each(function(fadeInDiv) {
+		/*$('.stationary img').each(function(fadeInDiv) {
 			$(this).delay((fadeInDiv+1) * 500).fadeIn(500*fadeInDiv);
-		});
+		});*/
 	});
 	</script>

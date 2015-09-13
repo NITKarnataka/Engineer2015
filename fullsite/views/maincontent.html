@@ -1,0 +1,72 @@
+<div class="background-leaf" style="background-image: url('/img/{{page.banner}}');">
+	<div id="closebt-container" class="close-animatedModal">
+		<img class="closebt" src="./img/closebt.svg" ng-click="closeLeaf()">
+	</div>
+</div>
+<div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+	<h4>{{page.name}}</h4>
+	<ul class="tabs">
+		<li ng-repeat="desc in page.subdesc" ng-click="showTab(desc.subtitle)" class="{{showSubtitle==desc.subtitle?'activeTab':''}}">{{desc.subtitle}}</li>
+		<li ng-if="page.list.length>1" ng-click="showTab('rules')" class="{{showThis=='rules'?'activeTab':''}}">Rules</li>
+		<li ng-if="page.subimage.length>1" ng-click="showTab('gallery')" class="{{showThis=='gallery'?'activeTab':''}}">Gallery</li>
+	</ul>
+	
+	<div>
+		<div ng-repeat="desc in page.subdesc" ng-if="showThis=='desc'">
+			<div ng-show="showSubtitle=='{{desc.subtitle}}'">
+				<h5>{{desc.subtitle}}</h5>
+				<p ng-if="desc.subtitle!='Problem Statement'">{{desc.subdescription}}</p>
+				<a ng-if="desc.subtitle=='Problem Statement'" href="{{desc.subdescription}}">
+					<button class="btn btn-primary" style="margin-bottom: 10px;">CLICK TO VIEW ON DRIVE</button>
+				</a>
+				<div ng-if="desc.subimage">
+					<img ng-src="{{desc.subimage}}" style="height:150px;width:auto"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-repeat="item in page.list" ng-if="showThis=='rules'">
+		<div ng-if="page.list.length>1">
+			<h5>{{item.title}}</h5>
+			<ul>
+				<li ng-repeat="rules in item.items">{{rules}}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row form-group" ng-if="showThis=='gallery'">
+		<div class="col-md-12">
+			<h5 ng-if="page.subimage.length>1">Gallery</h5>
+		</div>
+		<div class="col-md-3" ng-if="page.subimage.length" ng-repeat="images in page.subimage">
+			<img ng-src="{{images.link}}" style="height:150px;width:auto"/>
+			<h5>{{images.title}}</h5>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div ng-if="showRegisterForm==true" ng-include="'./views/RegisterForm.html'"></div>
+	<div ng-if="showCAForm==true" ng-include="'./views/CAForm.html'"></div>	
+</div>
+<style>
+ul.tabs li {
+    padding: 6px 8px;
+    margin-left: 2px;
+    background-color: #FCFCFC;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid;
+    border-bottom: 0px;
+    cursor: pointer;
+}
+.tabs li:hover{
+	background-color: #E7E7FA;
+}
+.activeTab{
+	background-color: #D1D1D1!important;
+}
+ul.tabs{
+	list-style-type: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid;
+}
+</style>

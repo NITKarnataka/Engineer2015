@@ -268,3 +268,21 @@ html{
     }
 
     
+    .background-leaf{
+          height: 300px;
+    width: 100%;
+    background-color: wheat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
+    .background-leaf::before {
+    content: '';
+    background:rgba(0,0,0,.5);
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}

@@ -13,36 +13,45 @@ var Engi;
 		}).when('/events/:cat', {
 			templateUrl: './views/modals.html'
 		}).when('/events/:cat/:id', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/leaf.html'
 		}).when('/workshops', {
 			templateUrl: './views/modals.html'
 		}).when('/workshops/:id', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/leaf.html'
 		}).when('/techspeaks', {
 			templateUrl: './views/modals.html'
 		}).when('/techspeaks/:id', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/leaf.html'
 		}).when('/technites', {
 			templateUrl: './views/modals.html'
 		}).when('/technites/:id', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/leaf.html'
 		}).when('/mainshow', {
 			templateUrl: './views/modals.html'
 		}).when('/mainshow/:id', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/leaf.html'
 		}).when('/fillform', {
 			templateUrl: './views/form.html'
+		}).when('/CA', {
+			templateUrl: './views/leaf.html'
+		}).when('/about', {
+			templateUrl: './views/leaf.html'
+		}).when('/sponsors', {
+			templateUrl: './views/leaf.html'
+		}).when('/engiconnect', {
+			templateUrl: './views/leaf.html'
 		});
-
 	}]);
 })();
 
 (function() {
-	Engi.run(function ($rootScope, $location) {
+	Engi.run(function ($rootScope, $location,$routeParams) {
 
 		var history = [];
 
 		$rootScope.$on('$routeChangeSuccess', function() {
+			console.log($location.$$path)
+			if(!$routeParams.id)
 			history.push($location.$$path);
 		});
 
@@ -59,9 +68,8 @@ var Engi;
 	Engi.controller('MainController', function($scope, $location,$timeout) {
 		$scope.misc = {
 			showModal:false,
-			showLeaf:false,
 			wasLeaf:false,
-			parent:'',
+			leafCheck:0
 		}
 		$scope.showModal = function(redirect){
 			$scope.misc.parent= redirect;

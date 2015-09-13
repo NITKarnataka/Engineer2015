@@ -1,0 +1,131 @@
+<div class="row" ng-controller="RegisterController">
+	<div ng-show="success" class='col-md-12'>
+		<h4 class="bg-success">Thanx for registering.. we ll get back to you soon.</h4>
+	</div>
+	<div ng-show="error" class='col-md-12'>
+		<h4 class="bg-error">Some Problem occured</h4>
+	</div>
+
+	<div ng-show="!success&&!error" class="col-md-4">
+		<button class="btn btn-block btn-info" ng-click="toggleCAForm()">{{ CAForm ? 'Nah!':'BECOME AN ENGIREP' }}</button>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div ng-show="CAForm&&!success&&!error" class="caform">
+		<hr/>
+		<div>
+			<div class="col-md-12">
+				<h4>BASIC INFORMATION</h4>
+			</div>
+			<div class="col-md-3">
+				<h5>Name</h5>
+				<input type="text" ng-model="ca.name" class="form-control form-group" placeholder = 'Name' required/>
+			</div>
+			<div class="col-md-3">
+				<h5>Email</h5>
+				<input type="text" ng-model="ca.email" class="form-control form-group" placeholder = 'Email' required/>
+			</div>
+			<div class="col-md-3">
+				<h5>Phone Number</h5>
+				<input type="text" ng-model="ca.number" class="form-control form-group" placeholder = 'Phone Number' required/>
+			</div>
+			<div class="col-md-3">
+				<h5>College</h5>
+				<input type="text" ng-model="ca.college" class="form-control form-group" placeholder = 'College' required/>
+			</div>
+			<div class="col-md-12">
+				<h4>TELL US MORE</h4>
+			</div>
+			<div class="col-md-12">
+				<h5>Year of Pursuing</h5>
+			</div>
+			<div class="col-md-3">
+				<input type="Number" ng-model="ca.year" class="form-control form-group" placeholder = 'Year'/>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-12">
+				<h5>Your stream (Engineering/Commerce/Arts)</h5>
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="ca.stream" class="form-control form-group" placeholder = 'Discipline'/>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-12">
+				<h5>Where is Your College Located ?</h5>
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="ca.location" class="form-control form-group" placeholder = 'Location College'/>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-12">
+				<h5>Have You held any post in your college ?</h5>
+			</div>
+			<div class="col-md-3">
+				<div class="row">
+					<div class="col-md-6">
+						<input type="radio" name="held" value="yes" ng-model="ca.held"><h5>Yes</h5>
+					</div>
+					<div class="col-md-6">			
+						<input type="radio" name="held" value="no" ng-model="ca.held"><h5>No</h5>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<br>
+			<div class="col-md-12">
+				<h5>If yes,then what</h5>
+			</div>
+			<div class="col-md-12">
+				<input type="text" ng-model="ca.desc" class="form-control form-group" placeholder = 'Describe' rows="3"/>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-12">
+				<h4>Your Social Media Link</h4>
+			</div>
+			<div class="col-md-6">
+				<h5>Facebook</h5>
+				<input type="text" ng-model="ca.flink" class="form-control form-group" placeholder = 'Link Facebook'/>
+			</div>
+			<div class="col-md-6">
+				<h5>Twitter</h5>
+				<input type="text" ng-model="ca.tlink" class="form-control form-group" placeholder = 'Link Twitter'/>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-3">
+			<button class="btn-success btn btn-block" ng-click="submitCA()">Register</button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<style>
+.bg-success {
+	background-color: #dff0d8;
+	padding:12px;
+	border:1px solid #C2BFBF;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: 400;
+	text-transform: capitalize!important;
+}
+.bg-danger {
+	background-color: #f2dede;
+	padding:12px;
+	border:1px solid #C5C5C5;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: 400;
+	text-transform: capitalize!important;
+}
+.caform h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.caform h5 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #727272;
+}

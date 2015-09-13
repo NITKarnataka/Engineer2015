@@ -1,15 +1,1 @@
-[
-	{
-        "name": "Workshop",
-        "description": [
-        	"cool shit!! check coutv casd"
-        	]
-    },
-    {
-    	"name":"Androbotics",
-    	"pic":"http://t2.gstatic.com/images?q=tbn:ANd9GcQCRpA7jLRmt1MqAFBo0qObFEJ07RmwUl5cJhVdKR8IUEv_Rr6s",
-    	"link":"Androbotics",
-    	"description":
-    	"this is a cool workshop !! do arttend"
-    }
-]
+[{"name":"Android Controlled Robotics","pic":"robotics1.jpg","link":"androidcontrolledrobotics","description":"Experience a whole new world of Robotics using Android"},{"name":"Bridge Design","pic":"bridgedesign1.jpg","link":"bridgedesign","description":"Learn the next generation Bridge Design concepts."},{"name":"Vehicle Overhauling","pic":"vehicleoverhauling1.jpg","link":"vehicleoverhauling","description":"Dismantle a car to know its functionality !"},{"name":"Big Data","pic":"bigdata1.jpg","link":"bigdata","description":"Large and complex sets of data, difficult to handle."},{"name":"Ethical Hacking","pic":"ethicalhacking1.jpg","link":"ethicalhacking","description":"Hack Ethically"},{"name":"Internet of Things","pic":"internetofthings1.jpg","link":"internetofthings","description":"Come be a part of the next major leap forward in mankinds technical evolution - The Internet of Things!"}]

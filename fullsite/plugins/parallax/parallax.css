@@ -178,13 +178,7 @@ html.mouse a:hover, html.mouse button:hover {
   -moz-transition: color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-html.mouse a:hover {
-  color: #ff755a;
-}
-html.mouse button:hover {
-  background-color: #d92400;
-  color: white;
-}
+
 html.mouse .toggle:hover .x, html.mouse .toggle:hover .y {
   background-color: white;
 }

@@ -1,25 +1,21 @@
 Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, $location,$routeParams) {
+	$scope.misc.leafCheck= 0;
 	$scope.misc.showModal = true;
 	$scope.cat = $routeParams.cat;
+
 	var currentPage;
 
-	if($routeParams.id){
-		$scope.misc.showLeaf = true;
-	}else{
-		$scope.misc.showLeaf = false;
-	}
-
-	if($scope.misc.showModal&&(!($scope.misc.wasLeaf))&&!$scope.misc.showLeaf){
+	if($scope.misc.showModal&&(!($scope.misc.wasLeaf))){
 		$timeout(function() {
 				$("body").addClass("avgrund-active");
 		}, 100);
-		console.log('doing2')
-		console.log($scope.misc.showModal+' showModal')
-		console.log($scope.misc.wasLeaf+' wasLeaf')
+		$timeout(function() {
+				$(".avgrund-close").css("opacity","1");
+		}, 500);
 	}
-
-	if($scope.misc.showModal&&$scope.misc.wasLeaf){
+	if($scope.misc.showModal&&$scope.misc.wasLeaf&&!($routeParams.id)){
 		$("body").addClass("avgrund-active");
+		$(".avgrund-close").css("opacity","1");
 		$scope.misc.wasLeaf = false;
 	}
 
@@ -27,6 +23,7 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 		$scope.misc.showModal = false;
 		$timeout(function() {
 				$("body").removeClass("avgrund-active");
+				$(".avgrund-close").css("opacity","0");
 			}, 100);
 
 		$timeout(function() {
@@ -42,6 +39,12 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 			})
 		}
 	}
+
+	$scope.nextPage = function(page){
+		var url=$location.path()+'/'
+		$location.path(url+page);
+	}
+
 	$scope.init();
 
 	$scope.changeBack = function(){
