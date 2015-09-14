@@ -1,0 +1,194 @@
+<div ng-controller="LeafController" id="animatedModal" class="{{misc.leafCheck<=1?'animated animatedModal-on zoomIn temp':'temp'}}">
+	<div ng-if="show=='final-event'" ng-include="'views/maincontent.html'"></div>
+	<div ng-if="show=='about'" ng-include="'views/about.html'"></div>
+	<div ng-if="show=='sponsors'" ng-include="'views/about.html'"></div>
+</div>
+<STYLE>
+#container-wrapper h4{
+  margin-top: 0
+}
+.justify{
+	text-align: justify;
+}
+.portfolio-content h4{
+ 	font-size: 20px;
+}
+.portfolio-item {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+     background: #CB9191;
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(255,255,255,0.8);
+    -moz-box-shadow: 1px 1px 2px 0 rgba(255,255,255,0.8);
+    box-shadow: 1px 1px 2px 0 rgba(255,255,255,0.8);
+}
+.hover-content {
+    position: relative;
+}
+.item-wrapper{
+    padding: 4px;
+    background-color: #CB9191;
+    box-shadow: 1px 1px 2px 0 rgba(39, 39, 39, 0.8);
+    margin-bottom: 25px;
+}
+.portfolio-img {
+    width: 100%;
+    height: 150px!important;
+        background-image: url(https://s3-ap-southeast-1.amazonaws.com/purplesq/media/images/Banner-images/Showcase_thumbnails/pepsi_thumbnail2.jpg);
+    background-position: center center;
+        background-size: contain;
+    background-repeat: no-repeat;
+    background-color: beige;
+}
+a:hover {
+    color: #1E1716!important;
+    text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+a {
+    color: #3F3131!important;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.hover-content:hover .overlay-content{
+	opacity: 1;
+}
+.hover-content>.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 4;
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    text-align: justify;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bold;
+    transition: all linear .15s;
+    -ms-transition: all linear .15s;
+    -moz-transition: all linear .15s;
+    -webkit-transition: all linear .15s;
+    -o-transition: all linear .15s;
+}
+.portfolio-content {
+    padding: 5px 10px 10px;
+}.portfolio-content>h4 {
+    padding-top: 10px;
+    height: 50px;
+}
+.portfolio-content h4{
+	margin:0;
+}
+.description{
+	margin-bottom: 5px;
+}
+.ng-enter 
+      {
+          -webkit-transition: .7s;
+          transition: .7s;
+          opacity:0;
+      }
+      .ng-enter-active 
+      {
+          opacity:1;
+      }
+ 
+ 
+      .ng-leave 
+      {
+          -webkit-transition: .6s;
+          transition: .3s;
+      }
+      .ng-leave-active 
+      {
+          opacity:0;
+      }
+</style>
+<style>
+.temp{
+	position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; overflow-y: auto; z-index: 9999; opacity: 1; animation-duration: 0.8s; background-color:white; color:black;text-align:left
+}
+.zoomIn {
+	-webkit-animation-name: zoomIn;
+	animation-name: zoomIn;
+}
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+#closebt-container {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+	height: 52px!important;
+	z-index: 6;
+}
+.bounceOut {
+	-webkit-animation-name: bounceOut;
+	animation-name: bounceOut;
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+}
+</style>
+<style>
+
+
+.closebt {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor:pointer;
+	
+}
+img.closebt{
+	width: 50px!important;
+    display: inline!important;
+}
+.closebt:hover {
+	transform:rotate(90deg);
+}
+ul{
+	margin-bottom: 18px;
+}
+
+</style>
+<style>
+#modal-container {
+	position:relative;
+	margin-top:30px;
+	margin-bottom: 30px;
+	overflow:hidden;
+}
+#modal-container h4,#modal-container h5,#modal-container h3,#modal-container h2 {
+    text-transform: uppercase;
+}
+
+h3,h4,h2,h5{
+	margin: 10px 0;
+}
+p{
+	margin: 0px 0px 10px;
+}
+
+</style>
+<style>
+@-webkit-keyframes zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);-ms-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}.zoomIn{-webkit-animation-name:zoomIn;animation-name:zoomIn}@-webkit-keyframes zoomInDown{0%{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);transform:scale3d(.475,.475,.475) translate3d(0,60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}
+@-webkit-keyframes zoomOut{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}100%{opacity:0}}@keyframes zoomOut{0%{opacity:1}50%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);-ms-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}100%{opacity:0}}.zoomOut{-webkit-animation-name:zoomOut;animation-name:zoomOut}
+</style>

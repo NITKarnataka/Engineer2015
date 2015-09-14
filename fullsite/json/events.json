@@ -1,0 +1,59 @@
+[
+    {
+        "name": "Events",
+        "description": [
+        	"cool shit!! check coutv casd",
+        	"mandira bohra",
+        	"mazjiasda bohra",
+        	"hello vinit"
+        	]
+    },
+    {
+        "name": "Mechanical",
+        "link": "mechanical",
+        "pic": "",
+        "description": "think. create. engineer"
+    },
+    {
+        "name": "Biz Events",
+        "link": "biz",
+        "pic": "",
+        "description": "think. create. engineer"
+    },
+    {
+        "name": "Civil",
+        "link": "civil",
+        "pic": "",
+        "description": "think. create. engineer.  Actually dont think.. just know civil is cool"
+    },
+    {
+        "name": "Comps",
+        "link": "comps",
+        "pic": "",
+        "description": "think. create. engineer"
+    },
+    {
+        "name": "Chemical",
+        "link": "chemical",
+        "pic": "",
+        "description": "think. create. engineer"
+    },
+    {
+        "name": "Mining",
+        "link": "mining",
+        "pic": "",
+        "description": "think. create. askcheeku engineer"
+    },
+    {
+        "name": "Metallurgical",
+        "link": "metallurgical",
+        "pic": "",
+        "description": "META Mondster"
+    },
+    {
+        "name": "Tronix",
+        "link": "tronix",
+        "pic": "",
+        "description": "think. create. engineer"
+    }
+]

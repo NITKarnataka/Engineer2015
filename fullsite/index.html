@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+	
+	<head>
+
+		<!-- Meta -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Engineer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Engineer Web Team" />
+		<meta name="keywords" content="engi, engineer, nitk, nitk surathkal, tech fest" />
+		<meta name="description" content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India." />
+
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@EngineerNITK">
+		<meta name="twitter:creator" content="@EngineerNITK">
+		<meta name="twitter:title" content="Engineer">
+		<meta name="twitter:description" content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India.">
+		<meta name="twitter:image:src" content="http://www.engineer.org.in/images/custom/engisite.png">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Engineer" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.engineer.org.in" />
+		<meta property="og:image" content="http://www.engineer.org.in/images/custom/engisite.png" />
+		<meta property="og:description" content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India." />
+		<meta property="og:site_name" content="Engineer" />
+
+		<!-- engi fullsite libs -->
+		<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="plugins/parallax/parallax.css"/>
+		<link rel="stylesheet" type="text/css" href="css/avgrund.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+
+		<!-- multi level push menu libraries -->
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="plugins/mlpm/jquery.multilevelpushmenu.css" />
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext,latin-ext,cyrillic'>
+		
+	</head>
+	
+	<body ng-app="Engi" ng-controller="MainController">
+		
+
+		<div id="container" class="wrapper avgrund-ready">
+
+			<div ng-include="'views/sidepanel.html'"></div>
+
+			<div id="scene" class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+				<div class="layer" data-depth="0.10">
+					<div class="background"></div>
+				</div>
+				<div class="layer circle1" id="id1" data-depth="0.12" ng-click="showModal('events')"></div>
+				<div class="layer circle2" id="id2" data-depth="0.12" ng-click="showModal('workshops')"></div>
+				<div class="layer circle3" id="id3" data-depth="0.12" ng-click="showModal('techspeaks')"></div>
+				<div class="layer circle4" id="id4" data-depth="0.12" ng-click="showModal('technites')"></div>
+				<div class="layer circle5" id="id5" data-depth="0.12" ng-click="showModal('mainshow')"></div>
+				<div class="layer circle6" id="id6" data-depth="0.12" ng-click="showModal('about')"></div>
+				<div class="layer title" data-depth="0.12"><h1><span>think. create. engineer</span></h1></div>
+				<!--<div class="layer stationary" data-depth="0.0">
+						<img class="rotater" src="./img/1.png"/>
+						<img class="rotater anti" src="./img/2.png"/>
+						<img class="rotater" src="./img/3.png"/>
+						<img class="rotater anti" src="./img/4.png"/>
+						<img class="rotater" src="./img/5.png"/>
+						<img class="rotater anti" src="./img/6.png"/>
+						<img class="rotater" src="./img/7.png"/>
+						<img class="only" src="./img/9.png"/>
+				</div>-->
+				<div class="layer" data-depth="0">
+					<div ng-include="'views/countdown.html'"></div>
+				</div>
+				<div class="layer" data-depth="0.0"><div id="particles-js"></div></div>
+			</div>
+
+		</div>
+		
+		<div class="avgrund-overlay"></div>
+		<div ng-view autoscroll="false"></div>
+
+
+
+		<!-- BODY SCRIPTS -->
+		
+		<!-- jquery and modernizer -->
+		<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="plugins/modernizer/modernizer.min.js"></script>
+		
+		<!-- particles -->
+		<script type="text/javascript" src="plugins/particles/particles.min.js"></script>
+		<script type="text/javascript" src="plugins/particles/particle.config.js"></script> 
+
+		<!-- parallax  -->
+		<script type="text/javascript" src="plugins/parallax/libraries.min.js"></script>
+		<script type="text/javascript" src="plugins/parallax/jquery.parallax.min.js"></script>
+		<script type="text/javascript" src="plugins/parallax/parallax.custom.js"></script>
+		
+		<!-- countdown -->
+		<script type="text/javascript" src="plugins/countdown/kinect.js"> </script>
+		<script type="text/javascript" src="plugins/countdown/jquery.final-countdown.min.js"></script>
+
+		<!-- multi level menu libs -->
+		<script type="text/javascript" src="plugins/mlpm/jquery.multilevelpushmenu.js"></script>
+
+		<!-- angular libs -->
+		<script type="text/javascript" src="plugins/angular/angular.min.js"></script>
+		<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
+		<script type="text/javascript" src="plugins/angular/animate.min.js"></script>
+
+		<!-- angular custom code -->
+		<script type="text/javascript" src="ng/app.js"></script>
+		<script type="text/javascript" src="ng/ctrl/EventsController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/LeafController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/OtherController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/RegisterController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/FormFillController.js"></script>
+		
+		<!-- our custom scripts  -->
+		<script type="text/javascript" src="/js/custom.js"></script>
+
+	</body>
+</html>

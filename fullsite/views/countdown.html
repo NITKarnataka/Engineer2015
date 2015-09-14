@@ -1,0 +1,64 @@
+<div class="countdown countdown-container">
+	<div class="clock">
+		<div class="clock-item clock-days countdown-time-value">
+			<div class="wrap">
+				<div class="inner">
+					<div id="canvas-days" class="clock-canvas"></div>
+					<div class="text">
+						<p class="val">0</p>
+						<p class="type-days type-time">DAYS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clock-item clock-hours countdown-time-value">
+			<div class="wrap">
+				<div class="inner">
+					<div id="canvas-hours" class="clock-canvas"></div>
+					<div class="text">
+						<p class="val">0</p>
+						<p class="type-hours type-time">HOURS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clock-item clock-minutes countdown-time-value">
+			<div class="wrap">
+				<div class="inner">
+					<div id="canvas-minutes" class="clock-canvas"></div>
+					<div class="text">
+						<p class="val">0</p>
+						<p class="type-minutes type-time">MINUTES</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clock-item clock-seconds countdown-time-value">
+			<div class="wrap">
+				<div class="inner">
+					<div id="canvas-seconds" class="clock-canvas"></div>
+					<div class="text">
+						<p class="val">0</p>
+						<p class="type-seconds type-time">SECONDS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<script type="text/javascript">
+	$('document').ready(function() {
+		'use strict';
+		var today = new Date();
+		$('.countdown').final_countdown({
+			'start': 1441627200,
+			'end': 1444305600,
+			'now':  today.getTime() / 1000        
+		});
+		/*$('.stationary img').each(function(fadeInDiv) {
+			$(this).delay((fadeInDiv+1) * 500).fadeIn(500*fadeInDiv);
+		});*/
+	});
+	</script>

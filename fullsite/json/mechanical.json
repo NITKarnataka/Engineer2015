@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Mechanical Events",
+        "description": [
+            "cool"
+        ]
+    },
+    {
+        "name": "Perfect Machine",
+        "pic": "perfectmachine.svg",
+        "link": "perfectmachine",
+        "description": "Participants design a robot which is made to complete some specified tasks"
+    },
+    {
+        "name": "Wright Flight",
+        "pic": "wrightflight.svg",
+        "link": "wrightflight",
+        "description": "Participants take part with their own designed gliders completing the specified tasks within the stipulated time."
+    },
+    {
+        "name": "Proteus",
+        "pic": "proteus.svg",
+        "link": "proteus",
+        "description": "Competition involving the underwater robotics in which participants take part with their own designed bots"
+    },
+    {
+        "name": "Robowars",
+        "pic": "robowars.svg",
+        "link": "robowars",
+        "description": "Robots fight to beat each other."
+    },
+    {
+        "name": "Velocity",
+        "pic": "velocity.svg",
+        "link": "velocity",
+        "description": "It is the flagship event of Engineer involving the RC car racing with self designed cars."
+    }
+]

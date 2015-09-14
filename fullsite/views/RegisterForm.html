@@ -1,0 +1,44 @@
+<div class="row" ng-controller="RegisterController">
+	<div class="col-md-2">
+		<button class="btn btn-block btn-info" ng-click="toggleRegisterForm()">{{ RegisterForm ? 'Nah!':'Register' }}</button>
+	</div>
+	<div class="clearfix"></div>
+	<div ng-show="RegisterForm">
+		<hr/>
+		<div class="col-md-4">
+			<input type="text" ng-model="form.name" class="form-control form-group" placeholder = 'Name' required/>
+		</div>
+		<div class="col-md-4">
+			<input type="text" ng-model="form.email" class="form-control form-group" placeholder = 'Email' required/>
+		</div>
+		<div class="col-md-4">
+			<input type="text" ng-model="form.number" class="form-control form-group" placeholder = 'Phone Number' required/>
+		</div>
+		<div class="col-md-2 form-group">
+			<button class="btn btn-block btn-primary" ng-click="addFriends()">Add Friends</button>
+		</div>
+		<div class="clearfix"></div>
+		<div ng-repeat="friend in form.friends">
+			<div class="col-md-4">
+				<input type="text" ng-model="friend.name" class="form-control form-group" placeholder = 'Name' required/>
+			</div>
+			<div class="col-md-4">
+				<input type="text" ng-model="friend.email" class="form-control form-group" placeholder = 'Email' required/>
+			</div>
+			<div class="col-md-4">
+				<input type="text" ng-model="friend.number" class="form-control form-group" placeholder = 'Phone Number' required/>
+			</div>
+			<div class="col-md-3 form-group">
+				<button class="btn btn-block btn-primary" ng-click="addFriends()">Add More Friends</button>
+			</div>
+			<div class="col-md-1 form-group">
+				<button class="btn btn-block btn-danger" ng-click="removeFriends($index)">X</button>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="col-md-3">
+			<button class="btn-success btn btn-block">Register</button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
