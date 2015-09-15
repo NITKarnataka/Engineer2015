@@ -54,12 +54,6 @@ var Engi;
 		.when('/engiconnect', {
 			templateUrl: './views/leaf.html'
 		});
-	
-
-		// $locationProvider.html5Mode({
-		//   enabled: true,
-		//   requireBase: false
-		// });
 
 	}]);
 
@@ -92,7 +86,7 @@ var Engi;
 
 			$('.scene').toggleClass('pusher')
 			$timeout(function(){$scope.misc.parent= redirect;
-			$location.path('/'+redirect);},500);
+			$location.path('/'+redirect);},200);
 		}
 
 

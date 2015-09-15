@@ -8,11 +8,6 @@
                 "subtitle": "Overview",
                 "subdescription": "To handle an event at a scale as large as that of Engineer, the support crew required is huge. And we could use all the help we can acquire, inside and outside college. The Campus Ambassador is one such initiative to assist the Engineer Team, by acting as a link between the participating colleges and the in-college support crew.",
                 "subimage": ""
-            },
-            {
-                "subtitle": "Contact Details",
-                "subdescription": "Bishal Thingom \nMobile No.: +91 7795488295\n\nArun Nandewal\nMobile No.: +91 8147963621 ",
-                "subimage": ""
             }
         ],
         "list": [
@@ -34,6 +29,15 @@
                     "Accommodation and food expenses will be handled by Team Engineer.",
                     "Free entry to all the pro-shows.",
                     "Engineer T-shirt, and other Engineer goodies."
+                ]
+            },
+            {
+                "title": "Contact Details",
+                "items": [
+                    "Mahendra Bohra - +91 8884794939",
+                    "Bishal Thingom -  +91 7795488295",
+                    "Arun Nandewal -   +91 8147963621",
+                    "Mail at ca@engineer.org.in"
                 ]
             }
         ],

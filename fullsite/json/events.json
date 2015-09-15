@@ -6,43 +6,43 @@
     {
         "name": "Mechanical",
         "link": "mechanical",
-        "pic": "",
-        "description": "think. create. engineer"
+        "pic": "mechanical.jpg",
+        "description": ""
     },
     {
         "name": "Biz Events",
         "link": "biz",
-        "pic": "",
-        "description": "think. create. engineer"
+        "pic": "biz.jpg",
+        "description": ""
     },
     {
         "name": "Civil",
         "link": "civil",
-        "pic": "",
-        "description": "think. create. engineer.  Actually dont think.. just know civil is cool"
+        "pic": "civil.jpg",
+        "description": ""
     },
     {
         "name": "Comps",
         "link": "comps",
-        "pic": "",
-        "description": "think. create. engineer"
+        "pic": "computer.jpg",
+        "description": ""
     },
     {
         "name": "Chemical",
         "link": "chemical",
-        "pic": "",
-        "description": "think. create. engineer"
+        "pic": "chemical.jpg",
+        "description": ""
     },
     {
         "name": "Metallurgical",
         "link": "metallurgical",
-        "pic": "",
-        "description": "META Mondster"
+        "pic": "metallurgy.jpg",
+        "description": ""
     },
     {
         "name": "Tronix",
         "link": "tronix",
-        "pic": "",
-        "description": "think. create. engineer"
+        "pic": "tronix.jpg",
+        "description": ""
     }
 ]
