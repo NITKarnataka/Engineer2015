@@ -14,7 +14,7 @@
 
 	<div ng-show="CAForm&&!success" class="caform">
 		<hr/>
-		<div><form name="caform">
+		<div><form name="caform" >
 			<div class="col-md-12">
 				<h4>BASIC INFORMATION</h4>
 			</div>
@@ -28,7 +28,7 @@
 			</div>
 			<div class="col-md-3">
 				<h5>Phone Number*</h5>
-				<input type="text" ng-model="ca.number" class="form-control form-group" placeholder = 'Phone Number' required/>
+				<input type="number" ng-model="ca.number" class="form-control form-group" placeholder = 'Phone Number' required maxlength="10" minlength="10"/>
 			</div>
 			<div class="col-md-3">
 				<h5>College*</h5>
@@ -38,10 +38,13 @@
 				<h4>TELL US MORE</h4>
 			</div>
 			<div class="col-md-12">
-				<h5>Year of Pursuing*</h5>
+				<h5>Year of Pursuing* {{ca.year}}</h5>
 			</div>
+
 			<div class="col-md-3">
-				<input type="Number" ng-model="ca.year" class="form-control form-group" placeholder = 'Year'/>
+				<select class="form-control form-group" ng-init="ca.year = year[3]" ng-model="ca.year">
+					<option ng-repeat="yer in year" >{{yer}}</option>
+				</select>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">

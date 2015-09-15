@@ -3,9 +3,9 @@
         <h2><i class="fa fa-reorder"></i>Engineer</h2>
         <ul>
             
-            <li>
+            <!--<li>
                 <a href="#"><i class="fa fa-lightbulb-o"></i>About</a>
-            </li>
+            </li>-->
             
             <li>
                 <a href="#/"><i class="fa fa-magnet"></i>Events</a>
@@ -234,6 +234,9 @@
 
 // collapse on clicking pushobj
 $('body').on('click', '#container', function () {
+  $('#menu').multilevelpushmenu('collapse');
+});
+$('body').on('click', '#animatedModal', function () {
   $('#menu').multilevelpushmenu('collapse');
 });
 

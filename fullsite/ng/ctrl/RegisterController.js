@@ -7,6 +7,7 @@ Engi.controller('RegisterController', function($http,$rootScope,$scope, $timeout
 		email:'',
 		friends:[]
 	}
+	$scope.year=["1st Year","2nd Year","3rd year","4th year","Other"]
 	$scope.addFriends = function(){
 		$scope.form.friends.push({name:'',number:'',email:''});
 	};
@@ -21,7 +22,7 @@ Engi.controller('RegisterController', function($http,$rootScope,$scope, $timeout
 		email:'',
 		college:'',
 		location:'',
-		year:4,
+		year:$scope.year[3],
 		stream:'',
 		held:false,
 		desc:'',
