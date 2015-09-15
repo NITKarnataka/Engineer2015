@@ -47,7 +47,7 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 	$scope.init();
 
 	$scope.changeBack = function(){
-		$location.path($rootScope.prevUrl)
+		$location.path('/events')
 	}
 
 })

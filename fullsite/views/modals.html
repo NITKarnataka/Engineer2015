@@ -5,7 +5,7 @@
         <div class="top-5f">
           <div class="col-md-2">
             <div ng-if="cat">
-              {{cat}}
+              <div class="col-md-2"><span ng-click="changeBack()"><img src="./img/bbtn.png" class="mt-10 bbt"/></span></div>
             </div>
             <div ng-if="!cat">
               &nbsp;
@@ -233,7 +233,7 @@
 .top-5f{
   position: fixed;
   top:5%;
-  z-index: 5;
+  z-index: 10;
   left: 5%;
   right: 5%;
   transition:all .5s ease;
@@ -263,5 +263,11 @@ img.closebt{
 }
 .mt-10{
   margin-top: 10px
+}
+img.bbt{
+     width: 23px!important;
+    display: inline!important;
+    height: 40px;
+    cursor: pointer;
 }
 </style>

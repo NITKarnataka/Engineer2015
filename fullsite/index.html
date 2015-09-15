@@ -68,11 +68,8 @@
 	</head>
 	
 	<body ng-app="Engi" ng-controller="MainController">
-
+		<div ng-include="'views/sidepanel.html'"></div>
 		<div id="container" class="wrapper">
-			
-			<div ng-include="'views/sidepanel.html'"></div>
-
 			<div id="scene" class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
 				<div class="layer" data-depth="0.03">
 					<div class="background"></div>
@@ -86,27 +83,27 @@
 					<div class="modal-menu-items">
 						<div class="circle1" ng-click="showModal('events')">
 							<img class="outer-c" src="./img/1.png">
-							<img src="./img/engicnnt.png">
+							<img src="./img/rbt.png">
 						</div>
 						<div class="circle2" ng-click="showModal('workshops')">
 							<img class="outer-c" src="./img/1.png">
-							<img src="./img/rbt.png">
+							<img src="./img/workshop.png">
 						</div>
 						<div class="circle3" ng-click="showModal('techspeaks')">
 							<img class="outer-c" src="./img/1.png">
 							<img src="./img/techxpk.png">
 						</div>
-						<div class="circle4" ng-click="showModal('technites')">
+						<a href="http://technites.in" target="_blank"><div class="circle4" ng-click="showModal('technites')">
 							<img class="outer-c" src="./img/1.png">
 							<img src="./img/swiss.png">
-						</div>
+						</div></a>
 						<div class="circle5" ng-click="showModal('mainshow')">
 							<img class="outer-c" src="./img/1.png">
 							<img src="./img/cloud.png">
 						</div>
 						<div class="circle6" ng-click="showModal('engiconnect')">
 							<img class="outer-c" src="./img/1.png">
-							<img src="./img/rbt.png">
+							<img src="./img/engicnnt.png">
 						</div>
 					</div>
 				</div>

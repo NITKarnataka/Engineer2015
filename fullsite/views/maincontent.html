@@ -7,7 +7,7 @@
 	<h4>{{page.name}}</h4>
 	<ul class="tabs">
 		<li ng-repeat="desc in page.subdesc" ng-click="showTab(desc.subtitle,'desc')" class="{{showSubtitle==desc.subtitle?'activeTab':''}}">{{desc.subtitle}}</li>
-		<li ng-if="page.list.length!=0&&page.list[0].title!=''" ng-click="showTab(desc.title,'rules')" class="{{showSubtitle==desc.subtitle?'activeTab':''}}" ng-repeat="desc in page.list">{{desc.title}}</li>
+		<li ng-if="page.list.length!=0&&page.list[0].title!=''" ng-click="showTab(desc.title,'rules')" class="{{showSubtitle==desc.title?'activeTab':''}}" ng-repeat="desc in page.list">{{desc.title}}</li>
 		<li ng-if="page.subimage.length>1" ng-click="showTab('gallery')" class="{{showThis=='gallery'?'activeTab':''}}">Gallery</li>
 	</ul>
 	
