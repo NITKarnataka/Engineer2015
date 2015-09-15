@@ -3,29 +3,25 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 	$scope.misc.showModal = true;
 	$scope.cat = $routeParams.cat;
 
+	$('#dd').scroll(function(){
+		if($(this).scrollTop()!=0){
+			$('.top-5f').addClass('fixedbar');
+		}else{
+			$('.top-5f').removeClass('fixedbar');
+		}
+	})
+
 	var currentPage;
 
 	if($scope.misc.showModal&&(!($scope.misc.wasLeaf))){
-		$timeout(function() {
-				$("body").addClass("avgrund-active");
-		}, 100);
-		$timeout(function() {
-				$(".avgrund-close").css("opacity","1");
-		}, 500);
+
 	}
 	if($scope.misc.showModal&&$scope.misc.wasLeaf&&!($routeParams.id)){
-		$("body").addClass("avgrund-active");
-		$(".avgrund-close").css("opacity","1");
 		$scope.misc.wasLeaf = false;
 	}
 
 	$scope.turnOffModal = function(){
 		$scope.misc.showModal = false;
-		$timeout(function() {
-				$("body").removeClass("avgrund-active");
-				$(".avgrund-close").css("opacity","0");
-			}, 100);
-
 		$timeout(function() {
 			$location.path('/');
 		}, 500);

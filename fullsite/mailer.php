@@ -50,7 +50,7 @@ if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
 		$mail->isHTML(true);                                  // Set email format to HTML
 
 		$mail->Subject = 'Thank You for registering as NITK Engineer Campus Ambassador';
-		$mail->Body    = 'Dear, '.$data->name.' ,<br>Thank you for Registering..we will get back to you soon..<br>Contact connektivion@gmail.com for more details..';
+		$mail->Body    = 'Dear '.$data->name.' ,<br>Thank you for Registering..we will get back to you soon..<br>Contact connektivion@gmail.com for more details..';
 		$mail->send();
 
 	    $response[ 'success' ] = true;

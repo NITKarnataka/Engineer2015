@@ -3,11 +3,11 @@
 		<img class="closebt" src="./img/closebt.svg" ng-click="closeLeaf()">
 	</div>
 </div>
-<div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+<div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2 col-xs-offset-2">
 	<h4>{{page.name}}</h4>
 	<ul class="tabs">
-		<li ng-repeat="desc in page.subdesc" ng-click="showTab(desc.subtitle)" class="{{showSubtitle==desc.subtitle?'activeTab':''}}">{{desc.subtitle}}</li>
-		<li ng-if="page.list.length>1" ng-click="showTab('rules')" class="{{showThis=='rules'?'activeTab':''}}">Rules</li>
+		<li ng-repeat="desc in page.subdesc" ng-click="showTab(desc.subtitle,'desc')" class="{{showSubtitle==desc.subtitle?'activeTab':''}}">{{desc.subtitle}}</li>
+		<li ng-if="page.list.length!=0&&page.list[0].title!=''" ng-click="showTab(desc.title,'rules')" class="{{showSubtitle==desc.subtitle?'activeTab':''}}" ng-repeat="desc in page.list">{{desc.title}}</li>
 		<li ng-if="page.subimage.length>1" ng-click="showTab('gallery')" class="{{showThis=='gallery'?'activeTab':''}}">Gallery</li>
 	</ul>
 	
@@ -26,11 +26,13 @@
 		</div>
 	</div>
 	<div ng-repeat="item in page.list" ng-if="showThis=='rules'">
-		<div ng-if="page.list.length>1">
-			<h5>{{item.title}}</h5>
-			<ul>
-				<li ng-repeat="rules in item.items">{{rules}}</li>
-			</ul>
+		<div ng-if="page.list.length>0">
+			<div ng-show="showSubtitle=='{{item.title}}'">
+				<h5>{{item.title}}</h5>
+				<ul>
+					<li ng-repeat="rules in item.items">{{rules}}</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="row form-group" ng-if="showThis=='gallery'">

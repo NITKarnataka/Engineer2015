@@ -115,6 +115,7 @@ Engi.controller('FormController', function($scope,$http) {
 				delete $scope.edits[i].list;
 				$scope.edits[i].list=[{title:'',items:['']}];
 			}
+			console.log($scope.edits)
 		});
 	}
 })

@@ -48,40 +48,90 @@
 	<body ng-app="Engi" ng-controller="MainController">
 		
 
-		<div id="container" class="wrapper avgrund-ready">
+		<div id="container" class="wrapper">
 
 			<div ng-include="'views/sidepanel.html'"></div>
 
 			<div id="scene" class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
-				<div class="layer" data-depth="0.10">
+				<div class="layer" data-depth="0.03">
 					<div class="background"></div>
 				</div>
-				<div class="layer circle1" id="id1" data-depth="0.12" ng-click="showModal('events')"></div>
-				<div class="layer circle2" id="id2" data-depth="0.12" ng-click="showModal('workshops')"></div>
-				<div class="layer circle3" id="id3" data-depth="0.12" ng-click="showModal('techspeaks')"></div>
-				<div class="layer circle4" id="id4" data-depth="0.12" ng-click="showModal('technites')"></div>
-				<div class="layer circle5" id="id5" data-depth="0.12" ng-click="showModal('mainshow')"></div>
-				<div class="layer circle6" id="id6" data-depth="0.12" ng-click="showModal('about')"></div>
-				<div class="layer title" data-depth="0.12"><h1><span>think. create. engineer</span></h1></div>
-				<!--<div class="layer stationary" data-depth="0.0">
-						<img class="rotater" src="./img/1.png"/>
-						<img class="rotater anti" src="./img/2.png"/>
-						<img class="rotater" src="./img/3.png"/>
-						<img class="rotater anti" src="./img/4.png"/>
-						<img class="rotater" src="./img/5.png"/>
-						<img class="rotater anti" src="./img/6.png"/>
-						<img class="rotater" src="./img/7.png"/>
-						<img class="only" src="./img/9.png"/>
-				</div>-->
-				<div class="layer" data-depth="0">
+				<div class="layer big-planet" data-depth="0.03">
+				</div>
+				<div class="layer space-station" data-depth="0.1"></div>
+				<div class="layer planet-1" data-depth="0.04"></div>
+				<div class="layer planet-2" data-depth="0.05" style="width:100px;
+				height:200px;background:url('./img/plnt2.png')"></div>
+				<div class="layer astro" data-depth="0.06"></div>
+				<div class="layer modal-menu-wrapper" data-depth="0.07">
+					<div class="modal-menu-items">
+						<div class="circle1" ng-click="showModal('events')">
+							<img class="outer-c" src="./img/1.png">
+							<img src="./img/engicnnt.png">
+						</div>
+						<div class="circle2" ng-click="showModal('workshops')">
+							<img class="outer-c" src="./img/1.png">
+							<img src="./img/rbt.png">
+						</div>
+						<div class="circle3" ng-click="showModal('techspeaks')">
+							<img class="outer-c" src="./img/1.png">
+							<img src="./img/techxpk.png">
+						</div>
+						<div class="circle4" ng-click="showModal('technites')">
+							<img class="outer-c" src="./img/1.png">
+							<img src="./img/swiss.png">
+						</div>
+						<div class="circle5" ng-click="showModal('mainshow')">
+							<img class="outer-c" src="./img/1.png">
+							<img src="./img/cloud.png">
+						</div>
+						<div class="circle6" ng-click="showModal('engiconnect')">
+							<img class="outer-c" src="./img/1.png">
+							<img src="./img/rbt.png">
+						</div>
+					</div>
+				</div>
+				<div class="layer title" data-depth="0">
+					<img src="./img/engix.png" class="brackets">
+					<img src="./img/engx.png" class="innertext">
+				</div>
+				<div class="layer header" data-depth="0"></div>
+				
+				<div class="layer ca-logo" data-depth="0.07" ng-click="showModal('CA')"></div>
+				<div class="layer cool-display" data-depth="0.07">
+					<img src="./img/rightconebox.png" class="coolouter">
+					<img src="./img/eventst.png" class="cool1">
+					<img src="./img/works.png" class="cool2">
+					<img src="./img/rightsideboxtext.png" class="cool3">
+					<img src="./img/techn.png" class="cool4">
+					<img src="./img/ms.png" class="cool5">
+					<img src="./img/cnnct.png" class="cool6">
+				</div>
+				<div class="layer stationary" data-depth="0.0">
+					<img class="rotater" src="./img/ER.png"/>
+					<img class="only" src="./img/circle_12.png"/>
+				</div>
+				<div class="layer timer-area" data-depth="0">
 					<div ng-include="'views/countdown.html'"></div>
+				</div>
+				<div class="layer social-icons" data-depth="0.04">
+					<div class="wrapper-fb">
+						<i class="fa fa-facebook"></i>
+					</div>
+					<div class="wrapper-twitter">
+						<i class="fa fa-twitter"></i>
+					</div>
+					<div class="wrapper-youtube">
+						<i class="fa fa-youtube-play"></i>
+					</div>
+					<div class="wrapper-instagram">
+						<i class="fa fa-instagram"></i>
+					</div>
 				</div>
 				<div class="layer" data-depth="0.0"><div id="particles-js"></div></div>
 			</div>
 
 		</div>
-		
-		<div class="avgrund-overlay"></div>
 		<div ng-view autoscroll="false"></div>
 
 

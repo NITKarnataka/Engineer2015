@@ -1,13 +1,13 @@
 <div class="row" ng-controller="RegisterController">
 	<div ng-show="success" class='col-md-12'>
-		<h4 class="bg-success">Thanx for registering.. we ll get back to you soon.</h4>
+		<h4 class="bg-success">Thanx for registering we will get back to you soon.Please Check your inbox or drop a mail to vishal@enginner.com</h4>
 	</div>
 	<div ng-show="error" class='col-md-12'>
 		<h4 class="bg-error">Some Problem occured</h4>
 	</div>
 
 	<div ng-show="!success&&!error" class="col-md-4">
-		<button class="btn btn-block btn-info" ng-click="toggleCAForm()">{{ CAForm ? 'Nah!':'BECOME AN ENGIREP' }}</button>
+		<button class="btn btn-block {{!CAForm ?'btn-info':'btn-danger'}}" ng-click="toggleCAForm()">{{ CAForm ? 'X':'BECOME AN ENGIREP' }}</button>
 	</div>
 
 	<div class="clearfix"></div>

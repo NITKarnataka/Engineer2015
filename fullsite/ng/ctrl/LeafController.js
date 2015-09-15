@@ -2,10 +2,6 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 	$scope.misc.leafCheck++;
 	$scope.misc.wasLeaf = true;1
 
-	$timeout(function() {
-		$("body").removeClass("avgrund-active");
-	}, 365);
-
 	$scope.init = function(){
 		var name;
 		$scope.show = 'final-event';
@@ -27,9 +23,18 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 		$http.get('./json/'+name+'.master.json').then(function(msg){
 			if(msg.data.length){
 				for(i=0;i<msg.data.length;i++){
-					if(msg.data[i].link==$routeParams.id)
-						$scope.page = msg.data[i];
+					if($routeParams.id!=undefined){
+						if(msg.data[i].link==$routeParams.id)
+							$scope.page = msg.data[i];
+					}
+					else{
+						if($location.$$path=='/CA'||$location.$$path=='/engiconnect'){
+							$scope.page = msg.data[0];
+							break;
+						}
+					}
 				}
+				console.log($scope.page)
 				$scope.showThis = 'desc';
 				$scope.showSubtitle=$scope.page.subdesc[0].subtitle;
 			}
@@ -40,10 +45,15 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 
 	$scope.init();
 
-	$scope.showTab = function(name){
-		if(name!='all'&&name!='rules'&&name!='gallery'){
-			$scope.showThis='desc';
-			$scope.showSubtitle=name;
+	$scope.showTab = function(name,name2){
+		if(name!='gallery'){
+			if(name2=='desc'){
+				$scope.showThis='desc';
+				$scope.showSubtitle=name;
+			}else{
+				$scope.showThis='rules';
+				$scope.showSubtitle=name;
+			}
 		}else{
 		$scope.showThis = name;
 		}
