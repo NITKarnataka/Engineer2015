@@ -3,6 +3,8 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 	$scope.misc.showModal = true;
 	$scope.cat = $routeParams.cat;
 
+	$('.scene').addClass('pusher')
+	
 	$('#dd').scroll(function(){
 		if($(this).scrollTop()!=0){
 			$('.top-5f').addClass('fixedbar');
@@ -24,6 +26,7 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 		$scope.misc.showModal = false;
 		$timeout(function() {
 			$location.path('/');
+			$('.scene').removeClass('pusher')
 		}, 500);
 	};
 

@@ -16,6 +16,21 @@ html{
   top: -5%;
 }
 
+
+/* mlpm css */
+.multilevelpushmenu_wrapper h2  {
+  color: #517193 !important;
+}
+
+.multilevelpushmenu_wrapper .backItemClass  {
+  background: #11385E !important;
+}
+
+.multilevelpushmenu_wrapper .levelHolderClass {
+  background: #0A2A49 !important;
+}
+
+
 /* ---- particles.js container ---- */
 
 #particles-js{
@@ -52,7 +67,7 @@ html{
   height: 35%;
   width: 25%;
   left: 37%!important;
-  top:35%!important;
+  top:33.3%!important;
 
 }
 .anti{
@@ -67,14 +82,14 @@ html{
 .title{
   top:auto!important;
   bottom:12%!important;
-  width:30%;
+  width:33.33%;
   height:15%;
-  left:35%!important;
+  left:33.33%!important;
 }
 .header{
-  width:30%;
+  width:33.33%;
   height:15%;
-  left:35%!important;
+  left:33.33%!important;
   top:3%!important;
   background-image: url('../img/header.png');
   background-repeat: no-repeat;
@@ -90,7 +105,7 @@ html{
 /*3d*/
 
 .modal-menu-wrapper{
-  width: 120px;
+  width: 7%;
   height: 90%;
   right: 2%!important;
   left: auto!important;
@@ -136,6 +151,18 @@ html{
   filter: blur(5px);
   transition:blur 1.5s ease-in;
 }
+.wrapper{
+  perspective:1000px;
+}
+.pusher{
+      transform: translate3d(0px, 0px, -30px)!important;
+}
+.scene{
+  transition:all .5s ease-out;
+}
+.logo-layer{
+  z-index: -1;
+}
 
 /*timer */
 .countdown-container {
@@ -145,7 +172,7 @@ html{
 .clock{
   display: flex;
       justify-content: space-around;
-    width: 500px;
+    width: 33%;
     margin: 20px auto 10px;
 
 }
@@ -265,8 +292,8 @@ html{
 
 }
 .ca-logo {
-    width: 220px;
-    height: 250px;
+    width: 20%;
+    height: 35%;
     background: url('../img/campusamb.png');
     background-size: contain!important;
     background-repeat: no-repeat!important;
@@ -332,4 +359,45 @@ html{
 }
 .wrapper-instagram:hover{
   background-color: #125688;
+}
+body > :not(.pace),body:before,body:after {
+      -webkit-transition:opacity .4s ease-in-out .2s!important;
+      -moz-transition:opacity .4s ease-in-out .2s!important;
+      -o-transition:opacity .4s ease-in-out .2s!important;
+      -ms-transition:opacity .4s ease-in-out .2s!important;
+      transition:opacity .4s ease-in-out .2s!important;
+    }
+/*mediaq*/
+@media (max-width: 865px){
+  .clock-item .inner{
+    width: 50px!important;
+    height: 50px!important;
+  }
+}
+@media (max-width: 500px){
+  .clock{
+    display: none;
+  }
+  .pusher{
+      transform: translate3d(0px, 0px, 0px)!important;
+  }
+  .social-icons{
+    bottom: 4%!important;
+    left:30%!important;
+    top:auto!important;
+    width: 40%;
+  }
+  .modal-menu-wrapper{
+ display: none!important;
+}
+
+.circle1,.circle2,.circle3,.circle4,.circle5,.circle6{
+  height: 80px!important;
+  width: 80px!important;
+  z-index: 100;
+}
+.space-station,.planet-1,.planet-2,.cool-display{
+  display: none!important;
+}
+
 }
