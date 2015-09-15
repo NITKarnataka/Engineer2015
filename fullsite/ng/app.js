@@ -1,50 +1,70 @@
 var Engi;
 
-(function() {
 	Engi = angular.module('Engi', ['ngRoute','ngAnimate']);
-})();
 
-(function() {
 
 	Engi.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
-		
-		$routeProvider.when('/events', {
+
+		$routeProvider
+		.when('/events', {
 			templateUrl: './views/modals.html',
-		}).when('/events/:cat', {
+		})
+		.when('/events/:cat', {
 			templateUrl: './views/modals.html'
-		}).when('/events/:cat/:id', {
+		})
+		.when('/events/:cat/:id', {
 			templateUrl: './views/leaf.html'
-		}).when('/workshops', {
+		})
+		.when('/workshops', {
 			templateUrl: './views/modals.html'
-		}).when('/workshops/:id', {
+		})
+		.when('/workshops/:id', {
 			templateUrl: './views/leaf.html'
-		}).when('/techspeaks', {
+		})
+		.when('/techspeaks', {
 			templateUrl: './views/modals.html'
-		}).when('/techspeaks/:id', {
+		})
+		.when('/techspeaks/:id', {
 			templateUrl: './views/leaf.html'
-		}).when('/technites', {
+		})
+		.when('/technites', {
 			templateUrl: './views/modals.html'
-		}).when('/technites/:id', {
+		})
+		.when('/technites/:id', {
 			templateUrl: './views/leaf.html'
-		}).when('/mainshow', {
+		})
+		.when('/mainshow', {
 			templateUrl: './views/modals.html'
-		}).when('/mainshow/:id', {
+		})
+		.when('/mainshow/:id', {
 			templateUrl: './views/leaf.html'
-		}).when('/fillform', {
+		})
+		.when('/fillform', {
 			templateUrl: './views/form.html'
-		}).when('/CA', {
+		})
+		.when('/CA', {
 			templateUrl: './views/leaf.html'
-		}).when('/about', {
+		})
+		.when('/about', {
 			templateUrl: './views/leaf.html'
-		}).when('/sponsors', {
+		})
+		.when('/sponsors', {
 			templateUrl: './views/leaf.html'
-		}).when('/engiconnect', {
+		})
+		.when('/engiconnect', {
 			templateUrl: './views/leaf.html'
 		});
-	}]);
-})();
+	
 
-(function() {
+		// $locationProvider.html5Mode({
+		//   enabled: true,
+		//   requireBase: false
+		// });
+
+	}]);
+
+
+
 	Engi.run(function ($rootScope, $location,$routeParams) {
 
 		var history = [];
@@ -61,9 +81,6 @@ var Engi;
 		};
 
 	});
-})();
-
-(function() {
 
 	Engi.controller('MainController', function($scope, $location,$timeout) {
 		$scope.misc = {
@@ -72,10 +89,12 @@ var Engi;
 			leafCheck:0
 		}
 		$scope.showModal = function(redirect){
-			$scope.misc.parent= redirect;
-			$location.path('/'+redirect);
+
+			$('.scene').toggleClass('pusher')
+			$timeout(function(){$scope.misc.parent= redirect;
+			$location.path('/'+redirect);},500);
 		}
 
 
 	})
-})();
+
