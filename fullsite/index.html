@@ -22,21 +22,43 @@
 		<meta name="twitter:creator" content="@EngineerNITK">
 		<meta name="twitter:title" content="Engineer">
 		<meta name="twitter:description" content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India.">
-		<meta name="twitter:image:src" content="http://www.engineer.org.in/images/custom/engisite.png">
+		<meta name="twitter:image:src" content="http://www.engineer.org.in/images/meta.png">
 
 		<!-- Open Graph data -->
 		<meta property="og:title" content="Engineer" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://www.engineer.org.in" />
-		<meta property="og:image" content="http://www.engineer.org.in/images/custom/engisite.png" />
+		<meta property="og:image" content="http://www.engineer.org.in/images/meta.png" />
 		<meta property="og:description" content="Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India." />
 		<meta property="og:site_name" content="Engineer" />
+
+		<!-- preloader -->
+		<script src="plugins/preloader/pace.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="plugins/preloader/pace-theme-center-atom.css" />
+		
+
+		<style type="text/css">
+		body > :not(.pace),body:before,body:after {
+		  -webkit-transition:opacity .4s ease-in-out;
+		  -moz-transition:opacity .4s ease-in-out;
+		  -o-transition:opacity .4s ease-in-out;
+		  -ms-transition:opacity .4s ease-in-out;
+		  transition:opacity .4s ease-in-out
+		}
+
+		body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-done):after {
+		  opacity:0
+		}
+		</style>
 
 		<!-- engi fullsite libs -->
 		<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="plugins/parallax/parallax.css"/>
 		<link rel="stylesheet" type="text/css" href="css/avgrund.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+
+
+
 
 		<!-- multi level push menu libraries -->
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
@@ -46,10 +68,9 @@
 	</head>
 	
 	<body ng-app="Engi" ng-controller="MainController">
-		
 
 		<div id="container" class="wrapper">
-
+			
 			<div ng-include="'views/sidepanel.html'"></div>
 
 			<div id="scene" class="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
@@ -115,7 +136,7 @@
 					<div ng-include="'views/countdown.html'"></div>
 				</div>
 				<div class="layer social-icons" data-depth="0.04">
-					<a href="http://facebook.com/engineernitk"><div class="wrapper-fb">
+					<a href="http://www.facebook.com/engineernitk"><div class="wrapper-fb">
 						<i class="fa fa-facebook"></i>
 					</div></a>
 					<a href="http://"><div class="wrapper-twitter">
@@ -124,7 +145,7 @@
 					<a href=""><div class="wrapper-youtube">
 						<i class="fa fa-youtube-play"></i>
 					</div></a>
-					<a href=""><div class="wrapper-instagram">
+					<a href="https://instagram.com/engineer_nitks/"><div class="wrapper-instagram">
 						<i class="fa fa-instagram"></i>
 					</div></a>
 				</div>
@@ -173,6 +194,10 @@
 		
 		<!-- our custom scripts  -->
 		<script type="text/javascript" src="js/custom.js"></script>
+
+
+<!-- preloader -->
+
 
 	</body>
 </html>
