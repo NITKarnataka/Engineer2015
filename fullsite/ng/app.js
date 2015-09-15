@@ -7,7 +7,7 @@ var Engi;
 (function() {
 
 	Engi.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
-
+		
 		$routeProvider.when('/events', {
 			templateUrl: './views/modals.html',
 		}).when('/events/:cat', {
@@ -73,9 +73,6 @@ var Engi;
 		}
 		$scope.showModal = function(redirect){
 			$scope.misc.parent= redirect;
-			$timeout(function() {
-				$("body").addClass("avgrund-active");
-			}, 100);
 			$location.path('/'+redirect);
 		}
 

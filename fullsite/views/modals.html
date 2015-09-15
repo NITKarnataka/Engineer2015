@@ -1,11 +1,22 @@
-<div class="modalwrapper" ng-controller='EventsController'>
-  <div>
-  <span class="avgrund-close" ng-click="turnOffModal()"><i class="fa fa-times-circle-o"></i></span>
-	<div class="avgrund-popin custom" style="overflow-y:scroll" id="style-3">
+<div id="dd" class="modalwrapper" ng-controller='EventsController'>
+  <div class="rel">
+	<div class="" id="">
     <div id="container-wrapper">
-  			<h4>{{obj[0].name}}</h4>
-  			<div class="row">
+        <div class="top-5f">
+          <div class="col-md-2">
+            <div ng-if="cat">
+              {{cat}}
+            </div>
+            <div ng-if="!cat">
+              &nbsp;
+            </div>
+          </div>
+          <h4 class="modal-title col-md-8">{{obj[0].name}}</h4>
+          <div class="col-md-2"><span ng-click="turnOffModal()"><img src="./img/closebtn.png" class="closebt mt-10"/></span></div>
+        </div>
+  			<div class="row mt-70">
   				<div class="col-md-12">
+            <p style="color:black;margin-top:0;text-align:left;color: black;margin: 0 0 10px;text-align: left;font-size: 18px;">{{obj[0].description}}</p>
   				</div>
   				<div ng-if="$index" class="col-md-3" ng-repeat = "t in obj">
             <div class="item-wrapper">
@@ -34,8 +45,16 @@
 </div>
 
 <STYLE>
-#container-wrapper h4{
-  margin-top: 0
+.modalwrapper{
+      position: fixed;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    background-color: rgba(255,255,255,.9);
+    overflow-y: scroll;
+    padding: 25px;
+    overflow-x:hidden;
 }
 .justify{
   text-align: justify;
@@ -47,7 +66,7 @@
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 0px;
-     background: #CB9191;
+     background: #000;
     -webkit-box-shadow: 1px 1px 2px 0 rgba(255,255,255,0.8);
     -moz-box-shadow: 1px 1px 2px 0 rgba(255,255,255,0.8);
     box-shadow: 1px 1px 2px 0 rgba(255,255,255,0.8);
@@ -57,29 +76,20 @@
 }
 .item-wrapper{
     padding: 4px;
-    background-color: #CB9191;
+    background-color: #000;
     box-shadow: 1px 1px 2px 0 rgba(39, 39, 39, 0.8);
     margin-bottom: 25px;
+    position: relative;
 }
 .portfolio-img {
     width: 100%;
-    height: 150px!important;
-        background-image: url(https://s3-ap-southeast-1.amazonaws.com/purplesq/media/images/Banner-images/Showcase_thumbnails/pepsi_thumbnail2.jpg);
+    height: 180px!important;
     background-position: center center;
-        background-size: contain;
+        background-size: cover;
     background-repeat: no-repeat;
     background-color: beige;
 }
-a:hover {
-    color: #1E1716!important;
-    text-decoration: none;
-}
-a:visited{
-  text-decoration: none;
-}
-a {
-    color: #3F3131!important;
-}
+
 .img-responsive {
     display: block;
     max-width: 100%;
@@ -114,6 +124,12 @@ a {
 }
 .portfolio-content {
     padding: 5px 10px 10px;
+        position: absolute;
+    bottom: 0;
+    background-color: black;
+    z-index: 5;
+    width: 100%;
+  }
 }.portfolio-content>h4 {
     padding-top: 10px;
     height: 50px;
@@ -125,26 +141,34 @@ a {
   margin-bottom: 5px;
 }
 .ng-enter 
-      {
-          -webkit-transition: .7s;
-          transition: .7s;
-          opacity:0;
-      }
-      .ng-enter-active 
-      {
-          opacity:1;
-      }
- 
- 
-      .ng-leave 
-      {
-          -webkit-transition: .6s;
-          transition: .3s;
-      }
-      .ng-leave-active 
-      {
-          opacity:0;
-      }
+{
+    -webkit-transition: .7s;
+    transition: .7s;
+    opacity:0;
+}
+.ng-enter-active 
+{
+    opacity:1;
+}
+
+
+.ng-leave 
+{
+    -webkit-transition: .6s;
+    transition: .3s;
+}
+.ng-leave-active 
+{
+    opacity:0;
+}
+.modal-title{
+  font-family: space age;
+    color: black;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 20px 0;
+}
 </style>
 <style>
 #style-3::-webkit-scrollbar-track
@@ -178,5 +202,66 @@ a {
 #style-3::-moz-scrollbar-thumb
 {
   background-color: #303030;
+}
+.slide-animation.ng-enter { display:none; }
+.slide-animation.ng-enter.ng-enter-active { display:block; }
+.item-wrapper::before {
+    content: '';
+    position: absolute;
+    background-image: url('./img/tshadow.png');
+    height: 34px;
+    width: 32px;
+    left: -26px;
+    top: -5px;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.item-wrapper::after {
+    content: '';
+    position: absolute;
+    background-image: url('./img/bshadow.png');
+    height: 24px;
+    width: 98%;
+    left: 1%;
+    bottom: -16px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.top-5f{
+  position: fixed;
+  top:5%;
+  z-index: 5;
+  left: 5%;
+  right: 5%;
+  transition:all .5s ease;
+}
+.fixedbar{
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+.mt-70{
+  margin-top: 60px;
+}
+.closebt {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor:pointer;
+  
+}
+img.closebt{
+  width: 50px!important;
+    display: inline!important;
+}
+.closebt:hover {
+  transform:rotate(90deg);
+}
+.mt-10{
+  margin-top: 10px
 }
 </style>

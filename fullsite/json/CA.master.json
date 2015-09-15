@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Campus Ambassador",
+        "link": "CA",
+        "banner": "campusambassador.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "To handle an event at a scale as large as that of Engineer, the support crew required is huge. And we could use all the help we can acquire, inside and outside college. The Campus Ambassador is one such initiative to assist the Engineer Team, by acting as a link between the participating colleges and the in-college support crew.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "Bishal Thingom \nMobile No.: +91 7795488295\n\nArun Nandewal\nMobile No.: +91 8147963621 ",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "Tasks",
+                "items": [
+                    "Coordinate with Team Engineer through all stages of the fest, as a representative of your college / institution.",
+                    "Organise all Engineer propaganda at your institution, including publicity through posters, unveiling of Engineer trailers and videos, and circulation of Engineer Publicity messages through social media.",
+                    "Prepare a detailed list of all students from your college participating in any event / workshop at Engineer 2015.",
+                    "Assist the Engineer team with formalities and procedures when they come for publicity to your college / institution.",
+                    "Guide your team through the competition, acting as the link between the Engineer team and your college / institution’s team."
+                ]
+            },
+            {
+                "title": "Perks",
+                "items": [
+                    "Certificate of Merit issued from the office of the Dean of Students’ Welfare, NITK.",
+                    "Discounted entry to all workshops.",
+                    "Accommodation and food expenses will be handled by Team Engineer.",
+                    "Free entry to all the pro-shows.",
+                    "Engineer T-shirt, and other Engineer goodies."
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    }
+]

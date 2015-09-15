@@ -38,8 +38,8 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 4,
-      "random": true,
+      "value": 2,
+      "random": false,
       "anim": {
         "enable": false,
         "speed": 20,
