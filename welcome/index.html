@@ -35,12 +35,13 @@
 <!--main style-->
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-<!--google font style-->
+<!--google font style -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
 <!--font-family: 'Open Sans', sans-serif;-->
 <!-- font css style-->
 <link rel="stylesheet" href="css/font-awesome.css">
 <link rel="stylesheet" href="css/engi.css">
+<link rel="stylesheet" href="plugins/flipclock/flipclock.css">
 <!--for slider style-->
 
 <noscript>
@@ -101,6 +102,8 @@
     <div class="bannerText container">
       <h2 class="engifont">think. create.</h2>
       <h1 class="engifont" style="font-weight:100; text-transform:lowercase;">engineer</h1>
+      <h3>FULL WEBSITE COMING SOON</h3>
+      <div class="hidden-xs" style="margin:0 auto; max-width:620px; margin-top:3em;"><div class="clock"></div></div>
     </div>
     <!--menu start-->
     <div class="menu">
@@ -156,7 +159,7 @@
   <!--about me end-->
   
   	<article id="video" style="height:100%;">
-  	<embed width="100%" height="600px;" src="http://www.youtube.com/v/wTi6c4aAlAU&autohide=1&showinfo=0" type="application/x-shockwave-flash">
+  	<embed width="100%" height="600px;" src="http://www.youtube.com/v/zhn60UMrlUg&autohide=1&showinfo=0" type="application/x-shockwave-flash">
 	</embed>
 	</article>
 
@@ -474,5 +477,19 @@ $( ".navbar-toggle" ).click(function() {
 <script src="js/jquery.easypiechart.js"></script>
 <!--contact form js-->
 <script type="text/javascript" src="js/jquery.contact.js"></script>
+
+<!--flipclock-->
+<script src="plugins/flipclock/flipclock.min.js"></script>
+<script type="text/javascript">
+var date  = new Date(2015, 8, 15, 18, 0, 0);
+var now   = new Date();
+var diff  = date.getTime()/1000 - now.getTime()/1000;
+
+var clock = $('.clock').FlipClock(diff, {
+    clockFace: 'DailyCounter',
+    countdown: true
+});
+</script>
+
 </body>
 </html>

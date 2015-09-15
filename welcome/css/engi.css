@@ -1,3 +1,7 @@
+.flip-clock-divider .flip-clock-label	{
+	color: white !important;
+}
+
 .cb-slideshow li	{
 	opacity: 0.25;
 }
