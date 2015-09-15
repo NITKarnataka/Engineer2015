@@ -1,6 +1,8 @@
 Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $location,$routeParams) {
 	$scope.misc.leafCheck++;
-	$scope.misc.wasLeaf = true;1
+	$scope.misc.wasLeaf = true;
+	if(!$scope.misc.showModal)
+		$('.scene').addClass('pusher')
 
 	$scope.init = function(){
 		var name;
@@ -60,7 +62,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 	}
 
 	$scope.closeLeaf = function(){
-		
+		$('.scene').removeClass('pusher')
 		$scope.misc.leafCheck=0;
 		$rootScope.back();
 	}
