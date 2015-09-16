@@ -18,5 +18,19 @@ $('.circle1,.circle2,.circle3,.circle4,.circle5,.circle6').hover(function(){
 	var number = $(this).context.className.substring(6);
 		$('.cool'+number).toggleClass("showtext");
 });
+/*plugin paceloader hack*/
+function PaceLoaderHack(){
+    if($('body').hasClass('pace-done')){
+	   $('.pace-progress:before').style('display','none','important');
+	   $('.pace-progress').style('display','none','important')
+	   $('.pace-activity').style('display','none','important')
+	   $('.pace-activity::after').style('display','none','important')
+	   $('.pace-activity::before').style('display','none','important');
+	   $('.pace').style('display','none','important')
+	}
+    else
+        setTimeout(PaceLoaderHack, 100);
+}
+$(PaceLoaderHack);
 	
 });
