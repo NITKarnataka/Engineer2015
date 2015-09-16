@@ -9,7 +9,6 @@ $formData = file_get_contents( 'php://input' );
 $data = json_decode( $formData );
 
 if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
-	$mail = new PHPMailer;
 
 	//$mail->SMTPDebug = 3;                               // Enable verbose debug output
                               // Set email format to HTML
