@@ -27,6 +27,9 @@ function PaceLoaderHack(){
 	   $('.pace-activity::after').style('display','none','important')
 	   $('.pace-activity::before').style('display','none','important');
 	   $('.pace').style('display','none','important')
+	   $('.pace').style('display','none','important')
+	   $('.pace-running').style('display','none','important')
+
 	}
     else
         setTimeout(PaceLoaderHack, 100);
