@@ -47,14 +47,15 @@ Engi.controller('RegisterController', function($http,$rootScope,$scope, $timeout
 	$scope.validateAndSubmit = function(){
 		$scope.success=false;
 		$scope.error = false;
-		if($scope.ca.name!=''&&$scope.ca.number!=''&&$scope.ca.email!=''&&$scope.ca.college!=''&&$scope.ca.location!=''&&$scope.ca.year!=''&&$scope.ca.stream!='')
+		if($scope.ca.name!=''&&$scope.ca.number!=''&&$scope.ca.email!=''&&$scope.ca.college!=''&&$scope.ca.location!=''&&$scope.ca.year!=''&&$scope.ca.stream!=''){
 			$scope.submitCA();
-		else
+		}else{
+			console.log($scope.ca);
 			$scope.error = true;
+		}
 	}
 
 	$scope.submitCA = function(){
-		console.log(caform.email)
 		$timeout(function(){$scope.success = true;},1000);
 		$scope.error = false;
 		$http.post('mailer.php',{"name": $scope.ca.name,"number": $scope.ca.number,"email": $scope.ca.email,"college": $scope.ca.college,"year":$scope.ca.year,"location":$scope.ca.location,"stream":$scope.ca.stream,"held":$scope.ca.held,"desc":$scope.ca.desc,"flink":$scope.ca.flink,"tlink":$scope.ca.tlink})
