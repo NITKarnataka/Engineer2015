@@ -10,11 +10,16 @@ if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
 
 	//$mail->SMTPDebug = 3;                               // Enable verbose debug output
                               // Set email format to HTML
-	$subject = 'Engineer Campus Ambassedor Registration';
-	$body = 'Hey dude,<br>'.$data->name.' from '.$data->college.' has registered<br> '.'Email: '.$data->email.'<br>Number: '.$data->number.'<br>year: '.$data->year.'<br>stream: '.$data->stream.'<br>location: '.$data->location.'<br>Has held any position: '.$data->held.'<br>Description if yes: '.$data->desc.'<br>Facebook :'.$data->flink.'<br>Twitter :'.$data->tlink;
+	$subject = "Engineer Campus Ambassedor Registration";
+	$body = "Hey dude,\r\n".$data->name." from ".$data->college." has registered\r\n "."Email: ".$data->email."\r\nNumber: ".$data->number."\r\nyear: ".$data->year."\r\nstream: ".$data->stream."\r\nlocation: ".$data->location."\r\nHas held any position: ".$data->held."\r\nDescription if yes: ".$data->desc."\r\nFacebook :".$data->flink."\r\nTwitter :".$data->tlink;
 	$address = "rajatmittal18@gmail.com";
 	if(mail($address, $subject, $body)) {
-		 $response[ 'success' ] = true;
+		$response[ 'success' ] = true;
+		$contacter_name = $data->name;
+		$contacter_mail = $data->email;
+		$contacter_subject = "Campus Ambassedor Registration";
+		$contacter_body = "Dear ".$contacter_name.",\r\nThank you for registering..\r\nWe will contact you again..\r\n..";
+		mail($contacter_mail, $contacter_subject , $contacter_body);
 	} else {
 
 	   $response[ 'false' ] = true;
