@@ -80,7 +80,8 @@ var Engi;
 		$scope.misc = {
 			showModal:false,
 			wasLeaf:false,
-			leafCheck:0
+			leafCheck:0,
+			prevPage:'/'
 		}
 		$scope.showModal = function(redirect){
 
@@ -91,4 +92,3 @@ var Engi;
 
 
 	})
-

@@ -2,6 +2,7 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 	$scope.misc.leafCheck= 0;
 	$scope.misc.showModal = true;
 	$scope.cat = $routeParams.cat;
+	$scope.misc.prevPage = $location.$$path;
 
 	$('.scene').addClass('pusher')
 	
@@ -24,6 +25,7 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 
 	$scope.turnOffModal = function(){
 		$scope.misc.showModal = false;
+		$scope.misc.prevPage="/";
 		$timeout(function() {
 			$location.path('/');
 			$('.scene').removeClass('pusher')

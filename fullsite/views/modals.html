@@ -1,6 +1,6 @@
 <div id="dd" class="modalwrapper" ng-controller='EventsController'>
   <div class="rel">
-	<div class="" id="">
+  <div class="" id="">
     <div id="container-wrapper">
         <div class="top-5f">
           <div class="col-md-2">
@@ -14,33 +14,33 @@
           <h4 class="modal-title col-md-8">{{obj[0].name}}</h4>
           <div class="col-md-2"><span ng-click="turnOffModal()"><img src="./img/closebtn.png" class="closebt mt-10"/></span></div>
         </div>
-  			<div class="row mt-70">
-  				<div class="col-md-12">
+        <div class="row mt-70">
+          <div class="col-md-12">
             <p style="color:black;margin-top:0;text-align:left;color: black;margin: 0 0 10px;text-align: left;font-size: 18px;">{{obj[0].description}}</p>
-  				</div>
-  				<div ng-if="$index" class="col-md-3" ng-repeat = "t in obj">
+          </div>
+          <div ng-if="$index" class="col-md-3" ng-repeat = "t in obj">
             <div class="item-wrapper">
-    					<div class="portfolio-item">
-    						<div ng-click="nextPage(t.link);">
-    							<div class="hover-content">
-    								<div class="portfolio-img img-responsive" style="background-image:url('img/{{t.pic}}')"></div>
-    									<div class="overlay-content">
-    										<p class="description">{{t.description}}</p>
-    									</div>
-    							</div>
-    						</div>
-    						<div class="portfolio-content">
-    							<div ng-click="nextPage(t.link);">
-    								<h4>{{t.name}}</h4>
-    							</div>
-    						</div>
-    					</div>
+              <div class="portfolio-item">
+                <div ng-click="nextPage(t.link);">
+                  <div class="hover-content">
+                    <div class="portfolio-img img-responsive" style="background-image:url('img/{{t.pic}}')"></div>
+                      <div class="overlay-content">
+                        <p class="description">{{t.description}}</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <div ng-click="nextPage(t.link);">
+                    <h4>{{t.name}}</h4>
+                  </div>
+                </div>
+              </div>
             </div>
-  				</div>
-  				<div style="clear:both"></div>
-  			</div>
+          </div>
+          <div style="clear:both"></div>
+        </div>
       </div>
-	</div>
+  </div>
 </div>
 </div>
 
