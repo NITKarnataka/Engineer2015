@@ -11,15 +11,16 @@
 	$count=0;
 	$query = "INSERT INTO `engineer2015`(`name`, `mobile`, `email`, `college`, `location`, `branch`,`rfor`) VALUES ('$formData->name','$formData->number','$formData->email','$formData->college','$formData->location','$formData->branch','$formData->rfor')";
 	if(mysql_query($query)){
+		$count++;
 		for ($i=0 ; $i < sizeof($formData->friends) ; $i++){
 			$friend = $formData->friends[$i];
-			$query = "INSERT INTO `engineer2015`(`name`, `mobile`, `email`, `college`, `location`, `branch`) VALUES ('$friend->name','$friend->number','$friend->email','$friend->college','$friend->location','$friend->branch')";
+			$query = "INSERT INTO `engineer2015`(`name`, `mobile`, `email`, `college`, `location`, `branch`,`rfor`) VALUES ('$friend->name','$friend->number','$friend->email','$friend->college','$friend->location','$friend->branch','$formData->rfor')";
 			if(mysql_query($query)){
 				$count++;
 			}
 		}
 	}
-	if($count == sizeof($formData->friends))
+	if($count == sizeof($formData->friends)+1)
 		$response[ 'success' ] = true;
 	else $response[ 'success' ] = false;
 
