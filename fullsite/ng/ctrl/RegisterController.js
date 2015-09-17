@@ -83,7 +83,7 @@ Engi.controller('RegisterController', function($http,$rootScope,$scope, $timeout
 					count++;
 			}
 			if(count==$scope.form.friends.length){
-				console.log(count)
+				$scope.rsuccess =1;
 				$scope.submitForm();
 			}else{
 				$scope.registerError = 1;
