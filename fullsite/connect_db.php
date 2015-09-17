@@ -1,9 +1,7 @@
 <?php
-if(!(mysql_connect('localhost','enginee8_enginee8','Inci2014@NiTk_Inci2014@NiTk')))
+if(!(mysql_connect('localhost','enginee8','Inci2014@NiTk'))||!(mysql_select_db('engiee8_engi')))
 {
-	echo "authenticaed" ;
-	if(!(mysql_select_db('enginee8_enginee8_engi')))
-	echo "we are temporarily down..cant connect";
+	echo"we are temporarily down..cant connect";
 die();
 }
 ?>

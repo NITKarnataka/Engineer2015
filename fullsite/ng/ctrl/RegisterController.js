@@ -96,6 +96,7 @@ Engi.controller('RegisterController', function($http,$rootScope,$scope, $timeout
 
 	$scope.registerError = 0;
 	$scope.submitForm = function(){
+		console.log($scope.form)
 		$http.post('register.php',{"name": $scope.form.name,"number": $scope.form.number,"email": $scope.form.email,"college": $scope.form.college,"friends":$scope.form.friends,"location":$scope.form.location,"branch":$scope.form.branch,"rfor":$routeParams.id})
 		.success( function(data) {
 			console.log(data)
