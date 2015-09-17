@@ -1,5 +1,5 @@
 <?php
-require 'connnect_db.php';
+require './connect_db.php';
 
 
 $response = array( 'success' => false );
