@@ -33,9 +33,7 @@ if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
 			$contacter_body = "Dear ".$contacter_name.",\r\nThank you for registering..\r\nWe will contact you again..\r\n..";
 			mail($contacter_mail, $contacter_subject , $contacter_body,$headers);
 		} else {
-
 		   $response[ 'success' ] = false;
-
 		}
 	}
 	echo json_encode( $response );
