@@ -1,18 +1,14 @@
 <div class="row" ng-controller="RegisterController">
-	<div ng-show="success" class='col-md-12'>
-		<h4 class="bg-success">Thanx for registering we will get back to you soon.Please Check your inbox or drop a mail to ca@engineer.org.in</h4>
+	<div ng-show="success==2" class='col-md-12'>
+		<h4 class="bg-success" style="text-transform:none;">Thanx for registering we will get back to you soon.Please Check your inbox or drop a mail to ca@engineer.org.in</h4>
 	</div>
-	<div ng-show="error" class='col-md-12'>
-		<h4 class="bg-error">Please fill all * marked field Properly</h4>
-	</div>
-
-	<div ng-show="!success" class="col-md-4">
+	<div ng-show="success!=2" class="col-md-4">
 		<button class="btn btn-block {{!CAForm ?'btn-info':'btn-danger'}}" ng-click="toggleCAForm()">{{ CAForm ? 'May Be Later':'BECOME A CA' }}</button>
 	</div>
 
 	<div class="clearfix"></div>
 
-	<div ng-show="CAForm&&!success" class="caform">
+	<div ng-show="CAForm&&success!=2" class="caform">
 		<hr/>
 		<div><form name="caform" >
 			<div class="col-md-12">
@@ -38,7 +34,7 @@
 				<h4>TELL US MORE</h4>
 			</div>
 			<div class="col-md-12">
-				<h5>Year of Pursuing* {{ca.year}}</h5>
+				<h5>Year of Pursuing*</h5>
 			</div>
 
 			<div class="col-md-3">
@@ -97,6 +93,15 @@
 		
 		</form></div>
 		<div class="clearfix"></div>
+		<div ng-show="error" class='col-md-12'>
+			<p class="bg-danger">Please fill all * marked field Properly</p>
+		</div>
+		<div ng-show="success==1&&!error" class='col-md-12'>
+			<p class="bg-wait">Please wait while we send process your input <span><img src="./img/Fadingcircles.gif" class="waiter"/></span></p>
+		</div>
+		<div ng-show="success==3" class='col-md-12'>
+			<p class="bg-danger">Some Server error occured sory for the inconvinience ..</p>
+		</div>
 		<div class="col-md-3">
 			<button class="btn-success btn btn-block" ng-click="validateAndSubmit()">Register</button>
 		</div>
@@ -104,14 +109,24 @@
 	</div>
 </div>
 <style>
-.bg-success {
+.waiter{
+	    width: 20px;
+    display: inherit;
+    margin-left: 10px;
+    position: relative;
+    bottom: -2px;
+
+}
+.bg-success ,.bg-wait{
 	background-color: #dff0d8;
 	padding:12px;
 	border:1px solid #C2BFBF;
 	border-radius: 4px;
 	text-align: center;
 	font-weight: 400;
-	text-transform: capitalize!important;
+}
+.bg-wait{
+	background-color: #FFE483;
 }
 .bg-danger {
 	background-color: #f2dede;
@@ -120,7 +135,6 @@
 	border-radius: 4px;
 	text-align: center;
 	font-weight: 400;
-	text-transform: capitalize!important;
 }
 .caform h4 {
     margin: 0 0 4px;

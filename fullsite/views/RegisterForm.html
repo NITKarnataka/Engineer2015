@@ -1,33 +1,72 @@
 <div class="row" ng-controller="RegisterController">
-	<div class="col-md-2">
-		<button class="btn btn-block btn-info" ng-click="toggleRegisterForm()">{{ RegisterForm ? 'Nah!':'Register' }}</button>
+	<div ng-show="rsuccess==2" class='col-md-12'>
+		<h4 class="bg-success" style="text-transform:none;">Thanx for registering we keep you updated</h4>
+	</div>
+	<div ng-show="rsuccess!=2" class="col-md-2">
+		<button class="btn btn-block btn-info" ng-click="toggleRegisterForm()">{{ RegisterForm ? 'Later':'Register' }}</button>
 	</div>
 	<div class="clearfix"></div>
-	<div ng-show="RegisterForm">
+	<div ng-show="RegisterForm&&rsuccess!=2" class="registerForm">
 		<hr/>
 		<div class="col-md-4">
+			<h5>Name*</h5>
 			<input type="text" ng-model="form.name" class="form-control form-group" placeholder = 'Name' required/>
 		</div>
 		<div class="col-md-4">
-			<input type="text" ng-model="form.email" class="form-control form-group" placeholder = 'Email' required/>
+			<h5>Email*</h5>
+			<input type="email" validate-email id='email' ng-model="form.email" class="form-control form-group" placeholder = 'Email' required/>
 		</div>
 		<div class="col-md-4">
+			<h5>Number*</h5>
 			<input type="text" ng-model="form.number" class="form-control form-group" placeholder = 'Phone Number' required/>
 		</div>
+		<div class="col-md-4">
+			<h5>College*</h5>
+			<input type="text" ng-model="form.college" class="form-control form-group" placeholder = 'College'/>
+		</div>
+		<div class="col-md-4">
+			<h5>Location*</h5>
+			<input type="text" ng-model="form.location" class="form-control form-group" placeholder = 'College Location'/>
+		</div>
+		<div class="col-md-4">
+			<h5>Branch</h5>
+			<input type="text" ng-model="form.branch" class="form-control form-group" placeholder = 'Branch'/>
+		</div>
+		<div class="clearfix"></div>
 		<div class="col-md-2 form-group">
 			<button class="btn btn-block btn-primary" ng-click="addFriends()">Add Friends</button>
 		</div>
 		<div class="clearfix"></div>
 		<div ng-repeat="friend in form.friends">
+			<div class="col-md-12">
+				<h4>Friend {{$index+1}} Details*</h4>
+			</div>
 			<div class="col-md-4">
+				<h5>Friend #{{$index + 1}} name*</h5>
 				<input type="text" ng-model="friend.name" class="form-control form-group" placeholder = 'Name' required/>
 			</div>
 			<div class="col-md-4">
-				<input type="text" ng-model="friend.email" class="form-control form-group" placeholder = 'Email' required/>
+				<h5>Friend #{{$index + 1}} email*</h5>
+
+				<input type="email" validate-email id='{{"email"+$index}}' ng-model="friend.email" class="form-control form-group" placeholder = 'Email' required/>
 			</div>
 			<div class="col-md-4">
+				<h5>Friend #{{$index + 1}} number*</h5>
 				<input type="text" ng-model="friend.number" class="form-control form-group" placeholder = 'Phone Number' required/>
 			</div>
+			<div class="col-md-4">
+				<h5>Friend #{{$index + 1}} college*</h5>
+				<input type="text" ng-model="friend.college" class="form-control form-group" placeholder = 'College'/>
+			</div>
+			<div class="col-md-4">
+				<h5>Friend #{{$index + 1}} location</h5>
+				<input type="text" ng-model="friend.location" class="form-control form-group" placeholder = 'College Location'/>
+			</div>
+			<div class="col-md-4">
+				<h5>Friend #{{$index + 1}} branch</h5>
+				<input type="text" ng-model="friend.branch" class="form-control form-group" placeholder = 'Branch'/>
+			</div>
+			<div class="clearfix"></div>
 			<div class="col-md-3 form-group">
 				<button class="btn btn-block btn-primary" ng-click="addFriends()">Add More Friends</button>
 			</div>
@@ -36,9 +75,62 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
+		<div class="clearfix"></div>
+			<div ng-show="registerError" class='col-md-12'>
+				<p class="bg-danger">Please fill all * marked field Properly</p>
+			</div>
+			<div ng-show="rsuccess==1&&!error" class='col-md-12'>
+				<p class="bg-wait">Please wait while we send process your input <span><img src="./img/Fadingcircles.gif" class="waiter"/></span></p>
+			</div>
+			<div ng-show="rsuccess==3" class='col-md-12'>
+				<p class="bg-danger">Some Server error occured sory for the inconvinience ..</p>
+			</div>
 		<div class="col-md-3">
-			<button class="btn-success btn btn-block">Register</button>
+			<button class="btn-success btn btn-block" ng-click="validateAndSubmitRegister()">Register</button>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
+<style>
+.waiter{
+	    width: 20px;
+    display: inherit;
+    margin-left: 10px;
+    position: relative;
+    bottom: -2px;
+
+}
+.bg-success ,.bg-wait{
+	background-color: #dff0d8;
+	padding:12px;
+	border:1px solid #C2BFBF;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: 400;
+}
+.bg-wait{
+	background-color: #FFE483;
+}
+.bg-danger {
+	background-color: #f2dede;
+	padding:12px;
+	border:1px solid #C5C5C5;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: 400;
+}
+.registerForm h5 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #727272;
+}
+.registerForm h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.warning{
+   border:1px solid red;
+ }
+</style>
