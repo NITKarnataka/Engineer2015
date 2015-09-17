@@ -48,25 +48,6 @@
         ]
     },
     {
-        "name": "Proteus",
-        "link": "proteus",
-        "banner": "proteusbanner.jpg",
-        "subdesc": [
-            {
-                "subtitle": "Overview",
-                "subdescription": "Proteus is a water based bot event wherein the bot is required to show off its skills in water. The event would test the bot's maneuverability and dexterity in water { eg: evading obstacles ,collecting and depositing items etc}. The evaluation is points based.",
-                "subimage": ""
-            }
-        ],
-        "list": [],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
-            }
-        ]
-    },
-    {
         "name": "Robowars",
         "link": "robowars",
         "banner": "robowarsbanner.jpg",

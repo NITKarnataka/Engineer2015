@@ -16,7 +16,7 @@
 			<div ng-show="showSubtitle=='{{desc.subtitle}}'">
 				<h5>{{desc.subtitle}}</h5>
 				<p ng-if="desc.subtitle!='Problem Statement'">{{desc.subdescription}}</p>
-				<a ng-if="desc.subtitle=='Problem Statement'" href="{{desc.subdescription}}">
+				<a ng-if="desc.subtitle=='Problem Statement'" href="{{desc.subdescription}}" target="_blank">
 					<button class="btn btn-primary" style="margin-bottom: 10px;">CLICK TO VIEW ON DRIVE</button>
 				</a>
 				<div ng-if="desc.subimage">
@@ -45,8 +45,8 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<!--<div ng-if="showRegisterForm==true" ng-include="'./views/RegisterForm.html'"></div>-->
-	<div ng-if="showRegisterForm==true"><button class="btn btn-primary">Registrations to commence shortly</button></div>	
+	<div ng-if="showRegisterForm==true" ng-include="'./views/RegisterForm.html'"></div>
+	<!--<div ng-if="showRegisterForm==true"><button class="btn btn-primary">Registrations to commence shortly</button></div>-->	
 	<div ng-if="showCAForm==true" ng-include="'./views/CAForm.html'"></div>	
 </div>
 <style>
