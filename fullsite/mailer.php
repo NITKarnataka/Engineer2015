@@ -18,9 +18,8 @@ if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
 	$number =(string)$data->number;
 
 	$query = "INSERT INTO `engineer2015`(`name`, `mobile`, `email`, `college`, `location`, `branch`,`year`,`rfor`) VALUES ('$data->name','$number','$data->email','$data->college','$data->location','$data->stream','$year','$data->rfor')";
-	$query_run = mysql_query($query);
 	//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-    if($query_run){                          // Set email format to HTML
+    if(mysql_query($query)){                          // Set email format to HTML
 		$subject = "Engineer Campus Ambassedor Registration";
 	    $headers = "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
 		$body = "Hey dude,\r\n".$data->name." from ".$data->college." has registered\r\n "."Email: ".$data->email."\r\nNumber: ".$data->number."\r\nyear: ".$data->year."\r\nstream: ".$data->stream."\r\nlocation: ".$data->location."\r\nHas held any position: ".$data->held."\r\nDescription if yes: ".$data->desc."\r\nFacebook :".$data->flink."\r\nTwitter :".$data->tlink;
