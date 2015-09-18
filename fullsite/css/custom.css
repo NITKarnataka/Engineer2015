@@ -106,6 +106,10 @@ html{
   top:5%!important;
 }
 .modal-menu-items{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -156,6 +160,10 @@ html{
 
 }
 .clock{
+  display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox!important;      /* TWEENER - IE 10 */
+  display: -webkit-flex!important;
   display: flex;
       justify-content: space-around;
     width: 33%;
@@ -317,6 +325,10 @@ html{
   height: 100%;
 }
 .social-icons{
+  display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox!important;      /* TWEENER - IE 10 */
+  display: -webkit-flex!important;
   display: flex!important;
   justify-content:space-between;
   height: 3%;
@@ -354,15 +366,43 @@ body > :not(.pace),body:before,body:after {
       transition:opacity .4s ease-in-out .2s!important;
     }
 /*mediaq*/
-@media (max-width: 865px){
-  .clock-item .inner{
-    width: 50px!important;
-    height: 50px!important;
+@media (max-height: 320px){
+  .timer-area{
+    display: none!important;
   }
+  .modal-menu-wrapper{
+  height: 10%!important;
+  width: 65%!important;
+  right: 15%!important;
+  top:12%!important;
 }
+.modal-menu-items{
+     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.space-station,.planet-1,.planet-2,.cool-display{
+  display: none!important;
+}
+.social-icons{
+  display: none!important;
+}
+.circle1,.circle2,.circle3,.circle4,.circle5,.circle6{
+  height: 40px!important;
+  width: 40px!important;
+  z-index: 100;
+}
+}
+
 @media (max-width: 500px){
-  .clock{
-    display: none;
+  .timer-area{
+    display:none!important;
   }
   .pusher{
       transform: translate3d(0px, 0px, 0px)!important;
@@ -374,18 +414,53 @@ body > :not(.pace),body:before,body:after {
     width: 40%;
   }
   .modal-menu-wrapper{
- display: none!important;
+  height: 10%!important;
+  width: 65%!important;
+  right: 15%!important;
+  top:12%!important;
+}
+.modal-menu-items{
+     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
 }
 
 .circle1,.circle2,.circle3,.circle4,.circle5,.circle6{
-  height: 80px!important;
-  width: 80px!important;
+  height: 60px!important;
+  width: 60px!important;
   z-index: 100;
 }
 .space-station,.planet-1,.planet-2,.cool-display{
   display: none!important;
 }
+.header{
+  top:5%!important;
+  left:10%!important;
+  width: 80%!important;
+}
+.stationary{
+      width: 60%!important;
+    left: 20%!important;
+    top: 44%!important;
 
+}
+.title{
+  bottom: 3%!important;
+}
+.ca-logo{
+    width: 24%!important;
+    height: 20%!important;
+    right: 6%!important;
+    bottom: 11%;
+    left: auto!important;
+    top: auto!important;
+}
 }
 
 
