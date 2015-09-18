@@ -7,42 +7,42 @@
         "name": "Mechanical",
         "link": "mechanical",
         "pic": "mechanical.jpg",
-        "description": ""
+        "description": "Click to know more"
     },
     {
         "name": "BizWaves '15",
         "link": "biz",
         "pic": "biz.jpg",
-        "description": ""
+        "description": "Click to know more"
     },
     {
         "name": "Civil",
         "link": "civil",
         "pic": "civil.jpg",
-        "description": ""
+        "description": "Click to know more"
     },
     {
         "name": "Comps",
         "link": "comps",
         "pic": "computer.jpg",
-        "description": ""
+        "description": "Click to know more"
     },
     {
         "name": "Chemical",
         "link": "chemical",
         "pic": "chemical.jpg",
-        "description": ""
+        "description": "Click to know more"
     },
     {
         "name": "Metallurgical",
         "link": "metallurgical",
         "pic": "metallurgy.jpg",
-        "description": ""
+        "description": "Click to know more"
     },
     {
         "name": "Tronix",
         "link": "tronix",
         "pic": "tronix.jpg",
-        "description": ""
+        "description": "Click to know more"
     }
 ]
