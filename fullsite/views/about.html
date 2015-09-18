@@ -4,24 +4,14 @@
 	</div>
 </div>
 <div class="members" ng-controller="OtherController">
+
 	<link rel="stylesheet" type="text/css" href="/plugins/imagerotator/css/tilteffect.css" />
 	<link rel="stylesheet" type="text/css" href="/plugins/imagerotator/css/demo.css" />
 	<div id="side-content" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 side-content">
-		<h4>ABOUT US</h4>
+		<h4>ABOUT US {{ members[0] }}</h4>
 		<h4 class="our-team">OUR TEAM</h4>
 		<ul class="side-menu-team">
-			<li ng-click="showMember('all')">All</li>
-			<li ng-click="showMember('core')">Core Members</li>
-			<li ng-click="showMember('mnp')">Media and Publicity</li>
-			<li ng-click="showMember('events')">Events</li>
-			<li ng-click="showMember('hospi')">Student Hospitality</li>
-			<li ng-click="showMember('corporate')">Corporate Hospitality</li>
-			<li ng-click="showMember('workshops')">Workshops</li>
-			<li ng-click="showMember('office')">Office</li>
-			<li ng-click="showMember('fnr')">Food/Refreshment</li>
-			<li ng-click="showMember('ca')">Engireps</li>
-			<li ng-click="showMember('engitalks')">EngiTalks</li>
-			<li ng-click="showMember('cteam')">Creative Team</li>
+			<li ng-repeat="(key,value) in members" ng-click="showMember(key)">{{value}}</li>
 		</ul>
 	</div>
 	<div id="modal-container" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">

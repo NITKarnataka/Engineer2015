@@ -26,5 +26,11 @@
         "pic": "velocity.jpg",
         "link": "velocity",
         "description": "It is the flagship event of Engineer involving the RC car racing with self designed cars."
+    },
+    {
+        "name": "Bot Hockey",
+        "pic": "bothockey.jpg",
+        "link": "bothockey",
+        "description": "Ever wished that bots played hockey? Well, then ENGINEER 2015 is the place to be, to witness the first of its kind BOT HOCKEY contest."
     }
 ]

@@ -53,6 +53,9 @@ var Engi;
 		})
 		.when('/engiconnect', {
 			templateUrl: './views/leaf.html'
+		})
+		.when('/hospi', {
+			templateUrl: './views/leaf.html'
 		});
 
 	}]);
