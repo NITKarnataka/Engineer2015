@@ -112,7 +112,7 @@ Engi.controller('RegisterController', function($http,$rootScope,$scope, $timeout
 })
 
 Engi.directive('validateEmail', function() {
-  var EMAIL_REGEXP = /^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+  var EMAIL_REGEXP = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return {
     link: function(scope, elm) {
       elm.on("keyup",function(){
