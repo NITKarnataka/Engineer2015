@@ -44,5 +44,11 @@
         "link": "tronix",
         "pic": "tronix.jpg",
         "description": "Click to know more"
+    },
+    {
+        "name": "Astro Events",
+        "link": "astro",
+        "pic": "astro.jpg",
+        "description": "Click to know more"
     }
 ]
