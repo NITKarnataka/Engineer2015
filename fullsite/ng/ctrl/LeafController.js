@@ -10,7 +10,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 		var back = $routeParams.id;
 		if($location.$$path=='/CA'||$location.$$path=='/sponsors'||$location.$$path=='/about'||$location.$$path=='/engiconnect'){
 			name = $location.$$path.substring(1);
-			if($location.$$path=='/sponsors'||$location.$$path=='/about'){
+			if($location.$$path=='/sponsors'||$location.$$path=='/about'||$location.$$path=='/hospi'){
 				$scope.show = $location.$$path.substring(1);
 			}
 			if($location.$$path=='/CA'){

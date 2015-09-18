@@ -94,5 +94,36 @@
                 "link": ""
             }
         ]
+    },
+    {
+        "name": "Bot Hockey",
+        "link": "bothockey",
+        "banner": "bothockeybanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Participants are required to make a set of robots which will be playing hockey on the given arena following a set of rules.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Problem Statement",
+                "subdescription": "https://drive.google.com/folderview?id=0B57TN-89tpBVdGpmTWpfWGRZSTg&usp=sharing",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
     }
 ]

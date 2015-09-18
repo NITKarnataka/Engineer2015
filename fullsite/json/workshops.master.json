@@ -1,46 +1,5 @@
 [
     {
-        "name": "Android Controlled Robotics",
-        "link": "androidcontrolledrobotics",
-        "banner": "robotics.jpg",
-        "subdesc": [
-            {
-                "subtitle": "Overview",
-                "subdescription": "This Work shop is a fast-paced program designed to give the students the hands-on experience in Robotics using ANDROID/BLUETOOTH.This workshop is primarily targeted at students who wish to discover the new technology by hands on training session.This workshop program is designed to clear your concepts in Bluetooth communication and Microcontroller Programming.",
-                "subimage": ""
-            },
-            {
-                "subtitle": "Workshop Fees",
-                "subdescription": "Rs 1600 along with a toolkit.",
-                "subimage": ""
-            },
-            {
-                "subtitle": "Duration",
-                "subdescription": "2 Days(8 Hours each)",
-                "subimage": ""
-            },
-            {
-                "subtitle": "Contact Details",
-                "subdescription": "Sanket Gawande - 8197772633",
-                "subimage": ""
-            }
-        ],
-        "list": [
-            {
-                "title": "",
-                "items": [
-                    ""
-                ]
-            }
-        ],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
-            }
-        ]
-    },
-    {
         "name": "Bridge Design",
         "link": "bridgedesign",
         "banner": "bridgedesign.jpg",
@@ -52,12 +11,12 @@
             },
             {
                 "subtitle": "Workshop Fees",
-                "subdescription": "Rs 1500",
+                "subdescription": "Rs 800",
                 "subimage": ""
             },
             {
                 "subtitle": "Duration",
-                "subdescription": "2 Days",
+                "subdescription": "1 Day",
                 "subimage": ""
             },
             {
@@ -66,18 +25,18 @@
                 "subimage": ""
             }
         ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
         "list": [
             {
                 "title": "",
                 "items": [
                     ""
                 ]
-            }
-        ],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
             }
         ]
     },
@@ -107,18 +66,18 @@
                 "subimage": ""
             }
         ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
         "list": [
             {
                 "title": "",
                 "items": [
                     ""
                 ]
-            }
-        ],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
             }
         ]
     },
@@ -134,7 +93,7 @@
             },
             {
                 "subtitle": "Workshop Fees",
-                "subdescription": "Rs 1500 for a student and Rs 2000 for faculty.",
+                "subdescription": "Rs 1500",
                 "subimage": ""
             },
             {
@@ -148,18 +107,18 @@
                 "subimage": ""
             }
         ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
         "list": [
             {
                 "title": "",
                 "items": [
                     ""
                 ]
-            }
-        ],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
             }
         ]
     },
@@ -175,7 +134,7 @@
             },
             {
                 "subtitle": "Workshop Fees",
-                "subdescription": "Rs. 1400 and this fee includes workshop training, certification, event registration and Software Kit.",
+                "subdescription": "Rs. 1100 and this fee includes workshop training, certification, event registration and Software Kit.",
                 "subimage": ""
             },
             {
@@ -189,18 +148,18 @@
                 "subimage": ""
             }
         ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
         "list": [
             {
                 "title": "",
                 "items": [
                     ""
                 ]
-            }
-        ],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
             }
         ]
     },
@@ -211,12 +170,12 @@
         "subdesc": [
             {
                 "subtitle": "Overview",
-                "subdescription": "The Internet of Things is upon us! Connected Products are everywhere, and companies like the newly Google-acquired Nest are bringing the IoT into our homes. Come be a part of the next major leap forward in mankinds technical evolution - The Internet of Things! Come to this workshop equipped with your own IoT ideas and make them a reality.",
+                "subdescription": "The Internet of Things is upon us! Connected Products are everywhere, and companies like the newly Google-acquired Nest are bringing the IoT into our homes. Come be a part of the next major leap forward in mankind’s technical evolution - The Internet of Things! Come to this workshop equipped with your own IoT ideas and make them a reality.",
                 "subimage": ""
             },
             {
                 "subtitle": "Workshop Fees",
-                "subdescription": "The fees will be Rs. 1350 which will include workshop training, study material and a Software Kit",
+                "subdescription": "The fees will be Rs. 1300 which will include workshop training, study material and a Software Kit",
                 "subimage": ""
             },
             {
@@ -230,18 +189,18 @@
                 "subimage": ""
             }
         ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
         "list": [
             {
                 "title": "",
                 "items": [
                     ""
                 ]
-            }
-        ],
-        "subimage": [
-            {
-                "title": "",
-                "link": ""
             }
         ]
     },
@@ -271,27 +230,18 @@
                 "subimage": ""
             }
         ],
-        "list": [
-            {
-                "title": "",
-                "items": [
-                    "",
-                    "",
-                    "",
-                    ""
-                ]
-            },
-            {
-                "title": "cont",
-                "items": [
-                    ""
-                ]
-            }
-        ],
         "subimage": [
             {
                 "title": "",
                 "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
             }
         ]
     }

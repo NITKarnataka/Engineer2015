@@ -250,5 +250,18 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 			/**/
 		},50);
 	}
+	$scope.members = {
+		All:'All',
+		core:'Core Members',
+		mnp:'Media And Publicity',
+		events:'Events',
+		hospi:'Hospitality',
+		workshops:'workshops',
+		office:'Office',
+		fnr:'Food And Refreshments',
+		ca:'Campus Ambassadors',
+		engitalks:'EngiTalks',
+		cteam:'Create Team'
+	}
 
 })
