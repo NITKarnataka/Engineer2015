@@ -19,6 +19,16 @@
 				$count++;
 			}
 		}
+		/*mailer*/
+		$contacter_mail = $formData->email;
+		$contacter_subject = "Engineer NITK 2015 Events/workshops/Techspeaks Registeration";
+		$headers = "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
+		for($i=0 ; $i< sizeof($formData->friends) ; $i++){
+			$friend = $formData->friends[$i];
+			$contacter_mail .= ",".$friend->email;
+		}
+		$contacter_body = "Thank you for registering for ".$formData->rfor."\r\nWe will contact you again\r\nFor queries feel free to drop a mail to rajat@engineer.org.in .\r\nThis is an auto generated mail please do not reply to this mail.";
+		mail($contacter_mail, $contacter_subject , $contacter_body,$headers);
 	}
 	if($count == sizeof($formData->friends)+1)
 		$response[ 'success' ] = true;
