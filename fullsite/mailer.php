@@ -15,7 +15,7 @@ if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
 	else{
 		$year = (int)substr($data->year, 0,1);
 	}
-	$number =(string)$data->number;
+	$number = (string)$data->number;
 
 	$query = "INSERT INTO `engineer2015`(`name`, `mobile`, `email`, `college`, `location`, `branch`,`year`,`rfor`) VALUES ('$data->name','$number','$data->email','$data->college','$data->location','$data->stream','$year','$data->rfor')";
 	//$mail->SMTPDebug = 3;                               // Enable verbose debug output
