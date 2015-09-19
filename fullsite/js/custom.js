@@ -21,3 +21,11 @@ $('.circle1,.circle2,.circle3,.circle4,.circle5,.circle6').hover(function(){
 /*plugin paceloader hack*/
 	
 });
+
+
+
+// print in console for users
+if (typeof console != "undefined") {
+console.log("Engineer 2015 Website - By Engi Web Team");
+console.log("Report bugs and issues at shubhambadal@live.com");
+}
