@@ -64,6 +64,9 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 	$scope.closeLeaf = function(){
 		$('.scene').removeClass('pusher')
 		$scope.misc.leafCheck=0;
+		$('#scene').css("margin-left","0");
+		$('#scene').css("margin-right","0");
+
 		$('#animatedModal').removeClass('zoomIn').addClass('zoomOut')
 		setTimeout(500);
 		$location.path($scope.misc.prevPage);
