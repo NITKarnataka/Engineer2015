@@ -26,6 +26,8 @@ Engi.controller('EventsController', function($http,$rootScope,$scope, $timeout, 
 	$scope.turnOffModal = function(){
 		$scope.misc.showModal = false;
 		$scope.misc.prevPage="/";
+		$('#scene').css("margin-left","0");
+		$('#scene').css("margin-right","0");
 		$timeout(function() {
 			$location.path('/');
 			$('.scene').removeClass('pusher')
