@@ -58,7 +58,7 @@
 .multilevelpushmenu_wrapper li {
 	cursor: pointer;
 	border-top: 1px solid #295685;
-	padding: .4em .4em .4em .4em;
+	padding: 0em .4em ;
 }
 
 .multilevelpushmenu_wrapper li:last-child {
@@ -75,7 +75,7 @@
 	overflow: hidden;
 	font-size: 1.5em;
 	line-height: 1em;
-	padding: .2em .2em;
+	padding: .4em .2em;
 	text-decoration: none;
 	color: #fff;
 }
