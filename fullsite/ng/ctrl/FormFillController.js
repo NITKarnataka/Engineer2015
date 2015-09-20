@@ -100,7 +100,7 @@ Engi.controller('FormController', function($scope,$http) {
 	}
 
 	$scope.deleteMembers = function(number){
-		$scope.deleteMembers.splice(number,1);
+		$scope.members.splice(number,1);
 	}
 
 
