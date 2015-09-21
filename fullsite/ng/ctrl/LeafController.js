@@ -1,8 +1,12 @@
-Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $location,$routeParams) {
+Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $location,$routeParams,$sce) {
 	$scope.misc.leafCheck++;
 	$scope.misc.wasLeaf = true;
 	if(!$scope.misc.showModal)
 		$('.scene').addClass('pusher')
+
+	$scope.toTrustedHTML = function( html ){
+    return $sce.trustAsHtml( html );
+}
 
 	$scope.init = function(){
 		var name;
