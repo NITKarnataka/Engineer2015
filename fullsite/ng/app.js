@@ -1,6 +1,6 @@
 var Engi;
 
-	Engi = angular.module('Engi', ['ngRoute','ngAnimate']);
+	Engi = angular.module('Engi', ['ngRoute','ngAnimate','ngSanitize']);
 
 
 	Engi.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {

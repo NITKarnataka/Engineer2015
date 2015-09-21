@@ -4,10 +4,6 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 	if(!$scope.misc.showModal)
 		$('.scene').addClass('pusher')
 
-	$scope.toTrustedHTML = function( html ){
-    return $sce.trustAsHtml( html );
-}
-
 	$scope.init = function(){
 		var name;
 		$scope.show = 'final-event';
