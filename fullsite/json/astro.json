@@ -1,1 +1,26 @@
-[{"name":"Astro Events 15","description":"Coming Soon. We will keep you updated."}]
+[{"name":"Astro Events 15","description":"Coming Soon. We will keep you updated."},
+    {
+        "name": "Starry Nights",
+        "pic": "starrynight_main.jpg",
+        "link": "starrynights",
+        "description": "Explore the wonders of the night sky!"
+    },
+    {
+        "name": "Orbiter",
+        "pic": "orbiter_main.jpg",
+        "link": "orbiter",
+        "description": "Experience yourself being an astronaut and do amazing stuffs!"
+    },
+    {
+        "name": "Star Wars",
+        "pic": "IMG-20150919-WA0000.jpg",
+        "link": "starwars",
+        "description": "Test your knowledge in the field of Astronomy and Astrophysics"
+    },
+    {
+        "name": "Antariksh",
+        "pic": "antariksh_main.jpg",
+        "link": "antariksh",
+        "description": "A grand exhibition of space models and other fun events!"
+    }
+]

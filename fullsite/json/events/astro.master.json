@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Starry Nights",
+        "link": "starrynights",
+        "banner": "starrynight_background.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Starry Nights is one of the most attractive events where you get to learn sky mapping, amazing facts of the Universe, constellation identification and most importantly you can watch planets, nebulae and craters of the moon using a telescope!",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Orbiter",
+        "link": "orbiter",
+        "banner": "orbiter_backgroud.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Orbiter is a flight simulator, where you can experience launching and landing a space shuttle, docking and undocking shuttles from International Space Station, tour the solar system and much more!",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Star Wars",
+        "link": "starwars",
+        "banner": "starwars_background.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "An exciting two round quiz competition that will include a written round followed by an oral round. The participants have to come in a group of 3 and questions would be on various aspects related to astronomy, astrophysics and space explorations.",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Antariksh",
+        "link": "antariksh",
+        "banner": "antariksh_background.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Antariksh is an exhibition, showcasing some of the exciting cosmological phenomenon, working and non-working models used in space explorations and much more!",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    }
+]
