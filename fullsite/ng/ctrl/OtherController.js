@@ -1,12 +1,21 @@
 Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $location,$routeParams) {
 	console.log('asd')
-	$scope.membersList=[{"name":"vivek","email":"bhadouria@gmail.com","pic":"vivekbhadouria.jpg","post":"office convenor","comittee":"office","classie":"office"},{"name":"shubham dixir","email":"sdicitr@gmaiul.com","pic":"dixit.jpg","post":"joint convenor","comittee":"core","classie":"core"}]
+	$scope.membersList=[{"name":"vivek","email":"bhadouria@gmail.com","pic":"dixit.jpg","post":"office convenor","comittee":"office","classie":"office"},{"name":"shubham dixit","email":"sdicit@gmaiutttl.com","pic":"dixit.jpg","post":"joint convenor","comittee":"core","classie":"core"},{"name":"arpan","email":"sdicitr@gmaiul.com","pic":"dixit.jpg","post":"joint convenor","comittee":"core","classie":"core"}]
+
+	$scope.show='about'
+	$scope.showTab = function(name){
+		$scope.show=name;
+	}
 
 	$scope.showMember = function(cname){
 		$scope.members = [];
-		for(var i=0;i<$scope.membersList.length;i++){
-			if($scope.membersList[i].classie==cname)
-				$scope.members.push($scope.membersList[i])
+		if(cname=="All"){
+			$scope.members = $scope.membersList;
+		}else{
+			for(var i=0;i<$scope.membersList.length;i++){
+				if($scope.membersList[i].classie==cname)
+					$scope.members.push($scope.membersList[i])
+			}
 		}
 		/**/
 		$timeout(function(){
@@ -68,6 +77,7 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 					+ document.documentElement.scrollLeft;
 				posy = e.clientY + document.body.scrollTop
 					+ document.documentElement.scrollTop;
+				console.log(e.clientX +' - '+ e.clientY)
 			}
 			return {
 				x : posx,
@@ -93,8 +103,11 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 			/**
 			* TiltFx fn
 			*/
+			var wrapper_text;
 			function TiltFx(el, options) {
 			this.el = el;
+			wrapper_text = el.parentNode.nextSibling.nextSibling;
+			console.log(this)
 			this.options = extend( {}, this.options );
 			extend( this.options, options );
 			this._init();
@@ -114,9 +127,9 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 			// image element's movement configuration
 			movement : {
 				perspective : 1000, // perspective value
-				translateX : -10, // a relative movement of -10px to 10px on the x-axis (setting a negative value reverses the direction)
-				translateY : -10, // a relative movement of -10px to 10px on the y-axis 
-				translateZ : 20, // a relative movement of -20px to 20px on the z-axis (perspective value must be set). Also, this specific translation is done when the mouse moves vertically.
+				translateX : 0, // a relative movement of -10px to 10px on the x-axis (setting a negative value reverses the direction)
+				translateY : 0, // a relative movement of -10px to 10px on the y-axis 
+				translateZ : 0, // a relative movement of -20px to 20px on the z-axis (perspective value must be set). Also, this specific translation is done when the mouse moves vertically.
 				rotateX : 2, // a relative rotation of -2deg to 2deg on the x-axis (perspective value must be set)
 				rotateY : 2, // a relative rotation of -2deg to 2deg on the y-axis (perspective value must be set)
 				rotateZ : 0 // z-axis rotation; by default there's no rotation on the z-axis (perspective value must be set)
@@ -196,18 +209,22 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 					// configure the movement for each image element.
 					for(var i = 0, len = self.imgElems.length; i < len; ++i) {
 						var el = self.imgElems[i],
-							rotX = moveOpts.rotateX ? 2 * ((i+1)*moveOpts.rotateX/self.options.extraImgs) / self.view.height * relmousepos.y - ((i+1)*moveOpts.rotateX/self.options.extraImgs) : 0,
-							rotY = moveOpts.rotateY ? 2 * ((i+1)*moveOpts.rotateY/self.options.extraImgs) / self.view.width * relmousepos.x - ((i+1)*moveOpts.rotateY/self.options.extraImgs) : 0,
-							rotZ = moveOpts.rotateZ ? 2 * ((i+1)*moveOpts.rotateZ/self.options.extraImgs) / self.view.width * relmousepos.x - ((i+1)*moveOpts.rotateZ/self.options.extraImgs) : 0,
-							transX = moveOpts.translateX ? 2 * ((i+1)*moveOpts.translateX/self.options.extraImgs) / self.view.width * relmousepos.x - ((i+1)*moveOpts.translateX/self.options.extraImgs) : 0,
-							transY = moveOpts.translateY ? 2 * ((i+1)*moveOpts.translateY/self.options.extraImgs) / self.view.height * relmousepos.y - ((i+1)*moveOpts.translateY/self.options.extraImgs) : 0,
-							transZ = moveOpts.translateZ ? 2 * ((i+1)*moveOpts.translateZ/self.options.extraImgs) / self.view.height * relmousepos.y - ((i+1)*moveOpts.translateZ/self.options.extraImgs) : 0;
-
-						document.getElementById("member-details").style.transform = 'perspective(' + moveOpts.perspective + 'px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
-						document.getElementById("member-details").style.WebkitTransform = 'perspective(' + moveOpts.perspective + 'px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
-
-						el.style.WebkitTransform = 'perspective(' + moveOpts.perspective + 'px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
-						el.style.transform = 'perspective(' + moveOpts.perspective + 'px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
+							rotX = moveOpts.rotateX ? 8 * ((i+1)*moveOpts.rotateX/self.options.extraImgs) / self.view.height * relmousepos.y - ((i+1)*moveOpts.rotateX/self.options.extraImgs) : 0,
+							rotY = moveOpts.rotateY ? 8 * ((i+1)*moveOpts.rotateY/self.options.extraImgs) / self.view.width * relmousepos.x - ((i+1)*moveOpts.rotateY/self.options.extraImgs) : 0,
+							rotZ = 0//moveOpts.rotateZ ? 2 * ((i+1)*moveOpts.rotateZ/self.options.extraImgs) / self.view.width * relmousepos.x - ((i+1)*moveOpts.rotateZ/self.options.extraImgs) : 0,
+							//transX = moveOpts.translateX ? 4 * ((i+1)*moveOpts.translateX/self.options.extraImgs) / self.view.width * relmousepos.x - ((i+1)*moveOpts.translateX/self.options.extraImgs) : 0,
+							//transY = moveOpts.translateY ? 4 * ((i+1)*moveOpts.translateY/self.options.extraImgs) / self.view.height * relmousepos.y - ((i+1)*moveOpts.translateY/self.options.extraImgs) : 0,
+							//transZ = 0//moveOpts.translateZ ? 2 * ((i+1)*moveOpts.translateZ/self.options.extraImgs) / self.view.height * relmousepos.y - ((i+1)*moveOpts.translateZ/self.options.extraImgs) : 0;
+							
+						el.parentNode.parentNode.nextSibling.nextSibling.style.transform = 'rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
+						el.parentNode.parentNode.nextSibling.nextSibling.style.WebkitTransform = 'rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
+						el.parentNode.parentNode.nextSibling.nextSibling.style.transition= 'none';
+						
+						//console.log(el.parentNode.parentNode.nextSibling.nextSibling)
+						el.style.WebkitTransform = 'rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
+						el.style.transform = 'rotate3d(1,0,0,' + rotX + 'deg) rotate3d(0,1,0,' + rotY + 'deg) rotate3d(0,0,1,' + rotZ + 'deg)';
+						el.style.transition = 'none';
+							
 					}
 				});
 			});
@@ -217,13 +234,15 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 				setTimeout(function() {
 				for(var i = 0, len = self.imgElems.length; i < len; ++i) {
 					var el = self.imgElems[i];
+					
+					el.parentNode.parentNode.nextSibling.nextSibling.style.WebkitTransform = 'rotate3d(1,1,1,0deg)';
+					el.parentNode.parentNode.nextSibling.nextSibling.style.transform = 'rotate3d(1,1,1,0deg)';
+					el.parentNode.parentNode.nextSibling.nextSibling.style.transition = 'all .8s ease';
 
-					document.getElementById("member-details").style.WebkitTransform = 'perspective(' + moveOpts.perspective + 'px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
-
-					document.getElementById("member-details").style.transform = 'perspective(' + moveOpts.perspective + 'px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
-
-					el.style.WebkitTransform = 'perspective(' + moveOpts.perspective + 'px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
-					el.style.transform = 'perspective(' + moveOpts.perspective + 'px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
+					el.style.WebkitTransform = 'rotate3d(1,1,1,0deg)';
+					el.style.transform = 'rotate3d(1,1,1,0deg)';
+					el.style.transition = 'all .8s ease';
+					
 				}	
 				}, 60);
 				
@@ -249,8 +268,16 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 
 			/**/
 		},50);
+	};
+
+	var initi = function(){
+		console.log('done')
+		$scope.showMember('core');
 	}
-	$scope.members = {
+
+	initi();
+
+	$scope.committee = {
 		All:'All',
 		core:'Core Members',
 		mnp:'Media And Publicity',
@@ -263,5 +290,12 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 		engitalks:'EngiTalks',
 		cteam:'Create Team'
 	}
+	
+
+	$scope.$watch('showType',function(n,o){
+		if(n!=o){
+			$scope.showMember(n)
+		}
+	})
 
 })

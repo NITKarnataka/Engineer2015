@@ -55,29 +55,24 @@
 }
 
 
-.grid--examples .grid__img {
-	position: relative;
-	height: 0;
-	padding-bottom: 93%;
-	overflow: hidden;
-}
+
 
 .grid--examples .tilt {
 	position: absolute;
 	top: 0;
-	height: 185px;
+	height: 240px;
 }
 
-#member-details{
+.member-details-text{
 	position: absolute;
-    height: 90%;
+    height: 100%;
     width: 90%;
     top: 5%;
     left: 5%;
     pointer-events: none;
     color: white
 }
-.grid__item:hover #member-details{
+.grid__item:hover .member-details-text{
 
     border: 1px solid white;
     transition:border 1s ease;
@@ -95,7 +90,7 @@
     background-size: 100%;
 }
 .member-details{
-	height: 220px;
+	height: 260px;
 }
 .tilt__back::after {
     content: '';
@@ -117,4 +112,7 @@
     position: absolute;
     right: 0;
     bottom: 2px;
+}
+.grid__img.grid__img--example-1{
+	perspective:1000px;
 }
