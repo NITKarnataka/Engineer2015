@@ -410,6 +410,9 @@ body > :not(.pace),body:before,body:after {
     }
 /*mediaq*/
 @media (max-height: 320px){
+  .about-hospi{
+    display: none;
+  }
   .timer-area{
     display: none!important;
   }
@@ -444,6 +447,9 @@ body > :not(.pace),body:before,body:after {
 }
 
 @media (max-width: 500px){
+  .about-hospi{
+    display: none;
+  }
   .timer-area{
     display:none!important;
   }
