@@ -216,7 +216,7 @@
             },
             {
                 "subtitle": "Workshop Fees",
-                "subdescription": "4000 INR per team. A team can be a maximum of four members. Kits will be provided to each team. Individual kits will also be made available for sale.",
+                "subdescription": "4500 INR per team. A team can be a maximum of four members. Kits will be provided to each team. Individual kits will also be made available for sale.",
                 "subimage": ""
             },
             {
@@ -242,6 +242,58 @@
                 "items": [
                     ""
                 ]
+            }
+        ]
+    },
+    {
+        "name": "Fundamentals of Photography",
+        "link": "myphototalks",
+        "banner": "ramubanner.png",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Photographs are more than snapshots. When taken right way, they become dramatic. They can transport to distant landscapes , capture floating emotions, recall cherished memories, reveal the beauty of life and even change the world.<br><br>This workshop is to change your perception , boost your confidence and improve your skills. This workshop will give you the skills and inspiration to take your work to new heights.<br><br><iframe width='854' height='480' src='https://www.youtube.com/embed/8z6kSl7JM0Q' frameborder='0' allowfullscreen></iframe>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Who can attend?",
+                "subdescription": "<ul>\n<li>Anyone who is passionate about photography </li><li>want to know how DSLR camera works! </li><li>want to learn photography as a new hobby</li><li>Improve their post processing skills</li></ul>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Duration",
+                "subdescription": "2 Days",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Harsha - 8861996581</li><li>Yashaswini - 8971008382</li></ul>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Structure of workshop",
+                "subdescription": "<b>First Half</b>\n<ol><li>What is a great photograph?</li><li>Camera details</li><li>Lens And Focal Length</li><li>Building blocks of photography (Aperture ,shutterspeed,ISO)</li><li>Light</li><li>Composition</li></ol><b>Second Half</b><ol><li>Field Skills</li><li>Different kinds of photography:<ul><li>Landscapes</li><li>Portrait</li><li>Wildlife</li><li>travel</li><li>Event Photography</li><li>Street Photography</li><li>Action Photography</li></ul></li><li>Workflow</li><li>Editing and Organizing</li><li>Visual Story Telling</li></ol>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 350",
+                "subimage": ""
+            },
+            {"subtitle":"About","subdescription":"This workshop is conducted by <b><a href=\"http://facebook.com/myphototalks.ramias\">Ram IAS</a></b> , the founder of <a href='http://myphototalks.blogspot.in'>MyPhotoTalks</a> , and a Google trusted Photographer.","subimage":""}
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
             }
         ]
     }

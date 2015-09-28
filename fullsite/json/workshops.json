@@ -1,7 +1,6 @@
 [
     {
-        "name": "Workshops",
-        "description": "More coming soon.."
+        "name": "Workshops"
     },
     {
         "name": "Bridge Design",
@@ -33,5 +32,11 @@
         "link": "internetofthings",
         "description": "Come be a part of the next major leap forward in mankinds technical evolution - The Internet of Things!"
     },
-    {"name":"Unmanned Ground Vehicle","pic":"unmannedgroundvehicle1.jpg","link":"unmannedgroundvehicle","description":"Ever wondered how automobiles can maneuver safely ? Well if not, then here is your chance to make your own \"Unmanned Ground Vehicle\"."}
+    {"name":"Unmanned Ground Vehicle","pic":"unmannedgroundvehicle1.jpg","link":"unmannedgroundvehicle","description":"Ever wondered how automobiles can maneuver safely ? Well if not, then here is your chance to make your own \"Unmanned Ground Vehicle\"."},
+    {
+    "name": "Fundamentals of Photography",
+    "pic": "ramu1.png",
+    "link": "myphototalks",
+    "description": "Change your perception and boost your skills in photography"
+}
 ]

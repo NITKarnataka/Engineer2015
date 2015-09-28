@@ -86,7 +86,7 @@
     content: '';
     height: 22px;
     width: 100%;
-    background: url('http://www.kikk.be/2015/files/templates/kikk2015/public/assets/images/floating-card-shadow.png') no-repeat;
+    background: url('../../../img/mshadow.png') no-repeat;
     background-size: 100%;
 }
 .member-details{
@@ -99,6 +99,7 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    left: 0;
 }
 .member-details h5{
     margin: 4px 0;

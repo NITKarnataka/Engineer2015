@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Hospitality",
+        "link": "hospi",
+        "banner": "",
+        "subdesc": [
+            {
+                "subtitle": "Location",
+                "subdescription": "NITK lies on the coastal belt of Karnataka, on the National Highway 66, at about 22 kms from Mangalore towards Udupi. It lies close to Mangalore International Airport, Mangalore Railway Station and the Mangalore Port. Bus Routes from Mumbai, Goa and Bangalore ( that terminate at Udupi-Manipal) pass through the College and visitors can disembark right away.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Reach Us ( frm Manglaore)",
+                "subdescription": "<ul><b>From Mangalore Railway Station</b>\n<li> All Express buses to Udupi, Manipal or Karkala drop you at the College NITK Express Bus Stop which is closer to the Administrative Block, Departments, Girls Hostel Block, and the Guest House.</li></ul>\n<ul><b>From Mangalore Bus stand</b>\n<li> All Service/Express Buses starting from Mangalore Bus Stand and going towards Udupi, stop at NITK Main Building.</li>\n <li>A number of Private Taxis also available at Mangalore. NITK is 21 Kms. from Mangalore on the northern side on National Highway No.66</li></ul>\n<ul><b>From Surathkal Railway Station</b>\n<li> Passengers alighting at Surathkal station can engage auto rickshaws that will take them to the college 2 km's from the Station for Rs.40/-.</li>\n<li> Further, one could also reach Surathkal Bus Stand and board regular service buses that ply via the college.</li></ul>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Distances",
+                "subdescription": "<table class=\"table table-striped dist_table\">\n<tr>\n<td>From Mangalore Airport:</td>\n<td>20 KM</td>\n</tr>\n<tr>\n<td>From Mangalore Central Railway Station:</td>\n<td>21 KM</td>\n</tr>\n<tr>\n<td>From Mangalore Junction Railway Station:</td>\n<td>25 KM</td>\n</tr>\n<tr>\n<td>From Surathkal Railway Station:</td>\n<td>04 KM</td>\n</tr>\n<tr>\n<td>From Mangalore Bus stand:</td>\n<td>20 KM</td>\n</tr>\n<tr>\n<td>From Udupi Bus Stand:</td>\n<td>35 KM</td>\n</tr>\n</table>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Accomodation",
+                "subdescription": "For out-station participants accommodation would be provided at <b> NITK SURATHKAL HOSTELS </b>at very reasonable prices*.<br><br><small>* prices to be put up soon</small>",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "contact details",
+                "items": [
+                    "Rajat Mittal - +91 9686330882"
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    }
+]

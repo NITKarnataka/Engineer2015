@@ -1,6 +1,9 @@
-<div class="background-leaf" style="background-image: url('img/{{page.banner}}');">
+<div class="background-leaf">
+	 <div class="row mapArea">
+          <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=13.011879,74.793683&amp;spn=0.01134,0.026157&amp;t=m&amp;z=16&amp;output=embed"></iframe>
+        </div>
 	<div id="closebt-container" class="close-animatedModal">
-		<img class="closebt" src="./img/closebt.svg" ng-click="closeLeaf()">
+		<img class="closebt" src="./img/closebtn.png" ng-click="closeLeaf()">
 	</div>
 </div>
 <div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2 col-xs-offset-2">
@@ -17,9 +20,6 @@
 				<h5>{{::desc.subtitle}}</h5>
 
 				<p ng-if="desc.subtitle!='Problem Statement'" ng-bind-html='deliberatelyTrustDangerousSnippet(desc.subdescription)'></p>
-				<a ng-if="desc.subtitle=='Problem Statement'" href="{{desc.subdescription}}" target="_blank">
-					<button class="btn btn-primary" style="margin-bottom: 10px;">CLICK TO VIEW ON DRIVE</button>
-				</a>
 				<div ng-if="desc.subimage">
 					<img ng-src="{{desc.subimage}}" style="height:150px;width:auto"/>
 				</div>
@@ -46,36 +46,59 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	
-	<div ng-if="showRegisterForm==true && page.link!='stockoholic'" ng-include="'./views/RegisterForm.html'"></div>
-	<!--<div ng-if="showRegisterForm==true"><button class="btn btn-primary">Registrations to commence shortly</button></div>-->	
-	<div ng-if="showCAForm==true" ng-include="'./views/CAForm.html'"></div>	
 </div>
 <style>
-ul.tabs li {
-    padding: 6px 8px;
-    margin-left: 2px;
-    background-color: #FCFCFC;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border: 1px solid;
-    border-bottom: 0px;
-    cursor: pointer;
-}
-.tabs li:hover{
-	background-color: #E7E7FA;
-}
-.activeTab{
-	background-color: #D1D1D1!important;
-}
-ul.tabs{
-	list-style-type: none;
-    padding: 0;
-    display: flex;
-    display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;      
-  display: -webkit-flex;
-    border-bottom: 1px solid;
-}
+	ul.tabs li {
+	    padding: 6px 8px;
+	    margin-left: 2px;
+	    background-color: #FCFCFC;
+	    border-top-left-radius: 4px;
+	    border-top-right-radius: 4px;
+	    border: 1px solid;
+	    border-bottom: 0px;
+	    cursor: pointer;
+	}
+	.tabs li:hover{
+		background-color: #E7E7FA;
+	}
+	.activeTab{
+		background-color: #D1D1D1!important;
+	}
+	ul.tabs{
+		list-style-type: none;
+	    padding: 0;
+	    display: flex;
+	    display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;      
+	  display: -webkit-flex;
+	    border-bottom: 1px solid;
+	}
+	.mapArea {
+        background:url(../images/map-bro.png) repeat-x 0 0;
+        height:300px;
+        overflow:hidden;
+        width:100%;
+        margin:0;
+        z-index: 1000;
+        position: relative;
+    }
+    .mapArea iframe {
+        width:100%;
+        height:100%;
+       	position: absolute;
+       	left: 0;
+       	top: 0;
+        background:url(../images/map-bro.png) repeat-x 0 100%;
+    }
+    .background-leaf{
+    	overflow: hidden;
+    }
+    .background-leaf::before{
+    	background-color: transparent!important;
+    }
+    #closebt-container{
+   		top: 0!important;
+    	z-index: 10000!important;
+    }
 </style>

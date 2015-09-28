@@ -74,7 +74,7 @@ html{
 
 .title{
   top:auto!important;
-  bottom:12%!important;
+  bottom:8%!important;
   width:33.33%;
   height:15%;
   left:33.33%!important;
@@ -363,6 +363,22 @@ html{
   left:75%!important;
   top:2%!important;
   z-index: 1000;
+}
+.about-hospi{
+  display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox!important;      /* TWEENER - IE 10 */
+  display: -webkit-flex!important;
+  display: flex!important;
+  justify-content:space-between;
+  height: 3%;
+  width: 12%;
+  left:5%!important;
+  top:2%!important;
+  z-index: 1000;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 .wrapper-fb,.wrapper-twitter,.wrapper-youtube,.wrapper-instagram{
   height: 30px;

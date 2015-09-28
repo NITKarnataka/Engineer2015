@@ -3,10 +3,10 @@
 		<h4 class="bg-success" style="text-transform:none;">Thanx for registering we keep you updated</h4>
 	</div>
 	<div ng-show="rsuccess!=2" class="col-md-2">
-		<button class="btn btn-block btn-info" ng-click="toggleRegisterForm()">{{ RegisterForm ? 'Later':'Register' }}</button>
+		<button class="btn btn-block btn-info" ng-click="toggleRegisterForm();scrollToForm('startHere');">{{ RegisterForm ? 'Later':'Register' }}</button>
 	</div>
 	<div class="clearfix"></div>
-	<div ng-show="RegisterForm&&rsuccess!=2" class="registerForm">
+	<div ng-show="RegisterForm&&rsuccess!=2" class="registerForm" id="formStart">
 		<hr/>
 		<div class="col-md-4">
 			<h5>Name*</h5>
@@ -62,7 +62,7 @@
 				<h5>Friend #{{$index + 1}} location</h5>
 				<input type="text" ng-model="friend.location" class="form-control form-group" placeholder = 'College Location'/>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4" >
 				<h5>Friend #{{$index + 1}} branch</h5>
 				<input type="text" ng-model="friend.branch" class="form-control form-group" placeholder = 'Branch'/>
 			</div>
@@ -85,7 +85,7 @@
 			<div ng-show="rsuccess==3" class='col-md-12'>
 				<p class="bg-danger">Some Server error occured sory for the inconvinience ..</p>
 			</div>
-		<div class="col-md-3">
+		<div class="col-md-3" id="startHere">
 			<button class="btn-success btn btn-block" ng-click="validateAndSubmitRegister()">Register</button>
 		</div>
 		<div class="clearfix"></div>

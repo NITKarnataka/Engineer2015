@@ -23,7 +23,7 @@ if($data->name!=''&&$data->number!=''&&$data->college!=''&&$data->email!=''){
 		$subject = "Engineer Campus Ambassador Registration";
 	    $headers = "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
 		$body = "Hey dude,\r\n".$data->name." from ".$data->college." has registered\r\n "."Email: ".$data->email."\r\nNumber: ".$data->number."\r\nyear: ".$data->year."\r\nstream: ".$data->stream."\r\nlocation: ".$data->location."\r\nHas held any position: ".$data->held."\r\nDescription if yes: ".$data->desc."\r\nFacebook :".$data->flink."\r\nTwitter :".$data->tlink;
-		$address = "rajatmittal18@gmail.com";
+		$address = "mahendrabohra28@gmail.com";
 		if(mail($address, $subject, $body,$headers)) {
 			$response[ 'success' ] = true;
 			$contacter_name = $data->name;

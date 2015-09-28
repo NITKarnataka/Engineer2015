@@ -264,6 +264,4 @@
 			init();
 
 			window.TiltFx = TiltFx;
-
-			console.log('asdsfdfdfsd')
 })(window);

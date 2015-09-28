@@ -8,9 +8,9 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 		var name;
 		$scope.show = 'final-event';
 		var back = $routeParams.id;
-		if($location.$$path=='/CA'||$location.$$path=='/sponsors'||$location.$$path=='/about'||$location.$$path=='/engiconnect'){
+		if($location.$$path=='/CA'||$location.$$path=='/sponsors'||$location.$$path=='/contactTeam'||$location.$$path=='/about'||$location.$$path=='/engiconnect'||$location.$$path=='/hospi'){
 			name = $location.$$path.substring(1);
-			if($location.$$path=='/sponsors'||$location.$$path=='/about'||$location.$$path=='/hospi'){
+			if($location.$$path=='/sponsors'||$location.$$path=='/about'||$location.$$path=='/hospi'||$location.$$path=='/contactTeam'){
 				$scope.show = $location.$$path.substring(1);
 			}
 			if($location.$$path=='/CA'){
@@ -22,6 +22,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 			if(name!='technites')
 				$scope.showRegisterForm = true;
 		}
+		if(name!='about')
 		$http.get('./json/'+name+'.master.json').then(function(msg){
 			if(msg.data.length){
 				for(i=0;i<msg.data.length;i++){
@@ -30,7 +31,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 							$scope.page = msg.data[i];
 					}
 					else{
-						if($location.$$path=='/CA'||$location.$$path=='/engiconnect'){
+						if($location.$$path=='/CA'||$location.$$path=='/engiconnect'||$location.$$path=='/hospi'){
 							$scope.page = msg.data[0];
 							break;
 						}
@@ -71,4 +72,20 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
 		setTimeout(500);
 		$location.path($scope.misc.prevPage);
 	}
+
+	$scope.closeHome = function(){
+		$('.scene').removeClass('pusher')
+		$scope.misc.leafCheck=0;
+		$('#scene').css("margin-left","0");
+		$('#scene').css("margin-right","0");
+
+		$('#animatedModal').removeClass('zoomIn').addClass('zoomOut')
+		setTimeout(500);
+		$location.path('/');
+	}
+
+	$scope.deliberatelyTrustDangerousSnippet = function(html) {
+          return $sce.trustAsHtml(html);
+        };
+
 });

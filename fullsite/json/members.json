@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Vinit Mandowara",
+        "email": "vinitm52@gmail.com",
+        "pic": "vinit.jpg",
+        "post": "Convenor",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Snehal Jauhri",
+        "email": "",
+        "pic": "snehal.jpg",
+        "post": "Joint Convenor",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Ayush Malewar",
+        "email": "",
+        "pic": "ayush.jpg",
+        "post": "Joint Convenor",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Shahshikant",
+        "email": "",
+        "pic": "shashikant.jpg",
+        "post": "Organizing Secretary",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Rajat Mittal",
+        "email": "",
+        "pic": "rajat.jpg",
+        "post": "Secretary",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Shubham Dixit",
+        "email": "",
+        "pic": "shubham.jpg",
+        "post": "Secretary",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Mohammad Asif",
+        "email": "",
+        "pic": "asif.jpg",
+        "post": "Chief Coordinator",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Yash Kedia",
+        "email": "",
+        "pic": "yash.jpg",
+        "post": "Convenor",
+        "comittee": "core",
+        "classie": "core"
+    }
+]

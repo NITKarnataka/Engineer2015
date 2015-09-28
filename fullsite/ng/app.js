@@ -3,7 +3,7 @@ var Engi;
 	Engi = angular.module('Engi', ['ngRoute','ngAnimate','ngSanitize']);
 
 
-	Engi.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
+	Engi.config(['$routeProvider','$locationProvider','$sceDelegateProvider', function($routeProvider,$locationProvider,$sceDelegateProvider) {
 
 		$routeProvider
 		.when('/events', {
@@ -51,12 +51,25 @@ var Engi;
 		.when('/sponsors', {
 			templateUrl: './views/leaf.html'
 		})
+		.when('/team', {
+			templateUrl: './views/leaf.html'
+		})
+		.when('/sponsors', {
+			templateUrl: './views/leaf.html'
+		})
 		.when('/engiconnect', {
 			templateUrl: './views/leaf.html'
 		})
 		.when('/hospi', {
 			templateUrl: './views/leaf.html'
-		});
+		}).otherwise({
+        redirectTo: '/'
+      });;
+
+		$sceDelegateProvider.resourceUrlWhitelist([
+		     'self',
+		     '*://www.youtube.com/**'
+		   ]);
 
 	}]);
 
@@ -79,7 +92,7 @@ var Engi;
 
 	});
 
-	Engi.controller('MainController', function($scope, $location,$timeout) {
+	Engi.controller('MainController', function($scope, $location,$timeout,$anchorScroll,$timeout) {
 		$scope.misc = {
 			showModal:false,
 			wasLeaf:false,
@@ -89,9 +102,22 @@ var Engi;
 		$scope.showModal = function(redirect){
 
 			$('.scene').toggleClass('pusher')
-			$timeout(function(){$scope.misc.parent= redirect;
-			$location.path('/'+redirect);},200);
+			$timeout(function(){
+				$scope.misc.parent= redirect;
+				$location.path('/'+redirect);
+			},200);
+		}
+		$scope.scrollTo = function(id) {
+			$('#animatedModal').scrollTop( 0 );
+			$('#animatedModal').scrollTop( $('#'+id).position().top );
+		}
+		$scope.scrollToForm = function(id) {
+			$timeout(function(){
+				var nows = $('#animatedModal').scrollTop();
+			$('#animatedModal').scrollTop(300+nows);
+			console.log(100+nows )
+		},500)
 		}
 
-
 	})
+	

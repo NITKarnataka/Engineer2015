@@ -1,91 +1,13 @@
-<!-- 
-<div class="members" ng-controller="OtherController">
-
-	<link rel="stylesheet" type="text/css" href="/plugins/imagerotator/css/tilteffect.css" />
-	<link rel="stylesheet" type="text/css" href="/plugins/imagerotator/css/demo.css" />
-
-	<div class="col-xs-12 col-sm-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
-		<ul class="tabs">
-			<li ng-click="showTab('about')" class="{{show=='about'?'activeTab':''}}">About</li>
-			<li ng-click="showTab('team')" class="{{show=='team'?'activeTab':''}}">Team Engineer</li>
-		</ul>
-		<div ng-show="show=='team'">
-			<div class="row">
-				<div class="col-md-12">
-					<select class="form-control form-group" ng-model="showType" ng-init="showType='core'" ng-options="k as v for (k,v) in committee">
-					</select>
-				</div>
-			</div>
-			<h4>{{::doc.title}}</h4>
-			<div class="row">
-				<div class="col-md-4 member-details" ng-repeat="doc in members">
-					<div class="grid grid--examples">
-						<div class="grid__item" data-tilt-options='{ "opacity" : 1, "extraImgs" : 3, "movement": { "perspective" : 1200, "translateX" : -5, "translateY" : -5, "rotateX" : -5, "rotateY" : -5 } }' style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);position:relative;">
-							<div id='check' class="grid__img grid__img--example-1" >
-								<img ng-src="/img/{{doc.pic}}" class="tilt-effect"/>
-							</div>
-							<div class="member-details-text">
-								<div class="bottom-right">
-									<h5>{{:: doc.post +' - '+doc.comittee}}</h5>
-									<p>{{::doc.name}}</p>
-									<p>{{::doc.email}}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div ng-if="show=='about'">
-			<p><b>Think Create ENGINEER</b> is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India. Started in 2005 as an amalgamation of many technical fests held in NITK Surathkal by its various student clubs, ENGINEER has grown in leaps and bounds over the years. It is held over 4 days in the second half of the month of October and has consistently attracted participants from all over India.</p>
-			<p>All four days of ENGINEER are encompassed with lucid events ranging from Quizzes, war of machines, coding and business challenges and paper presentations. These are broadly classified into various Branch Events. Apart from this, Workshops in vivid fields covering all aspects of present day technical madness are held too. To upkeep the environmentalists in engineers, social/environmental awareness initiatives are undertaken under the banner of SCE (Socially Conscious Engineering). Apart from the events the fest sees main shows which portrays the adherence of entertainment to technology.</p>
-		</div>
-	</div>
-</div>
-
-<style>
-ul.tabs li {
-    padding: 6px 8px;
-    margin-left: 2px;
-    background-color: #FCFCFC;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border: 1px solid;
-    border-bottom: 0px;
-    cursor: pointer;
-}
-.tabs li:hover{
-	background-color: #E7E7FA;
-}
-.activeTab{
-	background-color: #D1D1D1!important;
-}
-ul.tabs{
-	list-style-type: none;
-    padding: 0;
-    display: flex;
-    display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;      
-  display: -webkit-flex;
-    border-bottom: 1px solid;
-}
-</style>
-
-
- -->
-<!--  s
- <div class="wrapper" id="wrapper">
-  <header>
-    <!--banner start-->
-        <!--slider start-->
-<div id="overflow-hidden">
+<link rel="stylesheet" type="text/css" href="css/nav.css">
+<div id="overflow-hidden" du-scroll-container>
+    <div id="closebt-container" class="close-animatedModal">
+        <img class="closebt" src="./img/closebt.svg" ng-click="closeHome()">
+    </div>
     <div class="wrapper-about">
         <div class="row">
             <div class="col-md-12">
                 <div id="ri-grid" class="ri-grid ri-grid-size-2">
-                    <ul class="cb-slideshow"><!--total 33 images required-->
+                    <ul class="cb-slideshow" id="gallery-grid"><!--total 33 images required-->
                         <li><a href="#"><img src="images/cover/1.jpg"/></a></li>
                         <li><a href="#"><img src="images/cover/2.jpg"/></a></li>
                         <li><a href="#"><img src="images/cover/3.jpg"/></a></li>
@@ -123,36 +45,275 @@ ul.tabs{
                 </div>
             </div>
         </div>
+        <div class="menu" style="left: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;">
+        <div class="navbar-wrapper" >
+            <div class="navwrapper">
+                <div class="navbar navbar-inverse navbar-static-top m-0">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                            <a class="navbar-brand" href="#">Engineer</a> 
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="menuItem"><a ng-click="scrollTo('gallery-grid')" >Home</a></li>
+                                <li class="menuItem"><a ng-click="scrollTo('aboutme')" >About</a></li>
+                                <li class="menuItem"><a ng-click="scrollTo('video')">Video</a></li>
+                                <li class="menuItem"><a ng-click="scrollTo('sponsors')" >Sponsors</a></li>
+                                <li class="menuItem"><a ng-click="scrollTo('contactTeam')" >Team</a></li>
+                                <li class="menuItem"><a ng-click="scrollTo('visit')" >visit</a></li>
+                                <li class="menuItem"><a ng-click="scrollTo('contact')" >Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!-- End Navbar -->
+        </div>
     </div>
+    </div>
+    <script type="text/javascript">
+        
+    </script>
+    <!-- START THE NAVBAR -->
+     <!--menu start-->
+    
+    <!--menu end-->
+
     <div class="bannerText container">
-        <h2 class="engifont">think. create.</h2>
-        <h1 class="engifont" style="font-weight:100; text-transform:lowercase;">engineer</h1>
+        <h2 class="engifont" style="font-size:51px">think. create. engineer</h2>
     </div>
     <section class="aboutme" id="aboutme">
         <div class="container">
-          <div class="heading">
-            <h2>About Engineer</h2>
-            <p>One of a kind!</p>
-          </div>
-          <div class="row">
-            <div class=" col-xs-12 col-sm-12 col-md-7 col-lg-7">
-              <h3>This Autumn</h3>
-              <h4 class="subHeading">October 08<sup>th</sup> - 11<sup>th</sup> 2015</h4>
-              <p>Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India. Started in 2005 as an amalgamation of many technical fests held in NITK Surathkal by its various student clubs, Engineer has grown in leaps and bounds over the years. It is held over 4 days in the second half of the month of October and has consistently attracted participants from all over India. A Penrose Triangle is used as its logo with the tagline 'Think.Create.Engineer'.</p>
+            <div class="heading">
+                <h2>About Engineer</h2>
+            </div>
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                    <h3>This Winter</h3>
+                    <h4 class="subHeading">October 08<sup>th</sup> - 11<sup>th</sup> 2015</h4>
+                    <p>Engineer is the Annual Technical Symposium of NITK Surathkal and is one of the largest of its kind in India. Started in 2005 as an amalgamation of many technical fests held in NITK Surathkal by its various student clubs, Engineer has grown in leaps and bounds over the years. It is held over 4 days in the second half of the month of October and has consistently attracted participants from all over India. A Penrose Triangle is used as its logo with the tagline 'Think.Create.Engineer'.</p>
 
-              <p>In its previous editions, Engineer brought organizations such as CERN, MIT Media and Bell labs while catering to a participation pool of over 6000 students from 150 colleges across 65 countries.</p>
+                    <p>In its previous editions, Engineer brought organizations such as CERN, MIT Media and Bell labs while catering to a participation pool of over 6000 students from 150 colleges across 65 countries.</p>
               
-              <a href="http://en.wikipedia.org/wiki/Engineer_%28technical_fest%29" target="_blank" class="bntDownload hide">Engi Wiki</a> </div>
-            <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic"> <img src="images/cover/engilogo.png" alt="" class="img-circle topmar" style="height:300px;"> </div>
-          </div>
+                    <a href="http://en.wikipedia.org/wiki/Engineer_%28technical_fest%29" target="_blank" class="bntDownload hide">Engi Wiki</a> 
+                </div>
+                <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic">
+                    <img src="images/cover/engilogo.png" alt="" class="img-circle topmar"> 
+                </div>
+            </div>
         </div>
     </section>
-    <article id="video" style="height:100vh;width:100%;position:relative">
+    <article id="video" style="height:100vh;width:100%;position:relative;padding:50px 0;">
         <iframe title="YouTube video player" class="youtube-player" type="text/html" 
         width="90%" height="100%" src="https://www.youtube.com/embed/uuAUCj_fRPQ"
         frameborder="0" allowFullScreen></iframe>
     </article>
-    <section class="contact" id="contact">
+
+    <section class="aboutme" id="sponsors">
+        <div class="extra">
+            <div class="container-fluid">
+                <div class="heading">
+                    <h2>Sponsors</h2>
+                    <div class="col-xs-12 col-sm-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
+                        <h3>We express our gratitude to our previous sponsors</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- <img src="img/sponsors/1.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/2.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/3.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/4.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/5.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/6.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/7.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/8.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/9.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/10.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/11.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/12.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/13.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/14.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/15.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/16.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/17.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/18.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/19.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/20.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/21.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/22.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/23.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/24.png"/>
+                            </div>
+                            <div class="col-md-3 h-200">
+                                <img src="img/sponsors/25.png"/> -->
+                            <img src="/img/sponsour.png" width='100%' class='img-reponsive' style="margin-bottom:50px"/>
+                        <div class="clearfix"></div> 
+
+                            </div>
+                        <div class="clearfix"></div> 
+
+                        </div>
+                        <div class="clearfix"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        ul.tabs li {
+            padding: 6px 8px;
+            margin-left: 2px;
+            background-color: #FCFCFC;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border: 1px solid;
+            border-bottom: 0px;
+            cursor: pointer;
+        }
+        .tabs li:hover{
+            background-color: #E7E7FA;
+        }
+        .activeTab{
+            background-color: #D1D1D1!important;
+        }
+        ul.tabs{
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;      
+          display: -webkit-flex;
+            border-bottom: 1px solid;
+        }
+    </style>
+    
+
+
+    <section class="contactDetails" id="contactTeam">
+        <div class="extra">
+            <div class="container topCon">
+                <div class="heading" style="color:white;">
+                    <h2>Team Engineer</h2>
+                    <div class="members" ng-controller="OtherController">
+                        <link rel="stylesheet" type="text/css" href="/plugins/imagerotator/css/tilteffect.css" />
+                        <link rel="stylesheet" type="text/css" href="/plugins/imagerotator/css/demo.css" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <select class="w-100" ng-model="showType" ng-init="showType='core'" ng-options="k as v for (k,v) in committee">
+                                </select>
+                            </div>
+                        </div>
+                        <h4>{{::doc.title}}</h4>
+                        <div class="row">
+                            <div class="col-md-4 member-details" ng-repeat="doc in members">
+                                <div class="grid grid--examples">
+                                    <div class="grid__item" data-tilt-options='{ "opacity" : 1, "extraImgs" : 3, "movement": { "perspective" : 1200, "translateX" : -5, "translateY" : -5, "rotateX" : -5, "rotateY" : -5 } }' style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);position:relative;">
+                                        <div id='check' class="grid__img grid__img--example-1" >
+                                            <img ng-src="img/{{doc.pic}}" class="tilt-effect"/>
+                                        </div>
+                                        <div class="member-details-text">
+                                            <div class="bottom-right">
+                                                <h5>{{:: doc.post }}</h5>
+                                                <p style="color:white" class="name">{{:: doc.name }}</p>
+                                                <p style="color:white">{{:: doc.email }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- <div ng-if="waitLoad">
+                            <script ng-if="waitLoad" type="text/javascript" src="plugins/imagerotator/js/tiltfx.js"></script>
+                        </div> -->
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        ul.tabs li {
+            padding: 6px 8px;
+            margin-left: 2px;
+            background-color: #FCFCFC;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border: 1px solid;
+            border-bottom: 0px;
+            cursor: pointer;
+        }
+        .tabs li:hover{
+            background-color: #E7E7FA;
+        }
+        .activeTab{
+            background-color: #D1D1D1!important;
+        }
+        ul.tabs{
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;      
+          display: -webkit-flex;
+            border-bottom: 1px solid;
+        }
+    </style>
+
+
+    <section class="contact" id="visit">
         <div class="container topCon">
           <div class="heading">
             <h2>Visit Us</h2>
@@ -163,7 +324,7 @@ ul.tabs{
           <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=13.011879,74.793683&amp;spn=0.01134,0.026157&amp;t=m&amp;z=16&amp;output=embed"></iframe>
         </div>
     </section>
-    <section class="contactDetails">
+    <section class="contactDetails" id="contact">
         <div class="container">
           <!--contact info start-->
             <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
@@ -178,7 +339,7 @@ ul.tabs{
             <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
                 <h4>Shoot a message!</h4>
                 <div id="message"></div>
-                <form method="post" action="php/contact.php" name="cform" id="cform">
+                <form method="post" action="contact.php" name="cform" id="cform">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr p-l-0">   
                         <input name="name" id="name" type="text" class="w-100" placeholder="Your name..." >
                     </div>
@@ -243,448 +404,658 @@ $( '#ri-grid' ).gridrotator( {
     } );
 </script>
 <style>
-.wrapper-about {
-    width:100%;
-    height: 100vh;
-    overflow-y:hidden;
-    overflow: hidden;
-    position: relative;
-}
-header {
-    position:relative;
-}
-#overflow-hidden{
-    overflow: hidden;
-}
-.banner {
-    overflow:hidden;
-    margin:0 auto !important;
-    background:#CACACA;
-}
-.bannerText {
-    position:absolute;
-    left:0;
-    right:0;
-    top:35%;
-    text-align:center;
-    padding:30px 0 30px;
-    max-width:960px;
-    border:1px solid #fff;
-    background: rgba(0, 0, 0, 0.3);
- filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
-    zoom: 1;
-    font-family: space age;
-    text-transform: lowercase;
-    color: white;
-}
-.bannerText h1 {
-    text-transform:uppercase;
-}
-.bannerText h2 {
-    font-size:34px;
-    text-transform:none;
-}
-.wrapper {
-    width:100%;
-}
-.cb-slideshow {
-    background:#1b1f2b;
-}
-#video{
-    background:#000;
-}
-#video iframe{
-        margin: 0 auto;
-    display: block;
-}
-.cb-slideshow li {
-    opacity:0.5;
-    filter:alpha(opacity=50); /* For IE8 and earlier */
-}
-/*---------------------------------------------------------------------------------
- 4. Background slider CSS style
--------------------------------------------------------------------------------*/
-.ri-grid {
-    margin:0px auto;
-    position: relative;
-    height: auto;
+    .m-0{
+        margin: 0;
+    }
+    .wrapper-about {
+        width:100%;
+        height: 100vh;
+        overflow-y:hidden;
+        overflow: hidden;
+        position: relative;
+    }
+    header {
+        position:relative;
+    }
+    #overflow-hidden{
+        overflow: hidden;
+    }
+    .banner {
+        overflow:hidden;
+        margin:0 auto !important;
+        background:#CACACA;
+    }
+    .bannerText {
+        position:absolute;
+        left:0;
+        right:0;
+        top:35%;
+        text-align:center;
+        padding:30px 0 30px;
+        max-width:960px;
+        border:1px solid #fff;
+        background: rgba(0, 0, 0, 0.3);
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
+        zoom: 1;
+        font-family: space age;
+        text-transform: lowercase;
+        color: white;
+    }
+    .bannerText h1 {
+        text-transform:uppercase;
+    }
+    .bannerText h2 {
+        font-size:34px;
+        text-transform:none;
+    }
+    .wrapper {
+        width:100%;
+    }
+    .cb-slideshow {
+        background:#1b1f2b;
+    }
+    #video{
+        background:#000;
+    }
+    #video iframe{
+            margin: 0 auto;
+        display: block;
+    }
+    .cb-slideshow li {
+        opacity:0.5;
+        filter:alpha(opacity=50); /* For IE8 and earlier */
+    }
+    /*---------------------------------------------------------------------------------
+     4. Background slider CSS style
+    -------------------------------------------------------------------------------*/
+    .ri-grid {
+        margin:0px auto;
+        position: relative;
+        height: auto;
 
-}
-.ri-grid ul {
-    list-style: none;
-    display: block;
+    }
+    .ri-grid ul {
+        list-style: none;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+    .ri-grid ul:before, .ri-grid ul:after {
+        content: '';
+        display: table;
+    }
+    .ri-grid ul:after {
+        clear: both;
+    }
+    .ri-grid ul {
+        zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    }
+    .ri-grid ul li {
+        -webkit-perspective: 400px;
+        -moz-perspective: 400px;
+        -o-perspective: 400px;
+        -ms-perspective: 400px;
+        perspective: 400px;
+        margin: 0;
+        padding: 0;
+        float: left;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        background: #000;
+    }
+    .ri-grid ul li a {
+        display: block;
+        outline: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #333;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    /* Grid wrapper sizes */
+    .ri-grid-size-1 {
+        width: 55%;
+    }
+    .ri-grid-size-2 {
+        width: 100%;
+    }
+    .ri-grid-size-3 {
+        width: 100%;
+        margin-top: 0px;
+    }
+    /* Shadow style */
+    .ri-shadow:after, .ri-shadow:before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        height: 20%;
+        max-width: 300px;
+        max-height: 100px;
+        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+    .ri-shadow:after {
+        right: 10px;
+        left: auto;
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+    .ri-grid-loading:after, .ri-grid-loading:before {
+        display: none;
+    }
+    .ri-loading-image {
+        display: none;
+    }
+    .ri-grid-loading .ri-loading-image {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        margin: 100px 0 0 -15px;
+        display: block;
+    }
+    .aboutme {
+        background:#00bdbd;
+        color:#fff;
+        position:relative;
+    }
+    .aboutme .container {
+        padding-top:85px;
+        padding-bottom:93px;
+    }
+    .aboutTop {
+        background:#00bdbd;
+        height:60px;
+    }
+    /*doc*/
+    .spHeight {
+        padding-top:63px;
+    }
+    .noMar {
+        margin:0 !important;
+    }
+    .noPadd {
+        padding:0px !important;
+    }
+    .engifont{
+        color: white;
+        font-family: space age;
+    }
+    .container .row {
+        margin:0px;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size:14px;
+        line-height:21px;
+        font-weight:400;
+        padding-bottom:22px;
+        margin:0px;
+    }
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:80px;
+        line-height:90px;
+        font-weight:700;
+        margin:0px;
+        padding-bottom:8px;
+    }
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:36px;
+        line-height:38px;
+        padding-bottom:0px;
+        font-weight:300;
+        text-transform:uppercase;
+        margin:0px;
+    }
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:24px;
+        line-height:30px;
+        padding-bottom:6px;
+        font-weight:400;
+        margin:0px;
+    }
+    h4 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:19px;
+        line-height:24px;
+        padding-bottom:6px;
+        font-weight:600;
+        margin:0px;
+    }
+    h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:16px;
+        line-height:24px;
+        padding-bottom:6px;
+        font-weight:400;
+        margin:0px;
+    }
+    h4.subHeading {
+        font-weight:600;
+        font-size:18px;
+        padding-bottom:22px;
+    }
+    .heading {
+        text-align:center;
+        padding-bottom:45px;
+    }
+    .topmar {
+        margin-top:20px;
+    }
+    /**/
+    .contact {
+        background:#fff;
+    }
+    .contact .container {
+        padding-top:85px;
+        padding-bottom:90px;
+    }
+    .contact h2 {
+        color:#ff675f;
+    }
+    .contact p {
+        color:#84868d;
+        /*font-size:13px;*/
+        line-height:18px;
+    }
+    .contact .heading p {
+        padding-bottom:41px;
+    }
+    .contact h4 {
+        font-weight:700;
+    }
+    .topCon {
+        padding-bottom:0px !important;
+    }
+    .mapArea {
+        background:url(../images/map-bro.png) repeat-x 0 0;
+        padding-top:4px;
+        height:400px;
+        overflow:hidden;
+        width:100%;
+        margin:0;
+    }
+    .mapArea iframe {
+        width:100%;
+        height:396px;
+        background:url(../images/map-bro.png) repeat-x 0 100%;
+    }
+    .contactDetails {
+        background:#474d5d;
+    }
+    .contactDetails .container {
+        padding-top:85px;
+        padding-bottom:90px;
+    }
+    .contactDetails h4 {
+        font-weight:600;
+        text-transform:uppercase;
+        padding-bottom:15px;
+        color: white;
+    }
+    .contactDetails p {
+        color:#93959c;
+        font-size:13px;
+        line-height:19px;
+        padding-bottom:14px;
+    }
+    .contactDetails p a {
+        color:#93959c;
+    }
+    .contactDetails p a:hover {
+        color:#a9abb0;
+        text-decoration:none;
+    }
+    .contactDetails i {
+        padding-right:15px;
+    }
+    .conForm h4{
+        color: white;
+    }
+    .p-r-0{
+        padding-right: 0;
+    }
+    .p-l-0{
+        padding-left: 0;
+    }
+    .w-100{
+        width: 100%;
+    }
+    .conForm input, select {
+        background:#585f73;
+        color:#93959c;
+        padding:15px 30px;
+        border:none;
+        margin-right:3%;
+        margin-bottom:30px;
+        outline:none;
+        font-style:italic;
+    }
+    .conForm input.noMarr {
+        margin-right:0px;
+    }
+    .conForm textarea {
+        background:#585f73;
+        color:#93959c;
+        padding:15px 30px;
+        border:none;
+        margin-bottom:40px;
+        outline:none;
+        height:100px;
+        font-style:italic;
+    }
+    .conForm .submitBnt {
+        background:#ff675f;
+        font-family: 'Open Sans', sans-serif;
+        color:#fff;
+        font-size:16px;
+        font-weight:600;
+        text-align:center;
+        float:right;
+        margin:0px;
+    }
+    .conForm .submitBnt:hover {
+        background:#f5534b;
+    }
+    .textGroup {
+        position:relative !important;
+        display: inline-block;
+        padding-left:0px !important;
+    }
+    #success_page {
+        color: #00bdbd;
+        font-weight: 500;
+    }
+    .error_message {
+        color: #ff675f;
+        padding-bottom: 15px;
+        font-weight: 500;
+    }
+    #success_page h3 {
+        font-size:17px;
+    }
+    /*----------------------------------------------------
+     12. Footer Style
+    ------------------------------------------------------*/
+    .footer {
+        background:#00bdbd;
+    }
+    .footer .container {
+        padding:40px 0;
+    }
+    .footer ul {
+        margin:0 auto;
+        text-align:center;
+        list-style-type:none;
+    }
+    .footer ul li {
+        display:inline-block;
+        text-align:center;
+        background:#ffffff;
+        color:#00bdbd;
+        line-height:42px;
+        margin:0 6px;
+        width:42px !important;
+        height:42px !important;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .footer ul li:hover {
+        background:#0a9f9f;
+    }
+    .footer ul li:hover a {
+        color:#fff;
+    }
+    .footer ul li a {
+        color:#00bdbd;
+        width:42px !important;
+        height:42px !important;
+    }
+    .footer ul li a i {
+        line-height:42px !important;
+    }
+    .member-details-text p{
+        color: white;
+        text-align: left;
+        font-weight: bold;
+        padding: 0
+    }
+    .member-details-text p.name{
+        color: white;
+        text-align: left;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+        padding-bottom: 0;
+        padding: 0
+    }
+    .member-details-text h5{
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0;
+        margin:0;
+    }
+</style>
+<script type="text/javascript">
+    jQuery(
+    function($) {
+        
+        $(document).ready(function(){
+            var contentButton = [];
+            var contentTop = [];
+            var content = [];
+            var lastScrollTop = 0;
+            var scrollDir = '';
+            var itemClass = '';
+            var itemHover = '';
+            var menuSize = null;
+            var stickyHeight = 0;
+            var stickyMarginB = 0;
+            var currentMarginT = 0;
+            var topMargin = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                    scrollDir = 'down';
+                } else {
+                    scrollDir = 'up';
+                }
+                lastScrollTop = st;
+            });
+            $.fn.stickUp = function( options ) {
+                // adding a class to users div
+                $(this).addClass('stuckMenu');
+                //getting options
+                var objn = 0;
+                if(options != null) {
+                    for(var o in options.parts) {
+                        if (options.parts.hasOwnProperty(o)){
+                            content[objn] = options.parts[objn];
+                            objn++;
+                        }
+                    }
+                    if(objn == 0) {
+                        console.log('error:needs arguments');
+                    }
+
+                    itemClass = options.itemClass;
+                    itemHover = options.itemHover;
+                    if(options.topMargin != null) {
+                        if(options.topMargin == 'auto') {
+                            topMargin = parseInt($('.stuckMenu').css('margin-top'));
+                        } else {
+                            if(isNaN(options.topMargin) && options.topMargin.search("px") > 0){
+                                topMargin = parseInt(options.topMargin.replace("px",""));
+                            } else if(!isNaN(parseInt(options.topMargin))) {
+                                topMargin = parseInt(options.topMargin);
+                            } else {
+                                console.log("incorrect argument, ignored.");
+                                topMargin = 0;
+                            }   
+                        }
+                    } else {
+                        topMargin = 0;
+                    }
+                    menuSize = $('.'+itemClass).size();
+                }           
+                stickyHeight = parseInt($(this).height());
+                stickyMarginB = parseInt($(this).css('margin-bottom'));
+                currentMarginT = parseInt($(this).next().closest('div').css('margin-top'));
+                vartop = parseInt($(this).offset().top);
+                //$(this).find('*').removeClass(itemHover);
+            }
+            $('#animatedModal').on('scroll', function() {
+                    varscroll = parseInt($('#animatedModal').scrollTop());
+                    if(menuSize != null){
+                        for(var i=0;i < menuSize;i++)
+                        {   
+                            if(content[i]!=undefined){
+                                contentTop[i] = $('#'+content[i]+'').offset().top;
+                                function bottomView(i) {
+                                    contentView = $('#'+content[i]+'').height()*.4;
+                                    testView = contentTop[i] - contentView;
+                                    //console.log(varscroll);
+                                    if(varscroll > testView){
+                                        $('.'+itemClass).removeClass(itemHover);
+                                        $('.'+itemClass+':eq('+i+')').addClass(itemHover);
+                                       // console.log('yes')
+                                    } else if(varscroll < 50){
+                                        $('.'+itemClass).removeClass(itemHover);
+                                        $('.'+itemClass+':eq(0)').addClass(itemHover);
+                                        // console.log('no')
+                                        
+                                    }
+                                    //  console.log(varscroll)
+                                }
+                                if(varscroll >= contentTop[i]+varscroll && varscroll <= contentTop[i]+varscroll+$('#'+content[i]+'').height()) {
+                                    $('.'+itemClass).removeClass(itemHover);
+                                    $('.'+itemClass+':eq('+i+')').addClass(itemHover);
+                                }
+                                if(scrollDir == 'up') {
+                                    bottomView(i);
+                                }
+                            }
+
+                        }
+                    }   
+
+
+
+                if(vartop < varscroll + topMargin && !($('navbar-wrapper').hasClass('top0'))){
+                    $('.stuckMenu').addClass('isStuck');
+                    $('.stuckMenu').next().closest('div').css({
+                        'margin-top': stickyHeight + stickyMarginB + currentMarginT + 'px'
+                    }, 10);
+                    $('.stuckMenu').css("position","fixed");
+                    $('.isStuck').css({
+                        'top': '0px',
+                        'left': '0px',
+                        'width': '100%',
+                        'z-index':'111'
+                    }, 10, function(){
+
+                    });
+                };
+
+                if(varscroll + topMargin < vartop){
+                    $('.stuckMenu').removeClass('isStuck');
+                    $('.stuckMenu').next().closest('div').css({
+                        'margin-top': currentMarginT + 'px'
+                    }, 10);
+                    $('.stuckMenu').css({"position":"relative","top":"0px"});
+                };
+
+            });
+        });
+
+    });
+                      jQuery(function ($) {
+                $(document).ready( function() {
+                  //enabling stickUp on the '.navbar-wrapper' class
+                  $('.navbar-wrapper').stickUp({
+                                parts: {
+                                  0:'gallery-grid',
+                                  1:'aboutme',
+                                  2: 'video',
+                                  3: 'sponsors',
+                                  4: 'contactTeam',
+                                  5: 'visit',
+                                  6: 'contact'
+                                },
+                                itemClass: 'menuItem',
+                                itemHover: 'active'
+                              });
+                });
+});
+// </script>
+ <script type="text/javascript">
+//               //initiating jQuery  
+
+//             </script>
+<style>
+.isStuck{
+    left: 0px;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+    z-index:111;
+    position:fixed
 }
-.ri-grid ul:before, .ri-grid ul:after {
-    content: '';
-    display: table;
-}
-.ri-grid ul:after {
-    clear: both;
-}
-.ri-grid ul {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-.ri-grid ul li {
-    -webkit-perspective: 400px;
-    -moz-perspective: 400px;
-    -o-perspective: 400px;
-    -ms-perspective: 400px;
-    perspective: 400px;
-    margin: 0;
-    padding: 0;
-    float: left;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    background: #000;
-}
-.ri-grid ul li a {
-    display: block;
-    outline: none;
-    position: absolute;
-    left: 0;
+/*.controls-fixed{
+  left:0;
+  position:fixed;
+  width:100%;
+  z-index: 100
+}*/
+.top0{
+        position: fixed;
     top: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #333;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-/* Grid wrapper sizes */
-.ri-grid-size-1 {
-    width: 55%;
-}
-.ri-grid-size-2 {
+    left: 0;
     width: 100%;
 }
-.ri-grid-size-3 {
-    width: 100%;
-    margin-top: 0px;
+.animated{
+    -webkit-animation-fill-mode: none!important;
+    animation-fill-mode: none!important;
 }
-/* Shadow style */
-.ri-shadow:after, .ri-shadow:before {
-    content: "";
-    position: absolute;
-    z-index: -2;
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    height: 20%;
-    max-width: 300px;
-    max-height: 100px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-    -webkit-transform: rotate(-3deg);
-    -moz-transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);
-    -o-transform: rotate(-3deg);
-    transform: rotate(-3deg);
+.menuItem{
+    cursor: pointer;
 }
-.ri-shadow:after {
-    right: 10px;
-    left: auto;
-    -webkit-transform: rotate(3deg);
-    -moz-transform: rotate(3deg);
-    -ms-transform: rotate(3deg);
-    -o-transform: rotate(3deg);
-    transform: rotate(3deg);
-}
-.ri-grid-loading:after, .ri-grid-loading:before {
-    display: none;
-}
-.ri-loading-image {
-    display: none;
-}
-.ri-grid-loading .ri-loading-image {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    left: 50%;
-    margin: 100px 0 0 -15px;
-    display: block;
-}
-.aboutme {
-    background:#00bdbd;
-    color:#fff;
-    position:relative;
-}
-.aboutme .container {
-    padding-top:85px;
-    padding-bottom:93px;
-}
-.aboutTop {
-    background:#00bdbd;
-    height:60px;
-}
-/*doc*/
-.spHeight {
-    padding-top:63px;
-}
-.noMar {
-    margin:0 !important;
-}
-.noPadd {
-    padding:0px !important;
-}
-.engifont{
-    color: white;
-    font-family: space age;
-}
-.container .row {
-    margin:0px;
-}
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-size:14px;
-    line-height:21px;
-    font-weight:400;
-    padding-bottom:22px;
-    margin:0px;
-}
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size:80px;
-    line-height:90px;
-    font-weight:700;
-    margin:0px;
-    padding-bottom:8px;
-}
-h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size:36px;
-    line-height:38px;
-    padding-bottom:0px;
-    font-weight:300;
-    text-transform:uppercase;
-    margin:0px;
-}
-h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-size:24px;
-    line-height:30px;
-    padding-bottom:6px;
-    font-weight:400;
-    margin:0px;
-}
-h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-size:19px;
-    line-height:24px;
-    padding-bottom:6px;
-    font-weight:600;
-    margin:0px;
-}
-h5 {
-    font-family: 'Open Sans', sans-serif;
-    font-size:16px;
-    line-height:24px;
-    padding-bottom:6px;
-    font-weight:400;
-    margin:0px;
-}
-h4.subHeading {
-    font-weight:600;
-    font-size:18px;
-    padding-bottom:22px;
-}
-.heading {
-    text-align:center;
-    padding-bottom:45px;
-}
-.topmar {
-    margin-top:20px;
-}
-/**/
-.contact {
-    background:#fff;
-}
-.contact .container {
-    padding-top:85px;
-    padding-bottom:90px;
-}
-.contact h2 {
-    color:#ff675f;
-}
-.contact p {
-    color:#84868d;
-    /*font-size:13px;*/
-    line-height:18px;
-}
-.contact .heading p {
-    padding-bottom:41px;
-}
-.contact h4 {
-    font-weight:700;
-}
-.topCon {
-    padding-bottom:0px !important;
-}
-.mapArea {
-    background:url(../images/map-bro.png) repeat-x 0 0;
-    padding-top:4px;
-    height:400px;
-    overflow:hidden;
-    width:100%;
-    margin:0;
-}
-.mapArea iframe {
-    width:100%;
-    height:396px;
-    background:url(../images/map-bro.png) repeat-x 0 100%;
-}
-.contactDetails {
-    background:#474d5d;
-}
-.contactDetails .container {
-    padding-top:85px;
-    padding-bottom:90px;
-}
-.contactDetails h4 {
-    font-weight:600;
-    text-transform:uppercase;
-    padding-bottom:15px;
-    color: white;
-}
-.contactDetails p {
-    color:#93959c;
-    font-size:13px;
-    line-height:19px;
-    padding-bottom:14px;
-}
-.contactDetails p a {
-    color:#93959c;
-}
-.contactDetails p a:hover {
-    color:#a9abb0;
-    text-decoration:none;
-}
-.contactDetails i {
-    padding-right:15px;
-}
-.conForm h4{
-    color: white;
-}
-.p-r-0{
-    padding-right: 0;
-}
-.p-l-0{
-    padding-left: 0;
-}
-.w-100{
-    width: 100%;
-}
-.conForm input {
-    background:#585f73;
-    color:#93959c;
-    padding:15px 30px;
-    border:none;
-    margin-right:3%;
-    margin-bottom:30px;
-    outline:none;
-    font-style:italic;
-}
-.conForm input.noMarr {
-    margin-right:0px;
-}
-.conForm textarea {
-    background:#585f73;
-    color:#93959c;
-    padding:15px 30px;
-    border:none;
-    margin-bottom:40px;
-    outline:none;
-    height:100px;
-    font-style:italic;
-}
-.conForm .submitBnt {
-    background:#ff675f;
-    font-family: 'Open Sans', sans-serif;
-    color:#fff;
-    font-size:16px;
-    font-weight:600;
-    text-align:center;
-    float:right;
-    margin:0px;
-}
-.conForm .submitBnt:hover {
-    background:#f5534b;
-}
-.textGroup {
-    position:relative !important;
-    display: inline-block;
-    padding-left:0px !important;
-}
-#success_page {
-    color: #00bdbd;
-    font-weight: 500;
-}
-.error_message {
-    color: #ff675f;
-    padding-bottom: 15px;
-    font-weight: 500;
-}
-#success_page h3 {
-    font-size:17px;
-}
-/*----------------------------------------------------
- 12. Footer Style
-------------------------------------------------------*/
-.footer {
-    background:#00bdbd;
-}
-.footer .container {
-    padding:40px 0;
-}
-.footer ul {
-    margin:0 auto;
-    text-align:center;
-    list-style-type:none;
-}
-.footer ul li {
-    display:inline-block;
-    text-align:center;
-    background:#ffffff;
-    color:#00bdbd;
-    line-height:42px;
-    margin:0 6px;
-    width:42px !important;
-    height:42px !important;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-.footer ul li:hover {
-    background:#0a9f9f;
-}
-.footer ul li:hover a {
-    color:#fff;
-}
-.footer ul li a {
-    color:#00bdbd;
-    width:42px !important;
-    height:42px !important;
-}
-.footer ul li a i {
-    line-height:42px !important;
+.h-200{
+    height: 200px;
 }
 </style>
-
   <!--about me start-->
