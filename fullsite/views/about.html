@@ -439,6 +439,7 @@ $( '#ri-grid' ).gridrotator( {
         font-family: space age;
         text-transform: lowercase;
         color: white;
+        z-index: 11;
     }
     .bannerText h1 {
         text-transform:uppercase;
@@ -1055,6 +1056,19 @@ $( '#ri-grid' ).gridrotator( {
 }
 .h-200{
     height: 200px;
+}
+.wrapper-about::before {
+    content: '';
+    background-color: rgba(0,0,0,.7);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    position: absolute;
+}
+#closebt-container{
+    z-index: 11!important;
 }
 </style>
   <!--about me start-->
