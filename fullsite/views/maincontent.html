@@ -46,8 +46,12 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	
-	<div ng-if="showRegisterForm==true && page.link!='stockoholic'" ng-include="'./views/RegisterForm.html'"></div>
+	<div style="margin-top:50px" ng-if="dontInclude(page.link)">
+		<small ng-if="!seperateRegistration(page.link)"> *This event is open to all</small>
+		<small ng-if="seperateRegistration(page.link)"> *Please Check the registeration tab to register</small>
+
+	</div>
+	<div ng-if="showRegisterForm==true && !dontInclude(page.link)" ng-include="'./views/RegisterForm.html'"></div>
 	<!--<div ng-if="showRegisterForm==true"><button class="btn btn-primary">Registrations to commence shortly</button></div>-->	
 	<div ng-if="showCAForm==true" ng-include="'./views/CAForm.html'"></div>	
 </div>

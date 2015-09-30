@@ -88,4 +88,22 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
           return $sce.trustAsHtml(html);
         };
 
+    $scope.dontInclude = function(name){
+    	var blacklist = ['simplicity','antariksh','orbiter','civilblueprint','stockoholic'];
+    	for(var i = 0 ; i<blacklist.length;i++){
+    		if(name==blacklist[i])
+    			return 1;
+    	}
+    	return 0;
+    }
+
+    $scope.seperateRegistration = function(name){
+    	var sep = ['stockoholic','civilblueprint','simplicity'];
+    	for(var i = 0 ; i<sep.length;i++){
+    		if(name==sep[i])
+    			return 1;
+    	}
+    	return 0;
+    }
+
 });

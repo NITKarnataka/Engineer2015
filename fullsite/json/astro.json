@@ -22,5 +22,7 @@
         "pic": "antariksh_main.jpg",
         "link": "antariksh",
         "description": "A grand exhibition of space models and other fun events!"
-    }
+    },
+    {"name":"Endeavour","pic":"endeavour_main.jpg","link":"endeavour","description":"A litmus test for your knowledge of the universe and problem solving skills!"},
+    {"name":"Interstellar","pic":"interstellar_main.jpg","link":"interstellar","description":"Launch a rocket!"}
 ]

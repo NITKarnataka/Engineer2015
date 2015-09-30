@@ -62,9 +62,7 @@ var Engi;
 		})
 		.when('/hospi', {
 			templateUrl: './views/leaf.html'
-		}).otherwise({
-        redirectTo: '/'
-      });;
+		});
 
 		$sceDelegateProvider.resourceUrlWhitelist([
 		     'self',
