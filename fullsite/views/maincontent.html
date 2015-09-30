@@ -48,7 +48,7 @@
 	</div>
 	<div style="margin-top:50px" ng-if="dontInclude(page.link)">
 		<small ng-if="!seperateRegistration(page.link)"> *This event is open to all</small>
-		<small ng-if="seperateRegistration(page.link)"> *Please Check the registeration tab to register</small>
+		<small ng-if="seperateRegistration(page.link)"> *Please Check the registration tab to register</small>
 
 	</div>
 	<div ng-if="showRegisterForm==true && !dontInclude(page.link)" ng-include="'./views/RegisterForm.html'"></div>
