@@ -111,10 +111,10 @@ Engi.controller('FormController', function($scope,$http) {
 		$scope.showEdit=!$scope.showEdit;
 		$http.get('./json/'+name+'.master.json').then(function(msg){
 			$scope.edits = msg.data
-			for(var i=0;i<$scope.edits.length;i++){
-				delete $scope.edits[i].list;
-				$scope.edits[i].list=[{title:'',items:['']}];
-			}
+			// for(var i=0;i<$scope.edits.length;i++){
+			// 	delete $scope.edits[i].list;
+			// 	$scope.edits[i].list=[{title:'',items:['']}];
+			// }
 			console.log($scope.edits)
 		});
 	}

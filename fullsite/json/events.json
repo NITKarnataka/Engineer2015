@@ -50,5 +50,11 @@
         "link": "astro",
         "pic": "astro.jpg",
         "description": "Click to know more"
+    },
+    {
+        "name": "Gaming Events",
+        "link": "gaming",
+        "pic": "gaming.jpg",
+        "description": "Click to know more"
     }
 ]

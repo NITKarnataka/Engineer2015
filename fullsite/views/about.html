@@ -195,11 +195,22 @@
                             </div>
                             <div class="col-md-3 h-200">
                                 <img src="img/sponsors/25.png"/> -->
-                            <img src="/img/sponsour.png" width='100%' class='img-reponsive' style="margin-bottom:50px"/>
+                                <img src="/img/sponsour.png" width='100%' class='img-reponsive' style="margin-bottom:50px"/>
 
                             </div>
-                        <div class="clearfix"></div> 
-
+                            <div class="clearfix"></div> 
+                        </div>
+                        <h3>Publicity Partners</h3>
+                        <div class="row">
+                            <div class="col-md-12 radioWrapper">
+                                <img src="img/radio1.jpg" class="h-100">
+                            </div>
+                        </div>
+                        <h3>Event Partners</h3>
+                        <div class="row">
+                            <div class="col-md-12 radioWrapper">
+                                <img src="img/radio2.png" class="h-100">
+                            </div>
                         </div>
                         <div class="clearfix"></div> 
                     </div>
@@ -209,6 +220,9 @@
     </section>
 
     <style>
+        .h-150{
+            height: 150px;
+        }
         ul.tabs li {
             padding: 6px 8px;
             margin-left: 2px;
@@ -263,7 +277,7 @@
                                         </div>
                                         <div class="member-details-text">
                                             <div class="bottom-right">
-                                                <h5>{{:: doc.post }}</h5>
+                                                <h5>{{:: doc.post +' - '+doc.comittee}}</h5>
                                                 <p style="color:white" class="name">{{:: doc.name }}</p>
                                                 <p style="color:white">{{:: doc.email }}</p>
                                             </div>
@@ -1069,6 +1083,21 @@ $( '#ri-grid' ).gridrotator( {
 }
 #closebt-container{
     z-index: 11!important;
+}
+.radioWrapper{
+    height:150px;
+    display: flex;
+    display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;      
+          display: -webkit-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.h-100{
+    height: 100%;
+    width: auto!important;
 }
 </style>
   <!--about me start-->

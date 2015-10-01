@@ -4,7 +4,7 @@
         "email": "vinitm52@gmail.com",
         "pic": "vinit.jpg",
         "post": "Convenor",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -12,7 +12,7 @@
         "email": "",
         "pic": "snehal.jpg",
         "post": "Joint Convenor",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -20,7 +20,7 @@
         "email": "",
         "pic": "ayush.jpg",
         "post": "Joint Convenor",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -28,7 +28,7 @@
         "email": "",
         "pic": "shashikant.jpg",
         "post": "Organizing Secretary",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -36,7 +36,7 @@
         "email": "",
         "pic": "rajat.jpg",
         "post": "Secretary",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -44,7 +44,7 @@
         "email": "",
         "pic": "shubham.jpg",
         "post": "Secretary",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -52,7 +52,7 @@
         "email": "",
         "pic": "asif.jpg",
         "post": "Chief Coordinator",
-        "comittee": "",
+        "comittee": "Core",
         "classie": "core"
     },
     {
@@ -60,7 +60,7 @@
         "email": "",
         "pic": "yash.jpg",
         "post": "Convenor",
-        "comittee": "core",
+        "comittee": "Marketing",
         "classie": "core"
     }
 ]
