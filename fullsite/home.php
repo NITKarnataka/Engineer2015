@@ -1,6 +1,6 @@
 <?php
 	//if(isset($_SESSION['logged'])&&$_SESSION['logged']){
-		$query = "SELECT * from `engineer2015`  ORDER BY `rfor` ASC";
+		$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
 		$query_run = mysql_query($query);
 		$pre='dummy';
 		$arr=array();
