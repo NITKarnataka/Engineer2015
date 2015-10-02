@@ -8,4 +8,4 @@
 <form action="check.php" method="post">
 	<input type="text" placeholder="Username" name="uname">
 	<input type="password" placeholder="Password" name="pwd">
-</form>
+	<input type="submit" value="Submit">
