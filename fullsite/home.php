@@ -1,6 +1,6 @@
 <?php
-	if(isset($_SESSION['logged'])&&$_SESSION['logged']){
-		$query = "SELECT * from `usertable`  ORDER BY `rfor`";
+	// if(isset($_SESSION['logged'])&&$_SESSION['logged']){
+		$query = "SELECT * from `engineer2015`  ORDER BY `rfor`";
 		$query_run = mysql_query($query);
 		$pre='dummy';
 		$arr=array();
@@ -9,6 +9,7 @@
 				if($var['rfor']!=''){
 					array_push($arr, $var['rfor']);
 					$pre = $var['rfor'];
+				}
 			}
 		}	
 		print_r($arr);
@@ -18,7 +19,7 @@
 	</table>
 
 <?php
-	}else{
-		header("Location: clogin.php")
-	}
+	// }else{
+	// 	header("Location: clogin.php")
+	// }
 ?>
