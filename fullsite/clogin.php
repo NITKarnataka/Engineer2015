@@ -9,3 +9,4 @@
 	<input type="text" placeholder="Username" name="uname">
 	<input type="password" placeholder="Password" name="pwd">
 	<input type="submit" value="Submit">
+</form>
