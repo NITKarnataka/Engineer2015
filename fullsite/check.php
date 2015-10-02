@@ -17,5 +17,7 @@
 				
 			}
 		}
+	}else{
+		header("Location: clogin.php");
 	}
 ?>
