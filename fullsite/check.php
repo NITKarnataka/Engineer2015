@@ -19,6 +19,7 @@ echo 'sasa';
 			$query_run = mysql_query($query);
 			while($var = mysql_fetch_assoc($query_run)){
 				echo "<br>".$var['uname'].' - '.$var['pwd'];
+				echo 'SELECT * from `usertable` WHERE `uname` = "$uname" AND `pwd` = "$pwd"';
 			}
 		}
 	}else{
