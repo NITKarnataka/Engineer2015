@@ -8,9 +8,9 @@
 			if($pre!=$var['rfor']){
 				if($var['rfor']!=''){
 					array_push($arr, $var['rfor']);
-					$pre = $var['rfor'];
 				}
 			}
+			$pre = $var['rfor'];
 		}	
 		for($i=0;$i<sizeof($arr);$i++)
 			echo $arr[$i]." <br/>";
