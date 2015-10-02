@@ -15,7 +15,11 @@ echo 'sasa';
 			echo mysql_num_rows($query_run);
 			while($var = mysql_fetch_assoc($query_run))
 				echo $var['uname'];
-			
+			$query = 'SELECT * from `usertable` WHERE 1';
+			$query_run = mysql_query($query);
+			while($var = mysql_fetch_assoc($query_run)){
+				echo "<br>".$var['uname'].' - '.$var['pwd'];
+			}
 		}
 	}else{
 		echo 'wtf';
