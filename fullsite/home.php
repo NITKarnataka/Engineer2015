@@ -1,6 +1,6 @@
 <?php
-	// if(isset($_SESSION['logged'])&&$_SESSION['logged']){
-		$query = "SELECT * from `engineer2015`  ORDER BY `rfor`";
+	if(isset($_SESSION['logged'])&&$_SESSION['logged']){
+		$query = "SELECT * from `engineer2015`  ORDER BY `rfor` ASC";
 		$query_run = mysql_query($query);
 		$pre='dummy';
 		$arr=array();
@@ -13,14 +13,15 @@
 			}
 		}	
 		for($i=0;$i<sizeof($arr);$i++)
-			echo $arr[$i];
+			echo $arr[$i]." <br/>";
+		echo sizeof($arr);
 ?>
 	<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
 	<table class="table table-striped">
 	</table>
 
 <?php
-	// }else{
-	// 	header("Location: clogin.php")
-	// }
+	}else{
+		header("Location: clogin.php")
+	}
 ?>
