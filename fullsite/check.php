@@ -3,6 +3,7 @@
 	if(isset($_POST['uname'])&&isset($_POST['pwd'])){
 		$uname = $_POST['uname'];
 		$pwd = $_POST['pwd'];
+		echo $uname.' '.$pwd;
 		if($uname!=''&&$pwd!=''){
 			$query='SELECT * from `usertable` WHERE `uname` = "$uname" AND `pwd` = "$pwd"';
 			$query_run=mysql_query($query);
@@ -11,8 +12,9 @@
 				header('Location: home.php');
 			}else{
 				$_SESSION['logged'] = false;
-				header('Location: clogin.php');
 				$_SESSION['errmsg'] = 'wrong user biactch';
+				header('Location: clogin.php');
+				
 			}
 		}
 	}
