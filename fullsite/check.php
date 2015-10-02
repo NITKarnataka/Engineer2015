@@ -6,7 +6,7 @@
 		if($uname!=''&&$pwd!=''){
 			$query='SELECT * from `usertable` WHERE `uname` = "mysql_real_escape_string($uname)" AND `pwd` = "mysql_real_escape_string($pwd)"';
 			$query_run=mysql_query($query);
-			if(mysql_num_rows($query_run)==1){
+			if(mysql_num_rows(mysql_fetch_assoc($query_run))==1){
 				$_SESSION['logged'] = true;
 				header('Location: home.php');
 			}else{
