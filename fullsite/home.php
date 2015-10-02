@@ -1,6 +1,6 @@
 <?php
 	if(isset($_SESSION['logged'])&&$_SESSION['logged']){
-		$query = "SELECT * from tableName  ORDER BY `rfor`";
+		$query = "SELECT * from `usertable`  ORDER BY `rfor`";
 		$query_run = mysql_query($query);
 		$pre='dummy';
 		$arr=array();

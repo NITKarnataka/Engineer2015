@@ -1,4 +1,5 @@
 <?php
+echo 'sasa';
 	require 'connect_db.php';
 	if(isset($_POST['uname'])&&isset($_POST['pwd'])){
 		$uname = $_POST['uname'];
