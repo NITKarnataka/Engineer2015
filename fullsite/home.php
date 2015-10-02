@@ -12,7 +12,9 @@
 				}
 			}
 		}	
-		print_r($arr);
+		foreach($arr as $key=>$value) {
+    		echo 'index is '.$key.' and value is '.$value;
+		}
 ?>
 	<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
 	<table class="table table-striped">

@@ -12,18 +12,19 @@ echo 'sasa';
 		}else{
 			$_SESSION["logged"] = false;
 			$_SESSION["errmsg"] = 'wrong user biactch';
-			echo mysql_num_rows($query_run);
-			while($var = mysql_fetch_assoc($query_run))
-				echo $var['uname'];
-			$query = 'SELECT * from `usertable` WHERE 1';
-			$query_run = mysql_query($query);
-			while($var = mysql_fetch_assoc($query_run)){
-				echo "<br>".$var['uname'].' - '.$var['pwd'];
-				echo 'SELECT * from `usertable` WHERE `uname` = "'.$uname.'" AND `pwd` = "'.$pwd.'"';
-			}
+			// echo mysql_num_rows($query_run);
+			// while($var = mysql_fetch_assoc($query_run))
+			// 	echo $var['uname'];
+			// $query = 'SELECT * from `usertable` WHERE 1';
+			// $query_run = mysql_query($query);
+			// while($var = mysql_fetch_assoc($query_run)){
+			// 	echo "<br>".$var['uname'].' - '.$var['pwd'];
+			// 	echo 'SELECT * from `usertable` WHERE `uname` = "'.$uname.'" AND `pwd` = "'.$pwd.'"';
+			// }
+			header("Location: clogin.php");
 		}
 	}else{
 		echo 'wtf';
-		//header("Location: clogin.php");
+		header("Location: clogin.php");
 	}
 ?>
