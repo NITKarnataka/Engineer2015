@@ -19,6 +19,7 @@ echo 'sasa';
 			}
 		}
 	}else{
-		header("Location: clogin.php");
+		echo 'wtf';
+		//header("Location: clogin.php");
 	}
 ?>
