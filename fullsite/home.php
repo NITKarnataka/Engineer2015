@@ -101,7 +101,7 @@
 						$scope.participants.push($scope.details[i]);
 					}
 				}
-				$scope.$watch($scope.selected,function(n,o){
+				$scope.$watch('selected',function(n,o){
 					if(n!=o){
 						$scope.participants=[];
 						for(var i=0;i<$scope.details.length;i++){
