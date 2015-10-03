@@ -6,7 +6,6 @@
 		$pre='dummy';
 		$arr=array();
 		while($var = mysql_fetch_assoc($query_run)){
-			echo $var.' - <br>';
 			if($pre!=$var['rfor']){
 				if($var['rfor']!=''){
 					array_push($arr, $var['rfor']);
@@ -16,7 +15,6 @@
 		}	
 		for($i=0;$i<sizeof($arr);$i++)
 			echo $arr[$i]." <br/>";
-		echo sizeof($arr);
 ?>
 	<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
 	<table class="table table-striped">
