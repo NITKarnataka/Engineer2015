@@ -5,11 +5,13 @@
 		$query_run = mysql_query($query);
 		$pre='dummy';
 		$arr=array();
+		$final = array();
 		while($var = mysql_fetch_assoc($query_run)){
-			if($pre!=$var['rfor']){
-				if($var['rfor']!=''){
+			if($var['rfor']!=''){
+				if($pre!=$var['rfor']){
 					array_push($arr, $var['rfor']);
 				}
+				array_push($final,$var);
 			}
 			$pre = $var['rfor'];
 		}	
@@ -24,13 +26,13 @@
 		</table>
 	</body>
 	<script type="text/javascript">
-		// Register = angular.module('Register');
-		// Register.controller('RegisterController', function($scope, $location,$http) {
+		 Register = angular.module('Register');
+		 Register.controller('RegisterController', function($scope, $location,$http) {
 			var events = <?php echo json_encode($arr); ?>;
-			var details = <?php echo json_encode(mysql_fetch_array($query_run)); ?>;
+			var details = <?php echo json_encode($final); ?>;
 			console.log(events);
 			console.log(details);
-		// });
+		 });
 	</script>
 
 <?php
