@@ -5,7 +5,7 @@
 		$pre='dummy';
 		$arr=array();
 		while($var = mysql_fetch_assoc($query_run)){
-			echo $var['rfor'].' - <br>';
+			echo $var.' - <br>';
 			if($pre!=$var['rfor']){
 				if($var['rfor']!=''){
 					array_push($arr, $var['rfor']);
