@@ -17,9 +17,9 @@
 			$pre = $var['rfor'];
 		}
 		for($i=0;$i<sizeof($arr);$i++){
-			$query2 = 'SELECT `id` from `engineer2015` WHERE `rfor`="'.$arr[$i].'"';
+			$query2 = 'SELECT `id` from `engineer2015` WHERE `rfor`= "'.$arr[$i].'" ';
 			$query_run2 = mysql_query($query2);
-			array_push($count,mysql_num_rows($query2));
+			array_push($count,mysql_num_rows($query_run2));
 		}
 ?>
 	<html ng-app="Register">
