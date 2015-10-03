@@ -1,6 +1,6 @@
 <?php
 	require 'connect_db.php';
-	if(isset($_SESSION['logged'])&&$_SESSION['logged']){
+	//if(isset($_SESSION['logged'])&&$_SESSION['logged']){
 		$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
 		$query_run = mysql_query($query);
 		$pre='dummy';
@@ -34,7 +34,7 @@
 	</script>
 
 <?php
-	}else{
-		header("Location: clogin.php")
-	}
+	// }else{
+	// 	header("Location: clogin.php")
+	// }
 ?>
