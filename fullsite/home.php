@@ -92,6 +92,7 @@
 				$scope.toggleEvent = function(){
 					$scope.wise = !(angular.copy($scope.wise));
 				}
+				$scope.participants = [];
 				for(var i=0;i<$scope.details.length;i++){
 					if($scope.details[i].rfor==$scope.events[0]){
 						$scope.participants.push($scope.details[i]);
