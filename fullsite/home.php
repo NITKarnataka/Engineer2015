@@ -33,7 +33,6 @@
 						<h3>See committee wise</h3>
 						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}}">{{committee?'Hide':'Show'}}</button>
 					</div>
-					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
 						<select ng-model='selected' ng-options="event for event in events" ng-init="selected=events[0]">
