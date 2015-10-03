@@ -31,7 +31,14 @@
 		<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
 		<body ng-controller="RegisterController">
 			<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
-				<h2>Total registrations : {{details.length}}</div>
+				<div class="row">
+					<div class="col-md-11">
+						<h2>Total registrations : {{details.length}}</div>
+					</div>
+					<div class="col-md-1">
+						<a href="logout.php">Logout</a>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<h3>See committee wise</h3>
