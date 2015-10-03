@@ -57,8 +57,10 @@
 				</div>
 				<div ng-show="wise">
 					<h4>Registrants for : <b>{{selected}}</b></h4>
+					<h4>Total : <b>{{participants.length}}</b></h4>
 					<table class="table table-striped">
 						<tr>
+							<th>Sl No</th>
 							<th>Name</th>
 							<th>College</th>
 							<th>Branch</th>
@@ -69,6 +71,7 @@
 							<th>Year</th>
 						</tr>
 						<tr ng-repeat="participant in participants">
+							<td>{{$index+1}}</td>
 							<td>{{participant.name}}</td>
 							<td>{{participant.college}}</td>
 							<td>{{participant.branch}}</td>
