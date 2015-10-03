@@ -18,23 +18,24 @@
 		for($i=0;$i<sizeof($arr);$i++)
 			echo $arr[$i];
 ?>
-	<script type="text/javascript" src="plugins/angular/angular.min.js"></script>
-	<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
-	<body ng-app="Register" ng-controller="RegisterController">
-		<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
-		<table class="table table-striped">
-		</table>
-	</body>
-	<script type="text/javascript">
-		 Register = angular.module('Register');
-		 Register.controller('RegisterController', function($scope, $location,$http) {
-			var events = <?php echo json_encode($arr); ?>;
-			var details = <?php echo json_encode($final); ?>;
-			console.log(events);
-			console.log(details);
-		 });
-	</script>
-
+	<html ng-app="Register">
+		<script type="text/javascript" src="plugins/angular/angular.min.js"></script>
+		<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
+		<body ng-controller="RegisterController">
+			<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
+			<table class="table table-striped">
+			</table>
+		</body>
+		<script type="text/javascript">
+			 Register = angular.module('Register', []);
+			 Register.controller('RegisterController', function($scope, $location,$http) {
+				var events = <?php echo json_encode($arr); ?>;
+				var details = <?php echo json_encode($final); ?>;
+				console.log(events);
+				console.log(details);
+			 });
+		</script>
+	</html>
 <?php
 	// }else{
 	// 	header("Location: clogin.php")
