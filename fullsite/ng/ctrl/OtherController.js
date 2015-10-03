@@ -297,7 +297,7 @@ Engi.controller('OtherController', function($http,$rootScope,$scope, $timeout, $
 	$scope.committee = {
 		All:'All',
 		core:'Core Members',
-		mnp:'Media And Publicity',
+		mnp:'Publicity',
 		events:'Events',
 		hospi:'Hospitality',
 		workshops:'workshops',

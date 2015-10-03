@@ -273,11 +273,11 @@
                                 <div class="grid grid--examples">
                                     <div class="grid__item" data-tilt-options='{ "opacity" : 1, "extraImgs" : 3, "movement": { "perspective" : 1200, "translateX" : -5, "translateY" : -5, "rotateX" : -5, "rotateY" : -5 } }' style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);position:relative;">
                                         <div id='check' class="grid__img grid__img--example-1" >
-                                            <img ng-src="img/{{doc.pic}}" class="tilt-effect"/>
+                                            <img ng-src="img/members/{{doc.pic}}" class="tilt-effect"/>
                                         </div>
                                         <div class="member-details-text">
                                             <div class="bottom-right">
-                                                <h5>{{:: doc.post +' - '+doc.comittee}}</h5>
+                                                <h5>{{:: doc.post }}{{ doc.comittee!= '' ? ' - '+ doc.comittee :'' }}</h5>
                                                 <p style="color:white" class="name">{{:: doc.name }}</p>
                                                 <p style="color:white">{{:: doc.email }}</p>
                                             </div>
