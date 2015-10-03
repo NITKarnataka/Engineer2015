@@ -3,7 +3,7 @@
 	require 'connect_db.php';
 	$logged=$_SESSION['logged'];
 	if(empty($logged)&&$logged==false){
-   		header("Location: clogin.php");
+		header("Location: clogin.php");
 	}
 	$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
 	$query_run = mysql_query($query);
