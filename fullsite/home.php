@@ -33,7 +33,7 @@
 			<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
 				<div class="row">
 					<div class="col-md-11">
-						<h2>Total registrations : {{details.length}}</div>
+						<h2>Total registrations : {{details.length}}</h2>
 					</div>
 					<div class="col-md-1">
 						<a href="logout.php">Logout</a>
