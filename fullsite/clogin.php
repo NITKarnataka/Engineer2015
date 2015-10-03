@@ -1,6 +1,6 @@
 <?php
-	require 'connect_db.php';
 	session_start();
+	require 'connect_db.php';
 	if(isset($_SESSION['errmsg'])&&$_SESSION['logged']==false){
 		echo $_SESSION['errmsg'];
 	}

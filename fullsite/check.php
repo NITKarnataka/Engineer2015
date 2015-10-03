@@ -1,6 +1,6 @@
 <?php
-	require 'connect_db.php';
 	session_start();
+	require 'connect_db.php';
 	if(isset($_POST["uname"])&&isset($_POST["pwd"])&&!empty($_POST["uname"])&&!empty($_POST["pwd"])){
 		$uname = $_POST["uname"];
 		$pwd = $_POST["pwd"];
