@@ -89,7 +89,7 @@
 				$scope.count = <?php echo json_encode($count); ?>;
 				$scope.committee = false;
 				$scope.wise = false;
-				$scope.toggleCommitttee = function(){
+				$scope.toggleCommittee = function(){
 					$scope.committee = !(angular.copy($scope.committee));
 				}
 				$scope.toggleEvent = function(){
