@@ -31,14 +31,14 @@
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<h3>See committee wise</h3>
-						<button ng-click="toggleCommittee();" class="btn {{showEvent?'btn-danger':'btn-primary'}}">{{showEvent?'Hide':'Show'}}</button>
+						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}}">{{committee?'Hide':'Show'}}</button>
 					</div>
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
 						<select ng-model='selected' ng-options="event in events" ng-init="selected=events[0]">
 						</select>
-						<button ng-click="toggleEvent();" class="btn {{showEvent?'btn-danger':'btn-primary'}}">{{showEvent?'Hide':'Show'}}</button>
+						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{wise?'Hide':'Show'}}</button>
 					</div>
 				</div>
 				<div ng-show="committee">
