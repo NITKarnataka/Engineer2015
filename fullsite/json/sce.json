@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Socially Conscious Engineering"
+    },
+    {
+        "name": "Skylantern",
+        "pic": "skylanternthumb.jpg",
+        "link": "skylantern",
+        "description": "Light up the sky with your dreams"
+    },
+    {
+        "name": "Green Innovation Challenge",
+        "pic": "greeninnovationchallengethumb.jpg",
+        "link": "greeninnovationchallenge",
+        "description": "Towards a Greener Future"
+    },
+    {
+        "name": "Sparsh",
+        "pic": "sparshthumb.jpg",
+        "link": "sparsh",
+        "description": "Touching Lives..."
+    },
+    {
+        "name": "Last Word",
+        "pic": "lastwordthumb.jpg",
+        "link": "lastword",
+        "description": "An avenue for your thoughts .."
+    }
+]

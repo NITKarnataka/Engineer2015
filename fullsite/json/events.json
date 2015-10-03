@@ -56,5 +56,11 @@
         "link": "gaming",
         "pic": "gaming.jpg",
         "description": "Click to know more"
+    },
+    {
+        "name": "Socially Conscious Engineering",
+        "link": "sce",
+        "pic": "sce.jpg",
+        "description": "Click to know more"
     }
 ]

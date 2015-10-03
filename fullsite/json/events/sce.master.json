@@ -1,0 +1,141 @@
+[
+    {
+        "name": "skylantern",
+        "link": "skylantern",
+        "banner": "skylanternbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "<b><i>\"Let the stars bear witness to our dreams and lead our way<br>As we pay homage to the man who taught us to dream big<br>And live our dreams…<br>Let’s join hands, let our dreams light up the sky,<br>As a tribute to the Missile Man of India<br>Who inspired us to soar high on the Wings of Fire,<br>Ignite the light in our minds<br>Let it shine and be the guiding star for your dreams<br>And mine…\"<br></i></b>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Time and Venue",
+                "subdescription": "9th October Friday,<br>at the SAC,<br>around 7pm",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Green Innovation Challenge",
+        "link": "greeninnovationchallenge",
+        "banner": "greeninnovationchallengebanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Problem Description",
+                "subdescription": "Design a biogas plant in a rural scenario that differs from the conventional techniques that have been implemented till date. As biomass consisting of agricultural wastes and animal excreta indirectly lead to deforestation and indoor air pollution, a novel design is the need of the hour. The design should be efficient environmentally benign and cost-effective. Elaborate on the feedstock composition and the components of the biogas plant/ reactor.<br><br>\nThe idea would be judged based on the above guidelines and innovative ideas will be regarded. A presentation should be given including the benefits of the proposed biogas plant and its comparison with conventional bio-gas system. Parameters like amount and nature of feedstock, slurry, capital investment and running expenses should be analyzed in the comparison. Students can participate in teams of 3 and the winners would be rewarded with certificates and cash prize.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Time And Venue",
+                "subdescription": "9th October Friday,<br>at the MSH,<br>between 1.00pm and 5.00pm.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Vivek B Krishnan (7760360703)<br>CONVENOR</li><li>Aprameya Prasad (9535215017)<br>EVENT IN CHARGE</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Sparsh",
+        "link": "sparsh",
+        "banner": "sparshbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "magine you are a passenger in a sinking ship. All the lifeboats are either deployed or full. Your only hope for survival is a malfunctioning life boat, whose only function was to act as an extra dumpster. Desperate and finding no other hope in sight, you jump into this lifeboat and lower it to the water. You are aware of the fact that the boat will stay afloat only for a short time. Searching desperately for a solution, an idea hits you!!! In addition to basic stationary, you see an excess of plastic waste. Now a floating structure can be made with old bottles, duct tape, glue, etc. There is hope now for you.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Problem Description",
+                "subdescription": "The participants have to make a floating building with maximum stability out of plastic waste like bottles. The materials used can be bundled together either by cutting or joining according to the participants creativity. The participants can use tape, thread, glue, pins, etc…for holding the structure together. The participants can start on designing and building the structure as soon as the problem statement is made available here. The testing and grading of your design will be done on the event day at the event venue. <br>The structure will be evaluated based on the following factors :<br><ol><li>Height of structure above the surface of water</li><li>Base Area(Maximum base area allowed is 60cmx60cm)</li><li>Time which the structure remains afloat(minimum 1 minute)</li><li>Aesthetics</li></ol>The height/Area ratio should be maximized. Points are awarded for all the above parameters.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Time And Venue",
+                "subdescription": "10th October Saturday at the Civil Department.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Vivek B Krishnan (7760360703) <br>CONVENOR</li><li>Manoj Kumar M (9447568031) <br>EVENT IN CHARGE</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Last Word",
+        "link": "lastword",
+        "banner": "lastwordbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Last word is the panel discussion conducted by SCE during ENGINEER. Five eminent panelists and a student representative will hold a discussion on a topic of national importance. The topic for this year is ‘Does our education system empower you to contribute to the society?’ A critical analysis of our age old education system is the need of the hour…so come, participate and voice your opinion…",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Time and Venue",
+                "subdescription": "11th October Sunday at the SJA",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    }
+]
