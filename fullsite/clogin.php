@@ -20,9 +20,11 @@
 	</style>
 	<body>
 		<form action="check.php" method="post">
-			<input type="text" placeholder="Username" class="form-control form-group" name="uname">
-			<input type="password" placeholder="Password" class="form-control form-group" name="pwd">
-			<input type="submit" value="Submit" class="btn btn-success">
+			<div class="col-md-4">
+				<input type="text" placeholder="Username" class="form-control form-group" name="uname">
+				<input type="password" placeholder="Password" class="form-control form-group" name="pwd">
+				<input type="submit" value="Submit" class="btn btn-success">
+			</div>
 		</form>
 	</body>
 </html>
