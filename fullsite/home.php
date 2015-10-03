@@ -27,10 +27,17 @@
 	}
 ?>
 	<html ng-app="Register">
-		<script type="text/javascript" src="plugins/angular/angular.min.js"></script>
-		<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
-		<body ng-controller="RegisterController">
+		<head>
+			<script type="text/javascript" src="plugins/angular/angular.min.js"></script>
+			<script type="text/javascript" src="plugins/angular/ng-router.js"></script>
 			<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
+			<style>
+				html,body{
+					font-size: 14px;
+				}
+			</style>
+		</head>
+		<body ng-controller="RegisterController">
 				<div class="row">
 					<div class="col-md-11">
 						<h2>Total registrations : {{details.length}}</h2>

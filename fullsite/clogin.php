@@ -13,11 +13,16 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.min.css">
 	</head>
+	<style>
+		html,body{
+			font-size: 14px;
+		}
+	</style>
 	<body>
 		<form action="check.php" method="post">
-			<input type="text" placeholder="Username" name="uname">
-			<input type="password" placeholder="Password" name="pwd">
-			<input type="submit" value="Submit">
+			<input type="text" placeholder="Username" class="form-control form-group" name="uname">
+			<input type="password" placeholder="Password" class="form-control form-group" name="pwd">
+			<input type="submit" value="Submit" class="btn btn-success">
 		</form>
 	</body>
 </html>
