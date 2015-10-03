@@ -93,9 +93,11 @@
 				$scope.wise = false;
 				$scope.toggleCommittee = function(){
 					$scope.committee = !(angular.copy($scope.committee));
+					$scope.wise = false;
 				}
 				$scope.toggleEvent = function(){
 					$scope.wise = !(angular.copy($scope.wise));
+					$scope.committee = false;
 				}
 				$scope.participants = [];
 				for(var i=0;i<$scope.details.length;i++){
