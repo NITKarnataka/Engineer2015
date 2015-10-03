@@ -89,7 +89,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
         };
 
     $scope.dontInclude = function(name){
-    	var blacklist = ['simplicity','antariksh','orbiter','civilblueprint','stockoholic'];
+    	var blacklist = ['simplicity','antariksh','orbiter','civilblueprint','stockoholic','skylantern','lastword'];
     	for(var i = 0 ; i<blacklist.length;i++){
     		if(name==blacklist[i])
     			return 1;

@@ -1,1 +1,193 @@
-[{"name":"Colossus","link":"colossus","banner":"colossusbanner.jpg","subdesc":[{"subtitle":"Overview","subdescription":"It's time to use all those equations and formulas and mugged up paragraphs. Design your own structures and give it life by making it a real model!","subimage":""},{"subtitle":"Contact Details","subdescription":"<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Shivaprasad -7259881831<br>Event In-charge</li></ul>","subimage":""}],"subimage":[{"title":"","link":""}],"list":[{"title":"","items":[""]}]},{"name":"Nirvahana","link":"nirvahana","banner":"nirvahanabanner.jpg","subdesc":[{"subtitle":"Overview","subdescription":"Ever felt like you should go out there and do something for your society?<br>Nirvahana gives you an opportunity to address all the subtle problems of society through engineering solutions","subimage":""},{"subtitle":"Contact Details","subdescription":"<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Sanath - 9916771187<br>Event In-Charge</li></ul>","subimage":""}],"subimage":[{"title":"","link":""}],"list":[{"title":"","items":[""]}]},{"name":"Mind Bend","link":"mindbend","banner":"mindbendbanner.jpg","subdesc":[{"subtitle":"Overview","subdescription":"How sharp is your brain? How strong is your memory? Come test your capabilities at Mind bend which comprises of GK, aptitude, basic civil engineering questions","subimage":""},{"subtitle":"Contact Details","subdescription":"<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Nidhi - 8197243600<br>Event In-charge</li></ul>","subimage":""}],"subimage":[{"title":"","link":""}],"list":[{"title":"","items":[""]}]},{"name":"Architect","link":"architect","banner":"architectbanner.jpg","subdesc":[{"subtitle":"Overview","subdescription":"Here's taking up-cycling to a whole new level. Pick up anything around you think can come to use and create working structures with it.","subimage":""},{"subtitle":"Contact Details","subdescription":"<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Mary Manisha - 8008887663<br>Event In-charge</li></ul>","subimage":""}],"subimage":[{"title":"","link":""}],"list":[{"title":"","items":[""]}]},{"name":"Civil Blueprint","link":"civilblueprint","banner":"civilblueprintbanner.jpg","subdesc":[{"subtitle":"Overview","subdescription":"Has there been any field or topic that you have been working on but waiting for an opportunity to showcase it. This event will let you present your ideas and research works in a very significant platform","subimage":""},{"subtitle":"Contact Details","subdescription":"<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li></ul>","subimage":""},{"subtitle":"Registration","subdescription":"Last day to register is <b>3rd October, 2015</b><br>Click the button below to register<br><br>\n<a href=\"http://goo.gl/forms/mNvRaafu5H\" target=\"_blank\"><button class=\"btn btn-primary\">Click to register</button></a>","subimage":""}],"subimage":[{"title":"","link":""}],"list":[{"title":"","items":[""]}]},{"name":"FantastiCity","link":"Fantasticity","banner":"fantasticitybanner.jpg","subdesc":[{"subtitle":"Overview","subdescription":"Take your creative side to its edge by building an entire city of your own. Plan, evaluate and design your own structures.","subimage":""},{"subtitle":"Contact Details","subdescription":"<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Vaishnavi Sulaya -8197595796<br>Event In-charge</li></ul>","subimage":""}],"subimage":[{"title":"","link":""}],"list":[{"title":"","items":[""]}]}]
+[
+    {
+        "name": "Colossus",
+        "link": "colossus",
+        "banner": "colossusbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "It's time to use all those equations and formulas and mugged up paragraphs. Design your own structures and give it life by making it a real model!",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Shivaprasad -7259881831<br>Event In-charge</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nirvahana",
+        "link": "nirvahana",
+        "banner": "nirvahanabanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Ever felt like you should go out there and do something for your society?<br>Nirvahana gives you an opportunity to address all the subtle problems of society through engineering solutions",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Sanath - 9916771187<br>Event In-Charge</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Mind Bend",
+        "link": "mindbend",
+        "banner": "mindbendbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "How sharp is your brain? How strong is your memory? Come test your capabilities at Mind bend which comprises of GK, aptitude, basic civil engineering questions",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Nidhi - 8197243600<br>Event In-charge</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Architect",
+        "link": "architect",
+        "banner": "architectbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Here's taking up-cycling to a whole new level. Pick up anything around you think can come to use and create working structures with it.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Mary Manisha - 8008887663<br>Event In-charge</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Civil Blueprint",
+        "link": "civilblueprint",
+        "banner": "civilblueprintbanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Has there been any field or topic that you have been working on but waiting for an opportunity to showcase it. This event will let you present your ideas and research works in a very significant platform",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li></ul>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Registration",
+                "subdescription": "Last day to register is <b>6th October, 2015</b><br>Click the button below to register<br><br>\n<a href=\"http://goo.gl/forms/mNvRaafu5H\" target=\"_blank\"><button class=\"btn btn-primary\">Click to register</button></a>",
+                "subimage": ""
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "FantastiCity",
+        "link": "Fantasticity",
+        "banner": "fantasticitybanner.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Take your creative side to its edge by building an entire city of your own. Plan, evaluate and design your own structures.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact Details",
+                "subdescription": "<ul><li>Eswar Surya Teja - 8123180400<br>Convenor</li><li>Vaishnavi Sulaya -8197595796<br>Event In-charge</li></ul>",
+                "subimage": ""
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ]
+    }
+]
