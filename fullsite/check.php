@@ -7,11 +7,11 @@
 		$query = 'SELECT * from `usertable` WHERE `uname` = "'.$uname.'" AND `pwd` = "'.$pwd.'"';
 		$query_run = mysql_query($query);
 		if(mysql_num_rows($query_run)==1){
-			$_SESSION["logged"] = true;
+			$_SESSION['logged'] = true;
 			header('Location: home.php');
 		}else{
-			$_SESSION["logged"] = false;
-			$_SESSION["errmsg"] = 'wrong user biactch';
+			$_SESSION['logged'] = false;
+			$_SESSION['errmsg'] = 'wrong user biactch';
 			// echo mysql_num_rows($query_run);
 			// while($var = mysql_fetch_assoc($query_run))
 			// 	echo $var['uname'];

@@ -1,28 +1,30 @@
 <?php
 	session_start();
 	require 'connect_db.php';
-	$logged=$_SESSION["logged"];
-	if(!empty($logged)&&$logged==true){
-		$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
-		$query_run = mysql_query($query);
-		$pre='dummy';
-		$arr=array();
-		$count = array();
-		$final = array();
-		while($var = mysql_fetch_assoc($query_run)){
-			if($var['rfor']!=''){
-				if($pre!=$var['rfor']){
-					array_push($arr, $var['rfor']);
-				}
-				array_push($final,$var);
+	$logged=$_SESSION['logged'];
+	if(empty($logged)&&$logged==false){
+   		header("Location: clogin.php");
+	}
+	$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
+	$query_run = mysql_query($query);
+	$pre='dummy';
+	$arr=array();
+	$count = array();
+	$final = array();
+	while($var = mysql_fetch_assoc($query_run)){
+		if($var['rfor']!=''){
+			if($pre!=$var['rfor']){
+				array_push($arr, $var['rfor']);
 			}
-			$pre = $var['rfor'];
+			array_push($final,$var);
 		}
-		for($i=0;$i<sizeof($arr);$i++){
-			$query2 = 'SELECT `id` from `engineer2015` WHERE `rfor`= "'.$arr[$i].'" ';
-			$query_run2 = mysql_query($query2);
-			array_push($count,mysql_num_rows($query_run2));
-		}
+		$pre = $var['rfor'];
+	}
+	for($i=0;$i<sizeof($arr);$i++){
+		$query2 = 'SELECT `id` from `engineer2015` WHERE `rfor`= "'.$arr[$i].'" ';
+		$query_run2 = mysql_query($query2);
+		array_push($count,mysql_num_rows($query_run2));
+	}
 ?>
 	<html ng-app="Register">
 		<script type="text/javascript" src="plugins/angular/angular.min.js"></script>
@@ -120,8 +122,3 @@
 			 });
 		</script>
 	</html>
-<?php
-	}else{
-		header("Location: clogin.php")
-	}
-?>
