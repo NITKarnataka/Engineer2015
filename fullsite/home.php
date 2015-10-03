@@ -23,14 +23,14 @@
 		<table class="table table-striped">
 		</table>
 	</body>
-	<script>
-		Register = angular.module('Register');
-		Register.controller('RegisterController', function($scope, $location,$http) {
-			$scope.events = <?php echo json_encode($arr) ?>;
-			$scope.details = <?php echo json_encode(mysql_fetch_array($query_run)); ?>
-			console.log($scope.events);
-			console.log($scope.details);
-		});
+	<script type="text/javascript">
+		// Register = angular.module('Register');
+		// Register.controller('RegisterController', function($scope, $location,$http) {
+			var events = <?php echo json_encode($arr); ?>;
+			var details = <?php echo json_encode(mysql_fetch_array($query_run)); ?>;
+			console.log(events);
+			console.log(details);
+		// });
 	</script>
 
 <?php
