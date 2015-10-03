@@ -30,7 +30,9 @@
 				<h2>Total registrations : {{details.length}}</div>
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
-						<h3 ng-click="toggleCommittee();">See committee wise</h3>
+						<h3>See committee wise</h3>
+						<button ng-click="toggleCommittee();" class="btn {{showEvent?'btn-danger':'btn-primary'}}">{{showEvent?'Hide':'Show'}}</button>
+					</div>
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
@@ -54,6 +56,7 @@
 					</table>
 				</div>
 				<div ng-show="wise">
+					<h4>Registrants for : <b>{{selected}}</b></h4>
 					<table class="table table-striped">
 						<tr>
 							<th>Name</th>
