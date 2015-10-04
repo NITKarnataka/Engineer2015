@@ -102,7 +102,7 @@
 					</div>
 				</div>
 				<div ng-show="committee">
-					<button class="btn {{sorted=='count'?'btn-info':'btn-warning'}}" ng-click="toggleSort();">Sort By {{sorted=='count'?'Committee Name':'Registrations'}}</button>
+					<button class="btn {{sorted=='count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{sorted=='count'?'Committee Name':'Registrations'}}</button>
 					<table class="table table-striped">
 						<tr>
 							<th>slno.</th>
@@ -159,7 +159,7 @@
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
 				for(var i=0;i<$scope.events.length;i++){
-					var temp =$scope.events[i]
+					var temp =$scope.events[i];
 					$scope.events[i] = {
 											"count":$scope.count[i],
 											"name":temp
@@ -227,7 +227,7 @@
 				}
 				$scope.toggleSort = function(){
 					if($scope.sorted=="name"){
-						$scope.sorted = "count";
+						$scope.sorted = "-count";
 					}else{
 						$scope.sorted = "name";
 					}
