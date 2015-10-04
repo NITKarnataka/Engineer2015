@@ -79,7 +79,7 @@
 					<div>
 						<span ng-repeat="item in mailList">{{participants[item].email+','}}</span>
 					</div>
-					<button class="btn btn-success" onclick='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
+					<button class="btn btn-success" ng-click='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
 					<table class="table table-striped">
 						<tr>
 							<th>Sl No</th>
@@ -168,7 +168,7 @@
 						addItem($scope.mailList,item);
 				}
 
-			    function convertArrayOfObjectsToCSV(args) {
+			    var convertArrayOfObjectsToCSV = function(args) {
 			        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
 
 			        data = args.data || null;
@@ -199,7 +199,7 @@
 			        return result;
     			}
 
-			    function downloadCSV(args) {
+			    $scope.downloadCSV = function(args) {
 			        var data, filename, link;
 
 			        var csv = convertArrayOfObjectsToCSV({
