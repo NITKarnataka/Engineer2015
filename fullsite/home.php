@@ -79,7 +79,7 @@
 					<div>
 						<span ng-repeat="item in mailList">{{participants[item].email+','}}</span>
 					</div>
-					<button class="btn btn-success" onclick='downloadCSV({ filename: {{selected +".csv"}} });'>Download As CSV</button>
+					<button class="btn btn-success" onclick='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
 					<table class="table table-striped">
 						<tr>
 							<th>Sl No</th>
