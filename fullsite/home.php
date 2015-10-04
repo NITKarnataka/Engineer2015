@@ -128,7 +128,7 @@
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
 						<p>
-							<div class="js-copytextarea"><span ng-repeat="item in mailList">{{participants[item].email}}{{($index!=mailList.length-1)?',':''}}</div>
+							<div class="js-copytextarea"><span ng-repeat="item in mailList">{{participants[item].email}}{{($index!=mailList.length - 1)?',':''}}</div>
 						</p>
 						<p>
 							<button class="js-textareacopybtn btn btn-success">Copy Maillist</button>
@@ -259,7 +259,7 @@
 				var removeItem = function(arr,item){
 					for(var i=0; i<arr.length; i++) {
 						if(arr[i] == item) {
-							arr.splice(i, 1);
+							arr.splice(indexOf(item),1);
 							break;
 						}
 					}
