@@ -137,7 +137,7 @@
 							<th>Year</th>
 							<th>Add/Remove</th>
 						</tr>
-						<tr ng-repeat="participant in participants | orderBy:'id'">
+						<tr ng-repeat="participant in participants | orderBy:'id'" class="{{participant.out?'bg-red':'bg-red'}}">
 							<td>{{$index+1}}</td>
 							<td>{{participant.name}}</td>
 							<td>{{participant.college}}</td>
@@ -166,11 +166,16 @@
 										}
 
 				}
+				
 				$scope.countOther = <?php echo $countOther; ?>;
 				$scope.countUnique = <?php echo $uniqueOut; ?>;
 				$scope.committee = false;
 				$scope.wise = false;
 				$scope.sorted = "name";
+
+				var arrlist = ['nitk','surathkal','national institute of technology ka','gy kar','gy,kar','gy, kar','gy ,kar','gy , kar','ntik','national institute of technology su','gy su'
+,'gy,su','gy, su','gy ,su','gy , su','ntik'];
+
 				$scope.toggleCommittee = function(){
 					$scope.committee = !(angular.copy($scope.committee));
 					$scope.wise = false;
@@ -179,11 +184,25 @@
 					$scope.wise = !(angular.copy($scope.wise));
 					$scope.committee = false;
 				}
+
+				var inBlackList = function(item){
+					for(var i=0;i<arrlist.length;i++){
+						var lower = item.toLowerCase();
+						if(lower.match(/^.*arrlist[i].*$/))
+							return true;
+					}
+					return false;
+				}
+
 				$scope.participants = [];
 				$scope.mailList = [];
 				for(var i=0;i<$scope.details.length;i++){
 					if($scope.details[i].rfor==$scope.events[0].name){
 						$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
+						if(inBlackList($scope.details[i].college))
+							$scope.details[i].out=true;
+						else
+							$scope.details[i].out=false;
 						$scope.participants.push($scope.details[i]);
 					}
 				}
@@ -194,6 +213,10 @@
 						for(var i=0;i<$scope.details.length;i++){
 							if($scope.details[i].rfor==$scope.selected.name){
 								$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
+								if(inBlackList($scope.details[i].college))
+									$scope.details[i].out=true;
+								else
+									$scope.details[i].out=false;
 								$scope.participants.push($scope.details[i]);
 							}
 						}
@@ -293,6 +316,9 @@
 			}
 			.form-group{
 				margin-bottom: 15px!important;
+			}
+			.bg-red{
+				background-color: red;
 			}
 		</style>
 	</html>
