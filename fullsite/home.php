@@ -140,6 +140,7 @@
 								$scope.participants.push($scope.details[i]);
 							}
 						}
+						console.log($scope.participants.id);
 					}
 				});
 				$scope.inList =function(arr,item){
