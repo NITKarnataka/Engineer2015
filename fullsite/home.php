@@ -54,6 +54,10 @@
 	$arr=array();
 	$count = array();
 	$final = array();
+	$diff = array();
+	while($var1 = mysql_fetch_assoc($query_run4)){
+		array_push($diff, $var1['id'])
+	}
 	while($var = mysql_fetch_assoc($query_run)){
 		if($var['rfor']!=''){
 			if($pre!=$var['rfor']){
@@ -158,6 +162,8 @@
 				$scope.events = <?php echo json_encode($arr); ?>;
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
+				var arrlist = <?php echo json_encode($diff); ?>;
+
 				for(var i=0;i<$scope.events.length;i++){
 					var temp =$scope.events[i];
 					$scope.events[i] = {
@@ -173,9 +179,6 @@
 				$scope.wise = false;
 				$scope.sorted = "name";
 
-				var arrlist = ['nitk','surathkal','national institute of technology ka','gy kar','gy,kar','gy, kar','gy ,kar','gy , kar','ntik','national institute of technology su','gy su'
-,'gy,su','gy, su','gy ,su','gy , su','ntik'];
-
 				$scope.toggleCommittee = function(){
 					$scope.committee = !(angular.copy($scope.committee));
 					$scope.wise = false;
@@ -187,8 +190,7 @@
 
 				var inBlackList = function(item){
 					for(var i=0;i<arrlist.length;i++){
-						var lower = item.toLowerCase();
-						if(lower.match(new RegExp(arrlist[i])))
+						if(item == arrlist[i])
 							return true;
 					}
 					return false;
@@ -199,7 +201,7 @@
 				for(var i=0;i<$scope.details.length;i++){
 					if($scope.details[i].rfor==$scope.events[0].name){
 						$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
-						if(inBlackList($scope.details[i].college))
+						if(inBlackList($scope.details[i].id))
 							$scope.details[i].out=true;
 						else
 							$scope.details[i].out=false;
@@ -213,7 +215,7 @@
 						for(var i=0;i<$scope.details.length;i++){
 							if($scope.details[i].rfor==$scope.selected.name){
 								$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
-								if(inBlackList($scope.details[i].college))
+								if(inBlackList($scope.details[i].id))
 									$scope.details[i].out=true;
 								else
 									$scope.details[i].out=false;
