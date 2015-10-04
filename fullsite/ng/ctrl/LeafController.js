@@ -89,7 +89,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
         };
 
     $scope.dontInclude = function(name){
-    	var blacklist = ['simplicity','antariksh','orbiter','civilblueprint','stockoholic','skylantern','lastword'];
+    	var blacklist = ['simplicity','antariksh','orbiter','civilblueprint','stockoholic','skylantern','lastword','colossus'];
     	for(var i = 0 ; i<blacklist.length;i++){
     		if(name==blacklist[i])
     			return 1;
@@ -98,7 +98,7 @@ Engi.controller('LeafController', function($http,$rootScope,$scope, $timeout, $l
     }
 
     $scope.seperateRegistration = function(name){
-    	var sep = ['stockoholic','civilblueprint','simplicity'];
+    	var sep = ['stockoholic','civilblueprint','simplicity','colossus'];
     	for(var i = 0 ; i<sep.length;i++){
     		if(name==sep[i])
     			return 1;
