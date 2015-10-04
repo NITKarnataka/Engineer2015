@@ -102,7 +102,7 @@
 							<td>{{participant.location}}</td>
 							<td>{{participant.time}}</td>
 							<td>{{participant.year}}</td>
-							<td><button class="btn {{(inList(mailList,$index))?'btn-danger':'btn-primary'}}" ng-click="AddRemove($index);">{{(inList(mailList,$index))?'Remove':'Add'}}<button></td>
+							<td><button class="btn {{(inList(mailList,$index))?'btn-danger':'btn-primary'}}" ng-click="AddRemove($index);">{{(inList(mailList,$index))?'Remove':'Add'}}</button></td>
 						</tr>
 					</table>
 				</div>
