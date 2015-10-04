@@ -188,7 +188,7 @@
 				var inBlackList = function(item){
 					for(var i=0;i<arrlist.length;i++){
 						var lower = item.toLowerCase();
-						if(lower.match(new RegExp(x)).length)
+						if(lower.match(new RegExp(arrlist[i])).length)
 							return true;
 					}
 					return false;
