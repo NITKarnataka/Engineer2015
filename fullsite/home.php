@@ -6,6 +6,19 @@
 		header("Location: clogin.php");
 	}
 	$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
+	$query4 = "SELECT * 
+				FROM  `engineer2015` 
+				WHERE LOWER(  `college` ) NOT LIKE  '%nitk%'
+				AND LOWER(  `college` ) NOT LIKE  '%surathkal%'
+				AND LOWER(  `college` ) NOT LIKE  '%national institute of technology ka%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy kar%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy,kar%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy, kar%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy ,kar%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy , kar%'
+				AND LOWER(  `college` ) NOT LIKE  '%ntik%'";
+	$query_run4 = mysql_query($query4);
+	$countOther = mysql_num_rows($query_run4);
 	$query_run = mysql_query($query);
 	$pre='dummy';
 	$arr=array();
@@ -40,7 +53,7 @@
 		<body ng-controller="RegisterController">
 				<div class="row">
 					<div class="col-md-11">
-						<h2>Total registrations : {{details.length}}</h2>
+						<h2>Total registrations : {{details.length}} ,OffCampus : {{countOther}}</h2>
 					</div>
 					<div class="col-md-1">
 						<a href="logout.php">Logout</a>
@@ -114,6 +127,7 @@
 				$scope.events = <?php echo json_encode($arr); ?>;
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
+				$scope.countOther = <?php echo $countOther; ?>;
 				$scope.committee = false;
 				$scope.wise = false;
 				$scope.toggleCommittee = function(){
