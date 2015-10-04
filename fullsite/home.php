@@ -83,7 +83,7 @@
 		<body ng-controller="RegisterController">
 				<div class="row">
 					<div class="col-md-11">
-						<h2>Total registrations : {{details.length}} ,OffCampus : {{countOther}} ,unique : {{countUnique}}</h2>
+						<h2>Total registrations : {{details.length}} ,OffCampus : {{countOther}} ,unique Offcampus : {{countUnique}}</h2>
 					</div>
 					<div class="col-md-1">
 						<a href="logout.php">Logout</a>
@@ -110,8 +110,8 @@
 						</tr>
 						<tr ng-repeat='event in events'>
 							<td>{{$index+1}}</td>
-							<td>{{event}}</td>
-							<td>{{count[$index]}}</td>
+							<td>{{event.name}}</td>
+							<td>{{event.count}}</td>
 						</tr>
 					</table>
 				</div>
@@ -157,6 +157,14 @@
 				$scope.events = <?php echo json_encode($arr); ?>;
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
+				for(var i=0;i<$scope.events.length;i++){
+					var temp =$scope.events[i]
+					$scope.events[i] = {
+											"count":$scope.count[i],
+											"name":temp
+										}
+
+				}
 				$scope.countOther = <?php echo $countOther; ?>;
 				$scope.countUnique = <?php echo $uniqueOut; ?>;
 				$scope.committee = false;
