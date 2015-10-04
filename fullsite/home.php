@@ -92,7 +92,7 @@
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<h3>See committee wise</h3>
-						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}}">{{committee?'Hide':'Show'}}</button>
+						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}} form-group">{{committee?'Hide':'Show'}}</button>
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
@@ -102,7 +102,7 @@
 					</div>
 				</div>
 				<div ng-show="committee">
-					<button class="btn {{sorted=='count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{sorted=='count'?'Committee Name':'Registrations'}}</button>
+					<button class="btn {{sorted=='-count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{sorted=='-count'?'Committee Name':'Registrations'}}</button>
 					<table class="table table-striped">
 						<tr>
 							<th>slno.</th>
