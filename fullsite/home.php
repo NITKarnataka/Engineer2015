@@ -320,7 +320,7 @@
 				margin-bottom: 15px!important;
 			}
 			.bg-red{
-				background-color: red!important;
+				background-color: #ECA6A6!important;
 			}
 		</style>
 	</html>
