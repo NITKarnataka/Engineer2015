@@ -16,6 +16,13 @@
 				AND LOWER(  `college` ) NOT LIKE  '%gy, kar%'
 				AND LOWER(  `college` ) NOT LIKE  '%gy ,kar%'
 				AND LOWER(  `college` ) NOT LIKE  '%gy , kar%'
+				AND LOWER(  `college` ) NOT LIKE  '%ntik%'
+				AND LOWER(  `college` ) NOT LIKE  '%national institute of technology su%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy su%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy,su%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy, su%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy ,su%'
+				AND LOWER(  `college` ) NOT LIKE  '%gy , su%'
 				AND LOWER(  `college` ) NOT LIKE  '%ntik%'";
 	$query_run4 = mysql_query($query4);
 	$countOther = mysql_num_rows($query_run4);
