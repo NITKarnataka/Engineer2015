@@ -112,11 +112,13 @@
 							<th>slno.</th>
 							<th>committee</th>
 							<th>count</th>
+							<th>OffCampusCount</th>
 						</tr>
 						<tr ng-repeat="event in events | orderBy: sorted ">
 							<td>{{$index+1}}</td>
 							<td>{{event.name}}</td>
 							<td>{{event.count}}</td>
+							<td>{{event.OffCampus}}</td>
 						</tr>
 					</table>
 				</div>
@@ -164,11 +166,31 @@
 				$scope.count = <?php echo json_encode($count); ?>;
 				var arrlist = <?php echo json_encode($diff); ?>;
 
+				var inBlackList = function(item){
+					for(var i=0;i<arrlist.length;i++){
+						if(item == arrlist[i])
+							return true;
+					}
+					return false;
+				}
+
+				var getOffCampus = function(name){
+					var count = 0;
+					for(var i=0;i<$scope.details.length;i++){
+						if($scope.details[i].rfor == name){
+							if(inBlackList($scope.details[i].id))
+								count++;
+						}
+					}
+					return count;
+				}
+
 				for(var i=0;i<$scope.events.length;i++){
 					var temp =$scope.events[i];
 					$scope.events[i] = {
 											"count":$scope.count[i],
-											"name":temp
+											"name":temp,
+											"OffCampus":getOffCampus(temp)
 										}
 
 				}
@@ -188,13 +210,7 @@
 					$scope.committee = false;
 				}
 
-				var inBlackList = function(item){
-					for(var i=0;i<arrlist.length;i++){
-						if(item == arrlist[i])
-							return true;
-					}
-					return false;
-				}
+				
 
 				$scope.participants = [];
 				$scope.mailList = [];
