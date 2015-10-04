@@ -109,7 +109,7 @@
 							<th>committee</th>
 							<th>count</th>
 						</tr>
-						<tr ng-repeat="event in events | orderBy:'sorted'">
+						<tr ng-repeat="event in events | orderBy: sorted ">
 							<td>{{$index+1}}</td>
 							<td>{{event.name}}</td>
 							<td>{{event.count}}</td>
@@ -117,7 +117,7 @@
 					</table>
 				</div>
 				<div ng-show="wise">
-					<h4>Registrants for : <b>{{selected}}</b></h4>
+					<h4>Registrants for : <b>{{selected.name}}</b></h4>
 					<h4>Total : <b>{{participants.length}}</b></h4>
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
