@@ -53,7 +53,7 @@
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
-						<select ng-model='selected' ng-options="event for event in events" ng-init="selected=events[0]">
+						<select ng-model='selected' class="form-control 50-w-b" ng-options="event for event in events" ng-init="selected=events[0]">
 						</select>
 						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{wise?'Hide':'Show'}}</button>
 					</div>
@@ -75,12 +75,12 @@
 				<div ng-show="wise">
 					<h4>Registrants for : <b>{{selected}}</b></h4>
 					<h4>Total : <b>{{participants.length}}</b></h4>
-					<h5>Email Selections:</h5>
+					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div>
 						<span ng-repeat="item in mailList">{{participants[item].email+','}}</span>
 					</div>
-					<button class="btn btn-success" ng-click='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
-					<table class="table table-striped">
+					<button class="btn btn-success form-group" ng-click='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
+					<table class="table table-striped form-group">
 						<tr>
 							<th>Sl No</th>
 							<th>Name</th>
@@ -222,4 +222,10 @@
 
 			 });
 		</script>
+		<style>
+			.50-w-b{
+				width: 50%!important;
+				display: inline-block!important;
+			}
+		</style>
 	</html>
