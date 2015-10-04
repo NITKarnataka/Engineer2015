@@ -75,6 +75,10 @@
 				<div ng-show="wise">
 					<h4>Registrants for : <b>{{selected}}</b></h4>
 					<h4>Total : <b>{{participants.length}}</b></h4>
+					<h5>Email Selections:</h5>
+					<div>
+						<span ng-repeat="item in mailList">{{participants[item]+','}}</span>
+					</div>
 					<table class="table table-striped">
 						<tr>
 							<th>Sl No</th>
@@ -86,6 +90,7 @@
 							<th>location</th>
 							<th>Time Registered</th>
 							<th>Year</th>
+							<th>Add/Remove</th>
 						</tr>
 						<tr ng-repeat="participant in participants">
 							<td>{{$index+1}}</td>
@@ -97,6 +102,7 @@
 							<td>{{participant.location}}</td>
 							<td>{{participant.time}}</td>
 							<td>{{participant.year}}</td>
+							<td><button class="btn btn-primary" ng-click="AddRemove($index);">Add/Remove<button></td>
 						</tr>
 					</table>
 				</div>
@@ -118,6 +124,7 @@
 					$scope.committee = false;
 				}
 				$scope.participants = [];
+				$scope.mailList = [];
 				for(var i=0;i<$scope.details.length;i++){
 					if($scope.details[i].rfor==$scope.events[0]){
 						$scope.participants.push($scope.details[i]);
@@ -126,13 +133,40 @@
 				$scope.$watch('selected',function(n,o){
 					if(n!=o){
 						$scope.participants=[];
+						$scope.mailList=[];
 						for(var i=0;i<$scope.details.length;i++){
 							if($scope.details[i].rfor==$scope.selected){
 								$scope.participants.push($scope.details[i]);
 							}
 						}
 					}
-				})
+				});
+				var inList =function(arr,item){
+					for(var i=0;i<arr.length;i++){
+						if(arr[i]==item){
+							return true;
+						}
+					}
+					return false;
+				}
+				var removeItem = function(arr,item){
+					for(var i=0; i<arr.length; i++) {
+						if(arr[i] == item) {
+							arr.splice(i, 1);
+							break;
+						}
+					}
+				}
+				var addItem = function(arr,item){
+					arr.push(item);
+				}
+				$scope.AddRemove = function(item){
+					if inList($scope.mailList,item)
+						removeItem($scope.mailList,item);
+					else
+						addItem($scope.mailList,item);
+				}
+
 			 });
 		</script>
 	</html>
