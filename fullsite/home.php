@@ -56,7 +56,7 @@
 	$final = array();
 	$diff = array();
 	while($var1 = mysql_fetch_assoc($query_run4)){
-		array_push($diff, $var1['id'])
+		array_push($diff, $var1['id']);
 	}
 	while($var = mysql_fetch_assoc($query_run)){
 		if($var['rfor']!=''){
