@@ -76,7 +76,7 @@
 					<h4>Registrants for : <b>{{selected}}</b></h4>
 					<h4>Total : <b>{{participants.length}}</b></h4>
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
-					<div>
+					<div class="form-group">
 						<span ng-repeat="item in mailList">{{participants[item].email+','}}</span>
 					</div>
 					<button class="btn btn-success form-group" ng-click='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
