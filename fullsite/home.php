@@ -77,7 +77,7 @@
 					<h4>Total : <b>{{participants.length}}</b></h4>
 					<h5>Email Selections:</h5>
 					<div>
-						<span ng-repeat="item in mailList">{{participants[item]+','}}</span>
+						<span ng-repeat="item in mailList">{{participants[item].email+','}}</span>
 					</div>
 					<table class="table table-striped">
 						<tr>
