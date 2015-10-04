@@ -141,7 +141,7 @@
 							<th>Year</th>
 							<th>Add/Remove</th>
 						</tr>
-						<tr ng-repeat="participant in participants | orderBy:'id'" class="{{participant.out?'bg-red':'bg-red'}}">
+						<tr ng-repeat="participant in participants | orderBy:'id'" class="{{participant.out?'bg-red':''}}">
 							<td>{{$index+1}}</td>
 							<td>{{participant.name}}</td>
 							<td>{{participant.college}}</td>
