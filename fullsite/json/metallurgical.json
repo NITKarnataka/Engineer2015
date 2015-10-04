@@ -1,1 +1,35 @@
-[{"name":"Meta Events","description":"Coming soon.."}]
+[
+    {
+        "name": "Meta Events"
+    },
+    {
+        "name": "Sem and Tem Expo",
+        "pic": "semandtemexpo.jpg",
+        "link": "semandtemexpo",
+        "description": ""
+    },
+    {
+        "name": "Meta Mind Bend",
+        "pic": "metamindbend.jpg",
+        "link": "metamindbend",
+        "description": ""
+    },
+    {
+        "name": "Meta Magic",
+        "pic": "metamagic.jpg",
+        "link": "metamagic",
+        "description": ""
+    },
+    {
+        "name": "Casting Demo Workshop",
+        "pic": "castingdemoworkshop.jpg",
+        "link": "castingdemoworkshop",
+        "description": ""
+    },
+    {
+        "name": "Thermite Reaction Demo Workshop",
+        "pic": "thermitereactiondemoworkshop.jpg",
+        "link": "thermitereactiondemoworkshop",
+        "description": ""
+    }
+]
