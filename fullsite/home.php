@@ -161,7 +161,7 @@
 					arr.push(item);
 				}
 				$scope.AddRemove = function(item){
-					if inList($scope.mailList,item)
+					if (inList($scope.mailList,item))
 						removeItem($scope.mailList,item);
 					else
 						addItem($scope.mailList,item);
