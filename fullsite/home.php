@@ -124,7 +124,7 @@
 				</div>
 				<div ng-show="wise">
 					<h4>Registrants for : <b>{{:: selected.name}}</b></h4>
-					<h4>Total : <b>{{:: participants.length}}</b> , OffCampus:<b></b></h4>
+					<h4>Total : <b>{{:: participants.length}}</b> , OffCampus : <b>{{:: OCount}}</b></h4>
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
 						<span ng-repeat="item in mailList">{{:: participants[item].email+','}}</span>
@@ -213,28 +213,34 @@
 				
 
 				$scope.participants = [];
+				$scope.OCount = 0;
 				$scope.mailList = [];
 				for(var i=0;i<$scope.details.length;i++){
 					if($scope.details[i].rfor==$scope.events[0].name){
 						$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
-						if(inBlackList($scope.details[i].id))
+						if(inBlackList($scope.details[i].id)){
 							$scope.details[i].out=true;
-						else
+							$scope.OCount ++;
+						}else{
 							$scope.details[i].out=false;
+						}
 						$scope.participants.push($scope.details[i]);
 					}
 				}
 				$scope.$watch('selected',function(n,o){
 					if(n!=o){
 						$scope.participants=[];
+						$scope.OCount = 0;
 						$scope.mailList=[];
 						for(var i=0;i<$scope.details.length;i++){
 							if($scope.details[i].rfor==$scope.selected.name){
 								$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
-								if(inBlackList($scope.details[i].id))
+								if(inBlackList($scope.details[i].id)){
 									$scope.details[i].out=true;
-								else
+									$scope.OCount ++;
+								}else{
 									$scope.details[i].out=false;
+								}
 								$scope.participants.push($scope.details[i]);
 							}
 						}
