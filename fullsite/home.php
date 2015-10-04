@@ -93,7 +93,7 @@
 							<th>Year</th>
 							<th>Add/Remove</th>
 						</tr>
-						<tr ng-repeat="participant in participants">
+						<tr ng-repeat="participant in participants | orderBy:'id'">
 							<td>{{$index+1}}</td>
 							<td>{{participant.name}}</td>
 							<td>{{participant.college}}</td>
