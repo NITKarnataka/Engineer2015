@@ -127,7 +127,12 @@
 					<h4>Total : <b>{{ selected.count }}</b> , OffCampus : <b>{{ selected.OffCampus }}</b></h4>
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
-						<span ng-repeat="item in mailList">{{:: participants[item].email+','}}</span>
+						<p>
+							<textarea class="js-copytextarea">{{mailList.join(', ')}}</textarea>
+						</p>
+						<p>
+							<button class="js-textareacopybtn btn btn-success">Copy Maillist</button>
+						</p>
 					</div>
 					<button class="btn btn-success form-group" ng-click='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
 					<table class="table table-striped form-group">
@@ -328,6 +333,21 @@
 			    }
 
 			 });
+		</script>
+		<script>
+			var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+				copyTextareaBtn.addEventListener('click', function(event) {
+					var copyTextarea = document.querySelector('.js-copytextarea');
+					copyTextarea.select();
+					try {
+						var successful = document.execCommand('copy');
+						var msg = successful ? 'successful' : 'unsuccessful';
+						alert('Copied!Dude');
+					} catch (err) {
+						alert('Oops, unable to copy');
+					}
+				});
 		</script>
 		<style>
 			.w50-b{
