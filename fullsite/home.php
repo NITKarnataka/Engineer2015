@@ -170,6 +170,7 @@
 				$scope.countUnique = <?php echo $uniqueOut; ?>;
 				$scope.committee = false;
 				$scope.wise = false;
+				$scope.sorted = "name";
 				$scope.toggleCommittee = function(){
 					$scope.committee = !(angular.copy($scope.committee));
 					$scope.wise = false;
