@@ -102,7 +102,7 @@
 							<td>{{participant.location}}</td>
 							<td>{{participant.time}}</td>
 							<td>{{participant.year}}</td>
-							<td><button class="btn btn-primary" ng-click="AddRemove($index);">Add/Remove<button></td>
+							<td><button class="btn {{(inList(mailList,$index))?'btn-danger':'btn-primary'}}" ng-click="AddRemove($index);">{{(inList(mailList,$index))?'Remove':'Add'}}<button></td>
 						</tr>
 					</table>
 				</div>
@@ -141,7 +141,7 @@
 						}
 					}
 				});
-				var inList =function(arr,item){
+				$scope.inList =function(arr,item){
 					for(var i=0;i<arr.length;i++){
 						if(arr[i]==item){
 							return true;
@@ -161,7 +161,7 @@
 					arr.push(item);
 				}
 				$scope.AddRemove = function(item){
-					if (inList($scope.mailList,item))
+					if ($scope.inList($scope.mailList,item))
 						removeItem($scope.mailList,item);
 					else
 						addItem($scope.mailList,item);
