@@ -128,6 +128,7 @@
 				$scope.mailList = [];
 				for(var i=0;i<$scope.details.length;i++){
 					if($scope.details[i].rfor==$scope.events[0]){
+						$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
 						$scope.participants.push($scope.details[i]);
 					}
 				}
@@ -137,6 +138,7 @@
 						$scope.mailList=[];
 						for(var i=0;i<$scope.details.length;i++){
 							if($scope.details[i].rfor==$scope.selected){
+								$scope.details[i].id=angular.copy(parseInt($scope.details[i].id));
 								$scope.participants.push($scope.details[i]);
 							}
 						}
