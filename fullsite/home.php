@@ -53,7 +53,7 @@
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
-						<select ng-model='selected' class="form-control 50-w-b" ng-options="event for event in events" ng-init="selected=events[0]">
+						<select ng-model='selected' class="form-control w50-b" ng-options="event for event in events" ng-init="selected=events[0]">
 						</select>
 						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{wise?'Hide':'Show'}}</button>
 					</div>
@@ -223,9 +223,12 @@
 			 });
 		</script>
 		<style>
-			.50-w-b{
+			.w50-b{
 				width: 50%!important;
 				display: inline-block!important;
+			}
+			.form-group{
+				margin-bottom: 15px!important;
 			}
 		</style>
 	</html>
