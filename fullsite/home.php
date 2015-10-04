@@ -128,7 +128,7 @@
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
 						<p>
-							<textarea class="js-copytextarea">{{mailList.join(',')}}</textarea>
+							<textarea class="js-copytextarea" rows="4" style="width: 600px;">{{mailList.join(',')}}</textarea>
 						</p>
 						<p>
 							<button class="js-textareacopybtn btn btn-success">Copy Maillist</button>
