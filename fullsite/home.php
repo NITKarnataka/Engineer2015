@@ -128,7 +128,7 @@
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
 						<p>
-							<textarea class="js-copytextarea">{{mailList.join(', ')}}</textarea>
+							<div class="js-copytextarea"><span ng-repeat="item in mailList">{{participants[item].email}}{{($index!=mailList.length-1)?',':''}}</div>
 						</p>
 						<p>
 							<button class="js-textareacopybtn btn btn-success">Copy Maillist</button>
