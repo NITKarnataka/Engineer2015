@@ -102,13 +102,14 @@
 					</div>
 				</div>
 				<div ng-show="committee">
+					<button class="btn {{sorted=='count'?'btn-info':'btn-warning'}}" ng-click="toggleSort();">Sort By {{sorted=='count'?'Committee Name':'Registrations'}}</button>
 					<table class="table table-striped">
 						<tr>
 							<th>slno.</th>
 							<th>committee</th>
 							<th>count</th>
 						</tr>
-						<tr ng-repeat='event in events'>
+						<tr ng-repeat="event in events | orderBy:'sorted'">
 							<td>{{$index+1}}</td>
 							<td>{{event.name}}</td>
 							<td>{{event.count}}</td>
@@ -223,7 +224,13 @@
 					else
 						addItem($scope.mailList,item);
 				}
-
+				$scope.toggleSort = function(){
+					if($scope.sorted=="name"){
+						$scope.sorted = "count";
+					}else{
+						$scope.sorted = "name";
+					}
+				}
 			    var convertArrayOfObjectsToCSV = function(args) {
 			        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
 
