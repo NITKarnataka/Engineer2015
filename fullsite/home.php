@@ -87,7 +87,7 @@
 		<body ng-controller="RegisterController">
 				<div class="row">
 					<div class="col-md-11">
-						<h2>Total registrations : {{details.length}} ,OffCampus : {{countOther}} ,unique Offcampus : {{countUnique}}</h2>
+						<h2>Total registrations : {{:: details.length}} ,OffCampus : {{:: countOther}} ,unique Offcampus : {{:: countUnique}}</h2>
 					</div>
 					<div class="col-md-1">
 						<a href="logout.php">Logout</a>
@@ -96,17 +96,17 @@
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<h3>See committee wise</h3>
-						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}} form-group">{{committee?'Hide':'Show'}}</button>
+						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}} form-group">{{:: committee?'Hide':'Show'}}</button>
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
 						<select ng-model='selected' class="form-control w50-b" ng-options="event.name for event in events" ng-init="selected=events[0].name">
 						</select>
-						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{wise?'Hide':'Show'}}</button>
+						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{:: wise?'Hide':'Show'}}</button>
 					</div>
 				</div>
 				<div ng-show="committee">
-					<button class="btn {{sorted=='-count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{sorted=='-count'?'Committee Name':'Registrations'}}</button>
+					<button class="btn {{sorted=='-count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{:: sorted=='-count'?'Committee Name':'Registrations'}}</button>
 					<table class="table table-striped">
 						<tr>
 							<th>slno.</th>
@@ -115,19 +115,19 @@
 							<th>OffCampusCount</th>
 						</tr>
 						<tr ng-repeat="event in events | orderBy: sorted ">
-							<td>{{$index+1}}</td>
-							<td>{{event.name}}</td>
-							<td>{{event.count}}</td>
-							<td>{{event.OffCampus}}</td>
+							<td>{{:: $index+1}}</td>
+							<td>{{:: event.name}}</td>
+							<td>{{:: event.count}}</td>
+							<td>{{:: event.OffCampus}}</td>
 						</tr>
 					</table>
 				</div>
 				<div ng-show="wise">
-					<h4>Registrants for : <b>{{selected.name}}</b></h4>
-					<h4>Total : <b>{{participants.length}}</b></h4>
+					<h4>Registrants for : <b>{{:: selected.name}}</b></h4>
+					<h4>Total : <b>{{:: participants.length}}</b> , OffCampus:<b></b></h4>
 					<h5>Email Selections(click add/remove to add/remove email list):</h5>
 					<div class="form-group">
-						<span ng-repeat="item in mailList">{{participants[item].email+','}}</span>
+						<span ng-repeat="item in mailList">{{:: participants[item].email+','}}</span>
 					</div>
 					<button class="btn btn-success form-group" ng-click='downloadCSV({ filename: "download.csv" });'>Download As CSV</button>
 					<table class="table table-striped form-group">
@@ -144,15 +144,15 @@
 							<th>Add/Remove</th>
 						</tr>
 						<tr ng-repeat="participant in participants | orderBy:'id'" class="{{participant.out?'bg-red':''}}">
-							<td>{{$index+1}}</td>
-							<td>{{participant.name}}</td>
-							<td>{{participant.college}}</td>
-							<td>{{participant.branch}}</td>
-							<td>{{participant.email}}</td>
-							<td>{{participant.mobile}}</td>
-							<td>{{participant.location}}</td>
-							<td>{{participant.time}}</td>
-							<td>{{participant.year}}</td>
+							<td>{{:: $index+1}}</td>
+							<td>{{:: participant.name}}</td>
+							<td>{{:: participant.college}}</td>
+							<td>{{:: participant.branch}}</td>
+							<td>{{:: participant.email}}</td>
+							<td>{{:: participant.mobile}}</td>
+							<td>{{:: participant.location}}</td>
+							<td>{{:: participant.time}}</td>
+							<td>{{:: participant.year}}</td>
 							<td><button class="btn {{(inList(mailList,$index))?'btn-danger':'btn-primary'}}" ng-click="AddRemove($index);">{{(inList(mailList,$index))?'Remove':'Add'}}</button></td>
 						</tr>
 					</table>
