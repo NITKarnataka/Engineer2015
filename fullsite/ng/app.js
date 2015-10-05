@@ -7,61 +7,61 @@ var Engi;
 
 		$routeProvider
 		.when('/events', {
-			templateUrl: './views/modals.html',
+			templateUrl: './views/modals.html?'+Math.random()*Math.random()
 		})
 		.when('/events/:cat', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/modals.html?'+Math.random()*Math.random()
 		})
 		.when('/events/:cat/:id', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/workshops', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/modals.html?'+Math.random()*Math.random()
 		})
 		.when('/workshops/:id', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/techspeaks', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/modals.html?'+Math.random()*Math.random()
 		})
 		.when('/techspeaks/:id', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/technites', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/modals.html?'+Math.random()*Math.random()
 		})
 		.when('/technites/:id', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/mainshow', {
-			templateUrl: './views/modals.html'
+			templateUrl: './views/modals.html?'+Math.random()*Math.random()
 		})
 		.when('/mainshow/:id', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/fillform', {
-			templateUrl: './views/form.html'
+			templateUrl: './views/form.html?'+Math.random()*Math.random()
 		})
 		.when('/CA', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/about', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/sponsors', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/team', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/sponsors', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/engiconnect', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		})
 		.when('/hospi', {
-			templateUrl: './views/leaf.html'
+			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
 		});
 
 		$sceDelegateProvider.resourceUrlWhitelist([
