@@ -73,7 +73,7 @@ var Engi;
 
 
 
-	Engi.run(function ($rootScope, $location,$routeParams) {
+	Engi.run(function ($rootScope, $location,$routeParams,$templateCache) {
 
 		var history = [];
 
@@ -87,6 +87,9 @@ var Engi;
 			$rootScope.prevUrl = history.length > 1 ? history.splice(-2)[0] : "/";
 			$location.path($rootScope.prevUrl);
 		};
+		$rootScope.$on('$viewContentLoaded', function() {
+			$templateCache.removeAll();
+		});
 
 	});
 
