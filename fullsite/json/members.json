@@ -4,7 +4,7 @@
         "email": "vinitm52@gmail.com",
         "pic": "vinit.jpg",
         "post": "Convenor",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -28,7 +28,7 @@
         "email": "",
         "pic": "shashikant.jpg",
         "post": "Organizing Secretary",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -43,16 +43,24 @@
         "name": "Yash Kedia",
         "email": "",
         "pic": "yash.jpg",
-        "post": "Convenor",
-        "comittee": "Marketing",
+        "post": "Marketing Convenor",
+        "comittee": "",
         "classie": "core"
     },
     {
         "name": "Mahendra Bohra",
         "email": "",
         "pic": "bohra.jpg",
-        "post": "Convenor",
-        "comittee": "Publicity",
+        "post": "Publicity Convenor",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Arun Nandewal",
+        "email": "",
+        "pic": "nandewal.jpg",
+        "post": "Publicity Co-ordinator",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -68,7 +76,7 @@
         "email": "",
         "pic": "shubham.jpg",
         "post": "Secretary",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -76,7 +84,7 @@
         "email": "",
         "pic": "rajat.jpg",
         "post": "Secretary",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -84,7 +92,7 @@
         "email": "",
         "pic": "asif.jpg",
         "post": "Chief Coordinator",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -116,7 +124,7 @@
         "email": "",
         "pic": "snehal.jpg",
         "post": "Joint Convenor",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -124,7 +132,7 @@
         "email": "",
         "pic": "ayush.jpg",
         "post": "Joint Convenor",
-        "comittee": "core",
+        "comittee": "",
         "classie": "core"
     },
     {
@@ -195,7 +203,7 @@
         "name": "Yushmita Singh",
         "email": "",
         "pic": "yushmita.jpg",
-        "post": "Girls Coordinator",
+        "post": "2nd yr Representative(girls)",
         "comittee": "",
         "classie": "core"
     }
