@@ -8,6 +8,110 @@
         "classie": "core"
     },
     {
+        "name": "Anirudh Ganesh",
+        "email": "",
+        "pic": "anirudh.jpg",
+        "post": "Student Council President",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "jainam",
+        "email": "",
+        "pic": "jainamgala.jpg",
+        "post": "Treasurer",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Shahshikant",
+        "email": "",
+        "pic": "shashikant.jpg",
+        "post": "Organizing Secretary",
+        "comittee": "core",
+        "classie": "core"
+    },
+    {
+        "name": "Vivek Bhadouria",
+        "email": "viv.bh123@gmail.com",
+        "pic": "vivek.jpg",
+        "post": "Overall coordinator",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Yash Kedia",
+        "email": "",
+        "pic": "yash.jpg",
+        "post": "Convenor",
+        "comittee": "Marketing",
+        "classie": "core"
+    },
+    {
+        "name": "Mahendra Bohra",
+        "email": "",
+        "pic": "bohra.jpg",
+        "post": "Convenor",
+        "comittee": "Publicity",
+        "classie": "core"
+    },
+    {
+        "name": "bishal thingam",
+        "email": "",
+        "pic": "bishal.jpg",
+        "post": "Publicity Co-ordinator",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Shubham Dixit",
+        "email": "",
+        "pic": "shubham.jpg",
+        "post": "Secretary",
+        "comittee": "core",
+        "classie": "core"
+    },
+    {
+        "name": "Rajat Mittal",
+        "email": "",
+        "pic": "rajat.jpg",
+        "post": "Secretary",
+        "comittee": "core",
+        "classie": "core"
+    },
+    {
+        "name": "Mohammad Asif",
+        "email": "",
+        "pic": "asif.jpg",
+        "post": "Chief Coordinator",
+        "comittee": "core",
+        "classie": "core"
+    },
+    {
+        "name": "Aditya hendre",
+        "email": "",
+        "pic": "hendre.jpg",
+        "post": "Chief Coordinator",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Shubham Raizada",
+        "email": "",
+        "pic": "raizada.jpg",
+        "post": "Chief Coordinator",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Ansu George",
+        "email": "",
+        "pic": "ansu.jpg",
+        "post": "Joint Convenor",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
         "name": "Snehal Jauhri",
         "email": "",
         "pic": "snehal.jpg",
@@ -24,50 +128,10 @@
         "classie": "core"
     },
     {
-        "name": "Shahshikant",
+        "name": "Ajay Sathya",
         "email": "",
-        "pic": "shashikant.jpg",
-        "post": "Organizing Secretary",
-        "comittee": "core",
-        "classie": "core"
-    },
-    {
-        "name": "Rajat Mittal",
-        "email": "",
-        "pic": "rajat.jpg",
-        "post": "Secretary",
-        "comittee": "core",
-        "classie": "core"
-    },
-    {
-        "name": "Shubham Dixit",
-        "email": "",
-        "pic": "shubham.jpg",
-        "post": "Secretary",
-        "comittee": "core",
-        "classie": "core"
-    },
-    {
-        "name": "Mohammad Asif",
-        "email": "",
-        "pic": "asif.jpg",
-        "post": "Chief Coordinator",
-        "comittee": "core",
-        "classie": "core"
-    },
-    {
-        "name": "Yash Kedia",
-        "email": "",
-        "pic": "yash.jpg",
-        "post": "Convenor",
-        "comittee": "Marketing",
-        "classie": "core"
-    },
-    {
-        "name": "Vivek Bhadouria",
-        "email": "viv.bh123@gmail.com",
-        "pic": "vivek.jpg",
-        "post": "Overall coordinator",
+        "pic": "ajay.jpg",
+        "post": "Joint Convenor",
         "comittee": "",
         "classie": "core"
     },
@@ -88,74 +152,10 @@
         "classie": "core"
     },
     {
-        "name": "Aditya hendre",
+        "name": "Siddaroodha",
         "email": "",
-        "pic": "hendre.jpg",
-        "post": "Chief Coordinator",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "Shubham Raizada",
-        "email": "",
-        "pic": "raizada.jpg",
-        "post": "Chief Coordinator",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "saurabh sachan",
-        "email": "",
-        "pic": "saurabh.jpg",
-        "post": "Third Yr. Rep.",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "Ansu George",
-        "email": "",
-        "pic": "ansu.jpg",
-        "post": "Joint Convenor",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "Ajay Sathya",
-        "email": "",
-        "pic": "ajay.jpg",
-        "post": "Joint Convenor",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "Anirudh Ganesh",
-        "email": "",
-        "pic": "anirudh.jpg",
-        "post": "Student Council President",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "Yushmita Singh",
-        "email": "",
-        "pic": "yushmita.jpg",
-        "post": "Girls Coordinator",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
-        "name": "Mahendra Bohra",
-        "email": "",
-        "pic": "bohra.jpg",
-        "post": "Convenor",
-        "comittee": "Publicity",
-        "classie": "mnp"
-    },
-    {
-        "name": "bishal thingam",
-        "email": "",
-        "pic": "bishal.jpg",
-        "post": "Publicity Co-ordinator",
+        "pic": "sidda.jpg",
+        "post": "Joint Design Head",
         "comittee": "",
         "classie": "core"
     },
@@ -168,18 +168,34 @@
         "classie": "core"
     },
     {
-        "name": "jainam",
-        "email": "",
-        "pic": "jainamgala.jpg",
-        "post": "Treasurer",
-        "comittee": "",
-        "classie": "core"
-    },
-    {
         "name": "abhishek reddy",
         "email": "",
         "pic": "abhishek.jpg",
         "post": "Joint Secretary",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "saurabh sachan",
+        "email": "",
+        "pic": "saurabh.jpg",
+        "post": "Third Yr. Rep.",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Anand Thamban",
+        "email": "",
+        "pic": "thamban.jpg",
+        "post": "2nd yr Representative",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Yushmita Singh",
+        "email": "",
+        "pic": "yushmita.jpg",
+        "post": "Girls Coordinator",
         "comittee": "",
         "classie": "core"
     }

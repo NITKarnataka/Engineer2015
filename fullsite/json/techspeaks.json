@@ -1,6 +1,41 @@
 [
     {
-        "name": "EngiTalks",
-        "description":"Coming Soon.."
+        "name": "EngiTalks"
+    },
+    {
+        "name": "Sunil MS",
+        "pic": "sunilms.jpg",
+        "link": "sunilms",
+        "description": ""
+    },
+    {
+        "name": "Deepak Shetty",
+        "pic": "deepakshetty.jpg",
+        "link": "deepakshetty",
+        "description": ""
+    },
+    {
+        "name": "Brigadier OP Yadav",
+        "pic": "opyadav.jpg",
+        "link": "opyadav",
+        "description": ""
+    },
+    {
+        "name": "Rahm Shastry",
+        "pic": "rahmshastry.jpg",
+        "link": "rahmshastry",
+        "description": ""
+    },
+    {
+        "name": "King Sidharth",
+        "pic": "kingsidharth.jpg",
+        "link": "kingsidharth",
+        "description": ""
+    },
+    {
+        "name": "Varsha Varghese",
+        "pic": "varshavarghese.jpg",
+        "link": "varshavarghese",
+        "description": ""
     }
 ]
