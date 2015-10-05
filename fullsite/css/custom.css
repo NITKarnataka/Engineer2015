@@ -160,12 +160,11 @@ html{
 
 }
 .clock{
-  display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox!important;      /* TWEENER - IE 10 */
+  display: -webkit-box!important;        /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox!important; 
   display: -webkit-flex!important;
   display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     width: 33%;
     margin: 20px auto 10px;
 
@@ -372,7 +371,7 @@ html{
   display: flex!important;
   justify-content:space-between;
   height: 3%;
-  width: 12%;
+  width: 18%;
   left:5%!important;
   top:2%!important;
   z-index: 1000;

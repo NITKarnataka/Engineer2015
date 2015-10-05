@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Mining Events"
+    },
+    {
+        "name": "Clue Quest",
+        "pic": "cluequest.jpg",
+        "link": "cluequest",
+        "description": ""
+    },
+    {
+        "name": "Industrial Case Study",
+        "pic": "industrialcasestudy.jpg",
+        "link": "industrialcasestudy",
+        "description": ""
+    },
+    {
+        "name": "Pit Design",
+        "pic": "pitdesign.jpg",
+        "link": "pitdesign",
+        "description": ""
+    },
+    {
+        "name": "Workshops",
+        "pic": "workshopsmin.jpg",
+        "link": "workshops",
+        "description": ""
+    },
+    {
+        "name": "Innovative Mining Presentation",
+        "pic": "innovativeminingpresentation.jpg",
+        "link": "innovativeminingpresentataion",
+        "description": ""
+    },
+    {
+        "name": "Online Event",
+        "pic": "onlineeventmin.jpg",
+        "link": "onlineevent",
+        "description": ""
+    },
+    {
+        "name": "Guest Lectures",
+        "pic": "guestlectures.jpg",
+        "link": "guestlectures",
+        "description": ""
+    }
+]

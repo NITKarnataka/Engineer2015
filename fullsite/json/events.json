@@ -62,5 +62,11 @@
         "link": "sce",
         "pic": "sce.jpg",
         "description": "Click to know more"
+    },
+    {
+        "name": "Mining Events",
+        "link": "mining",
+        "pic": "miningthumb.jpg",
+        "description": "Click to know more"
     }
 ]
