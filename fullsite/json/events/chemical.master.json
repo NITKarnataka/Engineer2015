@@ -98,13 +98,23 @@
         ]
     },
     {
-        "name": "Catalysis - Workshop",
+        "name": "Unisim Design - Catalysis (Workshop)",
         "link": "catalysisworkshop",
         "banner": "catalysisworkshopbanner.jpg",
         "subdesc": [
             {
                 "subtitle": "Overview",
-                "subdescription": "A two day Technology Orientation Workshop on Industry Perspective on Chemical Process Design, Operations and Control conducted by Institute of Process and Control Engineers (IPCE).",
+                "subdescription": "‘Catalysis’ is a workshop event organized by the Chemical Events Committee as a part of ENGINEER, the annual Technical Symposium of NITK Surathkal. The event aims to bridge the gap between the Classroom and the Industrial World by acquainting the participants to current Industrial Practices and advancements in Process Technology.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Workshop Details",
+                "subdescription": "This year we have Unisim Design Workshop which will be conducted on 10th and 11th October, 2015. The workshop will be conducted by <b>Mr. Shakuna Udupa, Dy. Manager- PT & E</b>. Following are the details of the workshop:<br><ul><li>Introduction – General Concepts of Simulation</li><li>The user interface and various models<ul><li>Workshops – Benzene Flash, Propane refrigeration</li></ul></li><li>Designing distillation system using Unisim Design<ul><li>Workshop – NGL Fractionation train</li><li>Workshop – Methanol water separation design</li></ul></li><li>Rigorous and Shortcut modelling of distillation column</li><li>Handling recycle streams<ul><li>Workhops :Cumene Production</li></ul></li><li>Cyclohexane production</li><li>Physical property</li><li>Case studies</li><li>Reactor workshop</li><li>Oil characterisation</li></ul>",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Registration Fee",
+                "subdescription": "Rs 150/-",
                 "subimage": ""
             },
             {
