@@ -147,7 +147,15 @@
         "name": "Arpan chandrashekhar",
         "email": "",
         "pic": "arpan.jpg",
-        "post": "Technical coordinator",
+        "post": "Web Head",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Shubham Badal",
+        "email": "",
+        "pic": "badal.jpg",
+        "post": "Web Co-Head",
         "comittee": "",
         "classie": "core"
     },
@@ -164,6 +172,22 @@
         "email": "",
         "pic": "sidda.jpg",
         "post": "Joint Design Head",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "vikram Singh Tomar",
+        "email": "",
+        "pic": "vikram.jpg",
+        "post": "Android App",
+        "comittee": "",
+        "classie": "core"
+    },
+    {
+        "name": "Benu Changmai",
+        "email": "",
+        "pic": "benu.jpg",
+        "post": "Android App",
         "comittee": "",
         "classie": "core"
     },

@@ -1,1 +1,218 @@
-[{"name":"Sunil MS","link":"sunilms","banner":"engitalks.jpg","subdesc":[{"subtitle":"About","subdescription":"One of the few individuals still fired with the passion to create a sustainable environment. He meets the growing demand of energy and resources planning and sustainable development. A vivid environmental engineer , he realises his dream and vision through his startup- HINREN TECHNOLOGIES.The sheer numbers of water harvested,energy and carbon emissions saved by his company through various project speak for his works.","subimage":""},{"subtitle":"Fees","subdescription":"Rs. 150","subimage":""},{"subtitle":"Contact","subdescription":"Naveen: +91-9844547911","subimage":""}],"list":[{"title":"","items":[""]}],"subimage":[{"title":"","link":""}]},{"name":"Deepak Shetty","link":"deepakshetty","banner":"deepakshetty.jpg","subdesc":[{"subtitle":"About","subdescription":"A dynamic professional with over 26 years of experience with strong leadership and communication skills. Currently associated with Moser Baer India as Chief Marketing Officer having significant exposure in managing business for the Indian & European markets for over a decade","subimage":""},{"subtitle":"Fees","subdescription":"Rs. 150","subimage":""},{"subtitle":"Contact","subdescription":"Naveen: +91-9844547911","subimage":""}],"list":[{"title":"","items":[""]}],"subimage":[{"title":"","link":""}]},{"name":"OP Yadav","link":"opyadav","banner":"engitalks.jpg","subdesc":[{"subtitle":"About","subdescription":"A kargil war hero, he brings a rich mixture of experience blended with stories of leadership, dedication and sacrifice.","subimage":""},{"subtitle":"Fees","subdescription":"Rs. 150","subimage":""},{"subtitle":"Contact","subdescription":"Naveen: +91-9844547911","subimage":""}],"list":[{"title":"","items":[""]}],"subimage":[{"title":"","link":""}]},{"name":"Rahm Shastry","link":"rahmshastry","banner":"engitalks.jpg","subdesc":[{"subtitle":"About","subdescription":"With years of experience and skills in the field of entrepreneurship and management he has a very sophisticated profile. Currently the CEO of DriveU, he has come a long way managing various companies and co founding many others. He is a distinguished NITK alumni and the former Students' Council President of NITK.","subimage":""},{"subtitle":"Fees","subdescription":"Rs. 150","subimage":""},{"subtitle":"Contact","subdescription":"Naveen: +91-9844547911","subimage":""}],"list":[{"title":"","items":[""]}],"subimage":[{"title":"","link":""}]},{"name":"King Sidharth","link":"kingsidharth","banner":"engitalks.jpg","subdesc":[{"subtitle":"About","subdescription":"King Sidharth is an entrepreneur,designer,artist and public speaker.\nHe displayed his talent for entrepreneurship early in life,when he he started an online magazine called Friendz,-an attempt to address problems fced by the younger generation - in the 10th standard. He has been listed amongst the Worlds 25 Young Entrepreneurs in the year 2010 and was also featured in the book of the same name . He currently works on the Design team for Instamojo, which aims to simplify online commerce with a focus on design,delivery and distribution","subimage":""},{"subtitle":"Fees","subdescription":"Rs. 150","subimage":""},{"subtitle":"Contact","subdescription":"Naveen: +91-9844547911","subimage":""}],"list":[{"title":"","items":[""]}],"subimage":[{"title":"","link":""}]},{"name":"Varsha Varghese","link":"varshavarghese","banner":"engitalks.jpg","subdesc":[{"subtitle":"About","subdescription":"Varsha Varghese, a Young India Fellow and graduate from St. Stephens College founded the WordsWorth Project which promotes reading among children. She is more inclined towards the various issues that face primary education in our country today.","subimage":""},{"subtitle":"Fees","subdescription":"Rs. 150","subimage":""},{"subtitle":"Contact","subdescription":"Naveen: +91-9844547911","subimage":""}],"list":[{"title":"","items":[""]}],"subimage":[{"title":"","link":""}]}]
+[
+    {
+        "name": "Sunil MS",
+        "link": "sunilms",
+        "banner": "engitalks.jpg",
+        "subdesc": [
+            {
+                "subtitle": "About",
+                "subdescription": "One of the few individuals still fired with the passion to create a sustainable environment. He meets the growing demand of energy and resources planning and sustainable development. A vivid environmental engineer , he realises his dream and vision through his startup- HINREN TECHNOLOGIES.The sheer numbers of water harvested,energy and carbon emissions saved by his company through various project speak for his works.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 150",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact",
+                "subdescription": "Naveen: +91-9844547911",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Deepak Shetty",
+        "link": "deepakshetty",
+        "banner": "engitalks.jpg",
+        "subdesc": [
+            {
+                "subtitle": "About",
+                "subdescription": "A dynamic professional with over 26 years of experience with strong leadership and communication skills. Currently associated with Moser Baer India as Chief Marketing Officer having significant exposure in managing business for the Indian & European markets for over a decade",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 150",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact",
+                "subdescription": "Naveen: +91-9844547911",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "OP Yadav",
+        "link": "opyadav",
+        "banner": "engitalks.jpg",
+        "subdesc": [
+            {
+                "subtitle": "About",
+                "subdescription": "A kargil war hero, he brings a rich mixture of experience blended with stories of leadership, dedication and sacrifice.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 150",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact",
+                "subdescription": "Naveen: +91-9844547911",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Rahm Shastry",
+        "link": "rahmshastry",
+        "banner": "engitalks.jpg",
+        "subdesc": [
+            {
+                "subtitle": "About",
+                "subdescription": "With years of experience and skills in the field of entrepreneurship and management he has a very sophisticated profile. Currently the CEO of DriveU, he has come a long way managing various companies and co founding many others. He is a distinguished NITK alumni and the former Students' Council President of NITK.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 150",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact",
+                "subdescription": "Naveen: +91-9844547911",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "King Sidharth",
+        "link": "kingsidharth",
+        "banner": "engitalks.jpg",
+        "subdesc": [
+            {
+                "subtitle": "About",
+                "subdescription": "King Sidharth is an entrepreneur,designer,artist and public speaker.\nHe displayed his talent for entrepreneurship early in life,when he he started an online magazine called Friendz,-an attempt to address problems fced by the younger generation - in the 10th standard. He has been listed amongst the Worlds 25 Young Entrepreneurs in the year 2010 and was also featured in the book of the same name . He currently works on the Design team for Instamojo, which aims to simplify online commerce with a focus on design,delivery and distribution",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 150",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact",
+                "subdescription": "Naveen: +91-9844547911",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Varsha Varghese",
+        "link": "varshavarghese",
+        "banner": "engitalks.jpg",
+        "subdesc": [
+            {
+                "subtitle": "About",
+                "subdescription": "Varsha Varghese, a Young India Fellow and graduate from St. Stephens College founded the WordsWorth Project which promotes reading among children. She is more inclined towards the various issues that face primary education in our country today.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Fees",
+                "subdescription": "Rs. 150",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Contact",
+                "subdescription": "Naveen: +91-9844547911",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    }
+]
