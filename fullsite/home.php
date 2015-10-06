@@ -5,6 +5,8 @@
 	if(empty($logged)&&$logged==0){
 		header("Location: clogin.php");
 	}
+	$pwd = $_SESSION['pwd'];
+	$un = $_SESSION['un'];
 	if($logged==1){
 		$qstring =" 1 ";
 		$q2string = "";
@@ -175,7 +177,7 @@
 							<td>{{:: $index+1}}</td>
 							<td ng-if="showPaid">
 								<div class="col-md-12">
-									<button class="btn {{parseInt(participant.send)?'btn-success':'btn-danger'}}" ng-click="paid(participant.id)">{{parseInt(participant.send)?'Paid':'Dint Pay'}}</button>
+									<button class="btn {{parseInt(participant.send)?'btn-success':'btn-danger'}}" ng-click="paid(participant.id,parseInt(participant.send))">{{parseInt(participant.send)?'Paid':'Dint Pay'}}</button>
 								</div>
 								<div class="col-md-12" ng-if="parseInt(participant.send)">
 									<button class="btn btn-warning" ng-click="mistake(participant.id)">By Mistake</button>
@@ -197,7 +199,7 @@
 		</body>
 		<script type="text/javascript">
 			 Register = angular.module('Register', []);
-			 Register.controller('RegisterController', function($scope, $location,$http) {
+			 Register.controller('RegisterController', function($scope, $location,$http,$route) {
 				$scope.events = <?php echo json_encode($arr); ?>;
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
@@ -369,15 +371,37 @@
 			        link.click();
 			    }
 
-			    $scope.paid = function(id){
-			    	if(id==0)
-			    		console.log('asd')
+			    $scope.paid = function(id,num){
+			    	if(num==0){
+			    		var uname = <?php echo $un; ?>;
+			    		var pwd = <?php echo $pwd; ?>;
+			    		$http.post('wpayment.php',{"id":id ,"uname":uname,"pwd":pwd,"send":1})
+							.success(function(data) {
+								if(data.success!=''){
+									if(data.success==true)
+										alert('changed!');
+									else
+										alert('some error occured try again..');
+								}
+							});
+						$route.reload();
+			    	}
 			    }
 
 			    $scope.mistake = function(id){
-			    	if(id==0)
-			    		console.log('asd')
-			    }
+			    	var uname = <?php echo $un; ?>;
+			    	var pwd = <?php echo $pwd; ?>;
+			   		$http.post('wpayment.php',{"id":id ,"uname":uname,"pwd":pwd,"send":0})
+						.success(function(data) {
+							if(data.success!=''){
+								if(data.success==true)
+									alert('changed!');
+								else
+									alert('some error occured try again..');
+							}
+						});
+					$route.reload();
+				}
 
 			 });
 		</script>

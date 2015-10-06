@@ -9,6 +9,8 @@
 		if(mysql_num_rows($query_run)==1){			
 			$var = mysql_fetch_assoc($query_run);
 			$_SESSION['logged']=$var['id'];
+			$_SESSION['pwd']=$pwd;
+			$_SESSION['un']=$uname;
 			header('Location: home.php');
 		}else{
 			$_SESSION['logged'] = 0;
