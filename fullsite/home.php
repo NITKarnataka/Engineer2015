@@ -100,13 +100,13 @@
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<h3>See committee wise</h3>
-						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}} form-group">{{:: committee?'Hide':'Show'}}</button>
+						<button ng-click="toggleCommittee();" class="btn {{committee?'btn-danger':'btn-primary'}} form-group">{{ committee?'Hide':'Show'}}</button>
 					</div>
 					<div class="col-md-6 col-xs-12">
 						<h3>Event/workshop wise(details)</h3>
 						<select ng-model='selected' class="form-control w50-b" ng-options="event.name for event in events" ng-init="selected=events[0].name">
 						</select>
-						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{:: wise?'Hide':'Show'}}</button>
+						<button ng-click="toggleEvent();" class="btn {{wise?'btn-danger':'btn-primary'}}">{{ wise?'Hide':'Show'}}</button>
 					</div>
 				</div>
 				<div ng-show="committee">
