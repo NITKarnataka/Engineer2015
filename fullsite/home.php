@@ -10,11 +10,11 @@
 		$q2string = "";
 	}
 	if($logged==2){
-		$qstring = " `rfor`='bridgedesign' OR `rfor`='vehicleoverhauling' OR `rfor`='bigdata' OR `rfor`='ethicalhacking' OR `rfor`='internetofthings' OR `rfor`='unmannedgroundvehicle' ";
+		$qstring = " (`rfor`='bridgedesign' OR `rfor`='vehicleoverhauling' OR `rfor`='bigdata' OR `rfor`='ethicalhacking' OR `rfor`='internetofthings' OR `rfor`='unmannedgroundvehicle') ";
 		$q2string = $qstring;
 	}
 	if($logged==3){
-		$qstring = " `rfor`='myphototalks' ";
+		$qstring = " (`rfor`='myphototalks') ";
 		$q2string = $qstring;
 
 	}
