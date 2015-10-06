@@ -175,7 +175,7 @@
 							<td>{{:: $index+1}}</td>
 							<td ng-if="showPaid">
 								<div class="col-md-12">
-									<button class="btn {{parseInt(participant.send)?'btn-danger':'btn-success'}}" ng-click="paid(participant.id)">{{parseInt(participant.send)?'Dint Pay':'Paid'}}</button>
+									<button class="btn {{parseInt(participant.send)?'btn-success':'btn-danger'}}" ng-click="paid(participant.id)">{{parseInt(participant.send)?'Paid':'Dint Pay'}}</button>
 								</div>
 								<div class="col-md-12" ng-if="parseInt(participant.send)">
 									<button class="btn btn-warning" ng-click="mistake(participant.id)">By Mistake</button>
