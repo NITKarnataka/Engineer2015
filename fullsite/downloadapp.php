@@ -1,3 +1,9 @@
+<?php 
+		require 'connect_db.php';
+		$query = 'UPDATE apptable SET downloads = downloads + 1 WHERE id = 1';
+		mysql_query($query);
+?>
+
 <html>
 <head>
 	<title>Thank you for downloading..</title>
@@ -14,10 +20,6 @@ $(document).ready( function() {
 </script>
 <body>
 	Thank you for downloading our android apk .. download to start soon...<br> or to force download click <a href="http://engineer.org.in/androidapp.php">Here</a>
-	<?php 
-		require 'connect_db.php';
-		$query = 'UPDATE apptable SET downloads = downloads + 1 WHERE id = 1';
-		mysql_query($query);
-	?>
+	
 </body>
 </html>
