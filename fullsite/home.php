@@ -203,10 +203,9 @@
 				$scope.count = <?php echo json_encode($count); ?>;
 				var arrlist = <?php echo json_encode($diff); ?>;
 				$scope.download_app = <?php echo $download_count['downloads']; ?>;
-				$scope.showPaid = false;
-				$scope.showPaid = <?php if($logged>1)
-											echo true;
-										else echo false; 
+				<?php if($logged>1)
+						echo "$scope.showPaid = true";
+					else echo "$scope.showPaid = false"; 
 									?>;
 
 				var inBlackList = function(item){
