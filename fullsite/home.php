@@ -204,8 +204,8 @@
 				var arrlist = <?php echo json_encode($diff); ?>;
 				$scope.download_app = <?php echo $download_count['downloads']; ?>;
 				<?php if($logged>1)
-						echo "$scope.showPaid = true";
-					else echo "$scope.showPaid = false"; 
+						echo "\$scope.showPaid = true";
+					else echo "\$scope.showPaid = false"; 
 									?>;
 
 				var inBlackList = function(item){
