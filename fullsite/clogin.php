@@ -2,15 +2,10 @@
 	session_start();
 	require 'connect_db.php';
 	$logged=$_SESSION['logged'];
-	$wlogged=$_SESSION['wlogged'];
-
-	if(!empty($logged)&&$logged==true){
+	if(!empty($logged)&&$logged!=0){
 		header("Location: home.php");
-	}else if(!empty($wlogged)&&$wlogged==true){
-		header("Location: wpayment.php");
 	}
-	
-	if(isset($_SESSION['errmsg'])&&$_SESSION['logged']==false){
+	if(isset($_SESSION['errmsg'])&&$_SESSION['logged']==0){
 		echo $_SESSION['errmsg'];
 	}
 ?>

@@ -2,13 +2,30 @@
 	session_start();
 	require 'connect_db.php';
 	$logged=$_SESSION['logged'];
-	if(empty($logged)&&$logged==false){
+	if(empty($logged)&&$logged==0){
 		header("Location: clogin.php");
+	}
+	if($logged==1){
+		$qstring = " 1==1 ";
+		$q2string = "";
+	}
+	if($logged==2){
+		$qstring = " `rfor`='bridgedesign' OR `rfor`='vehicleoverhauling' OR `rfor`='bigdata' OR `rfor`='ethicalhacking' OR `rfor`='internetofthings' OR `rfor`='unmannedgroundvehicle' ";
+		$q2string = " AND ".$qstring;
+	}
+	if($logged==3){
+		$qstring = " `rfor`='myphototalks' ";
+		$q2string = " AND ".$qstring;
+
+	}
+	if($logged==4){
+		$qstring = " `rfor`='fifa' OR `rfor`='nfs' OR `rfor`='cs' OR `rfor`='dota2' ";
+		$q2string = " AND ".$qstring;
 	}
 	$queryapp = "SELECT `downloads` from `apptable` WHERE `id` = 1";
 	$query_run_app=mysql_query($queryapp);
 	$download_count = mysql_fetch_assoc($query_run_app);
-	$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
+	$query = "SELECT * from `engineer2015` WHERE".$qstring."ORDER BY `rfor` ASC";
 	$query4 = "SELECT * 
 				FROM  `engineer2015` 
 				WHERE LOWER(  `college` ) NOT LIKE  '%nitk%'
@@ -26,7 +43,7 @@
 				AND LOWER(  `college` ) NOT LIKE  '%gy, su%'
 				AND LOWER(  `college` ) NOT LIKE  '%gy ,su%'
 				AND LOWER(  `college` ) NOT LIKE  '%gy , su%'
-				AND LOWER(  `college` ) NOT LIKE  '%ntik%'";
+				AND LOWER(  `college` ) NOT LIKE  '%ntik%'".$q2string;
 
 	$query5 = "SELECT * 
 				FROM  `engineer2015` 
@@ -46,7 +63,7 @@
 				AND LOWER(  `college` ) NOT LIKE  '%gy ,su%'
 				AND LOWER(  `college` ) NOT LIKE  '%gy , su%'
 				AND LOWER(  `college` ) NOT LIKE  '%ntik%'
-				GROUP BY CONCAT(  `name` ,  `mobile` ) ";
+				GROUP BY CONCAT(  `name` ,  `mobile` ) ".$q2string;
 	$query_run5 = mysql_query($query5);
 	$uniqueOut = mysql_num_rows($query_run5);
 
