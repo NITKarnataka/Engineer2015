@@ -20,7 +20,7 @@
 	}
 	if($logged==4){
 		$qstring = " `rfor`='fifa' OR `rfor`='nfs' OR `rfor`='cs' OR `rfor`='dota2' ";
-		$q2string = "(".$qstring." AND ";
+		$q2string = "(".$qstring.") AND ";
 	}
 	$queryapp = "SELECT `downloads` from `apptable` WHERE `id` = 1";
 	$query_run_app=mysql_query($queryapp);
