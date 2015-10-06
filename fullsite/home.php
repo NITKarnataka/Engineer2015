@@ -110,7 +110,7 @@
 					</div>
 				</div>
 				<div ng-show="committee">
-					<button class="btn {{sorted=='-count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{:: sorted=='-count'?'Committee Name':'Registrations'}}</button>
+					<button class="btn {{sorted=='-count'?'btn-info':'btn-warning'}} form-group" ng-click="toggleSort();">Sort By {{ sorted=='-count'?'Committee Name':'Registrations'}}</button>
 					<table class="table table-striped">
 						<tr>
 							<th>slno.</th>
