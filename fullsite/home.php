@@ -10,17 +10,17 @@
 		$q2string = "";
 	}
 	if($logged==2){
-		$qstring = " (`rfor`='bridgedesign' OR `rfor`='vehicleoverhauling' OR `rfor`='bigdata' OR `rfor`='ethicalhacking' OR `rfor`='internetofthings' OR `rfor`='unmannedgroundvehicle') ";
-		$q2string = $qstring;
+		$qstring = " `rfor`='bridgedesign' OR `rfor`='vehicleoverhauling' OR `rfor`='bigdata' OR `rfor`='ethicalhacking' OR `rfor`='internetofthings' OR `rfor`='unmannedgroundvehicle' ";
+		$q2string = "(".$qstring.") AND ";
 	}
 	if($logged==3){
-		$qstring = " (`rfor`='myphototalks') ";
-		$q2string = $qstring;
+		$qstring = " `rfor`='myphototalks' ";
+		$q2string = "("$qstring.") AND ";
 
 	}
 	if($logged==4){
 		$qstring = " `rfor`='fifa' OR `rfor`='nfs' OR `rfor`='cs' OR `rfor`='dota2' ";
-		$q2string = $qstring;
+		$q2string = "(".$qstring.") AND ";
 	}
 	$queryapp = "SELECT `downloads` from `apptable` WHERE `id` = 1";
 	$query_run_app=mysql_query($queryapp);
