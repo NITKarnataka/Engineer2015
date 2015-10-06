@@ -5,6 +5,9 @@
 	if(empty($logged)&&$logged==false){
 		header("Location: clogin.php");
 	}
+	$queryapp = "SELECT `downloads` from `apptable` WHERE `id` = 1";
+	$query_run_app=mysql_query($queryapp);
+	$download_count = mysql_fetch_assoc($query_run_app);
 	$query = "SELECT * from `engineer2015` WHERE 1 ORDER BY `rfor` ASC";
 	$query4 = "SELECT * 
 				FROM  `engineer2015` 
@@ -87,7 +90,8 @@
 		<body ng-controller="RegisterController">
 				<div class="row">
 					<div class="col-md-11">
-						<h2>Total registrations : {{:: details.length}} ,OffCampus : {{:: countOther}} ,unique Offcampus : {{:: countUnique}}</h2>
+						<h2>Total registrations : {{:: details.length}} ,OffCampus(include participants registed for more than 1 event) : {{:: countOther}} ,unique Offcampus : {{:: countUnique}}</h2>
+						<h3>app download android : {{:: download_app}}</h3>
 					</div>
 					<div class="col-md-1">
 						<a href="logout.php">Logout</a>
@@ -170,6 +174,7 @@
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
 				var arrlist = <?php echo json_encode($diff); ?>;
+				$scope.download_app = <?php $download_count['downloads'] ?>;
 
 				var inBlackList = function(item){
 					for(var i=0;i<arrlist.length;i++){
