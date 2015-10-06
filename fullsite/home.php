@@ -175,10 +175,10 @@
 							<td>{{:: $index+1}}</td>
 							<td ng-if="showPaid">
 								<div class="col-md-12">
-									<button class="btn {{participant.send?'btn-danger':'btn-success'}}">{{participant.send?'Dint Pay':'Paid'}}</button>
+									<button class="btn {{parseInt(participant.send)?'btn-danger':'btn-success'}}" ng-click="paid(participant.id)">{{parseInt(participant.send)?'Dint Pay':'Paid'}}</button>
 								</div>
-								<div class="col-md-12" ng-if="participant.send">
-									<button class="btn btn-warning">By Mistake</button>
+								<div class="col-md-12" ng-if="parseInt(participant.send)">
+									<button class="btn btn-warning" ng-click="mistake(participant.id)">By Mistake</button>
 								</div>
 								<div class="clearfix"></div>
 							</td>
@@ -367,6 +367,16 @@
 			        link.setAttribute('href', data);
 			        link.setAttribute('download', filename);
 			        link.click();
+			    }
+
+			    $scope.paid = function(id){
+			    	if(id==0)
+			    		console.log('asd')
+			    }
+
+			    $scope.mistake = function(id){
+			    	if(id==0)
+			    		console.log('asd')
 			    }
 
 			 });
