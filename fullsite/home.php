@@ -6,7 +6,7 @@
 		header("Location: clogin.php");
 	}
 	if($logged==1){
-		$qstring = 1;
+		$qstring =" 1 ";
 		$q2string = "";
 	}
 	if($logged==2){
