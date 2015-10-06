@@ -160,6 +160,7 @@
 					<table class="table table-striped form-group">
 						<tr>
 							<th>Sl No</th>
+							<th ng-if="showPaid">Paid</th>
 							<th>Name</th>
 							<th>College</th>
 							<th>Branch</th>
@@ -172,6 +173,15 @@
 						</tr>
 						<tr ng-repeat="participant in participants | orderBy:'id'" class="{{participant.out?'bg-red':''}}">
 							<td>{{:: $index+1}}</td>
+							<td ng-if="showPaid">
+								<div class="col-md-12">
+									<button class="btn {{participant.send?'btn danger':'btn-success'}}">{{participant.send?'Dint Pay':'Paid'}}</button>
+								</div>
+								<div class="col-md-12" ng-if="participant.send">
+									<button class="btn btn-warning">By Mistake</button>
+								</div>
+								<div class="clearfix"></div>
+							</td>
 							<td>{{:: participant.name}}</td>
 							<td>{{:: participant.college}}</td>
 							<td>{{:: participant.branch}}</td>
@@ -193,6 +203,8 @@
 				$scope.count = <?php echo json_encode($count); ?>;
 				var arrlist = <?php echo json_encode($diff); ?>;
 				$scope.download_app = <?php echo $download_count['downloads']; ?>;
+
+				$scope.showPaid = <?php $logged>1? echo true : echo false?>;
 
 				var inBlackList = function(item){
 					for(var i=0;i<arrlist.length;i++){
