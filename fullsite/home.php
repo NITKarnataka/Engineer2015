@@ -174,7 +174,7 @@
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
 				var arrlist = <?php echo json_encode($diff); ?>;
-				$scope.download_app = <?php $download_count['downloads'] ?>;
+				$scope.download_app = <?php echo $download_count['downloads']; ?>;
 
 				var inBlackList = function(item){
 					for(var i=0;i<arrlist.length;i++){
