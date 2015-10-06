@@ -8,10 +8,10 @@
 		$query_run = mysql_query($query);
 		if(mysql_num_rows($query_run)==1){			
 			$var = mysql_fetch_assoc($query_run);
-			if($var['id']===1){
+			if($var['id']==1){
 				$_SESSION['logged'] = true;
 				header('Location: home.php');
-			}else if($var['id']===2){
+			}else if($var['id']==2){
 				$_SESSION['wlogged']=true;
 				header('Location: wpayment.php');
 			}
