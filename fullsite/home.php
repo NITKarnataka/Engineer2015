@@ -94,7 +94,6 @@
 		$query_run2 = mysql_query($query2);
 		array_push($count,mysql_num_rows($query_run2));
 	}
-	echo $logged;
 ?>
 	<html ng-app="Register">
 		<head>
