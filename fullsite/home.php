@@ -373,8 +373,8 @@
 
 			    $scope.paid = function(id,num){
 			    	if(num==0){
-			    		var uname = <?php echo $un; ?>;
-			    		var pwd = <?php echo $pwd; ?>;
+			    		<?php echo "var uname = $un" ?>;
+			    		<?php echo "var pwd = $un" ?>;
 			    		$http.post('wpayment.php',{"id":id ,"uname":uname,"pwd":pwd,"send":1})
 							.success(function(data) {
 								if(data.success!=''){
@@ -389,8 +389,8 @@
 			    }
 
 			    $scope.mistake = function(id){
-			    	var uname = <?php echo $un; ?>;
-			    	var pwd = <?php echo $pwd; ?>;
+			    	<?php echo "var uname = $un" ?>;
+			    	<?php echo "var pwd = $un" ?>;
 			   		$http.post('wpayment.php',{"id":id ,"uname":uname,"pwd":pwd,"send":0})
 						.success(function(data) {
 							if(data.success!=''){
