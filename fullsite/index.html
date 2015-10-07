@@ -156,9 +156,13 @@
 					<img class="only logo-layer" src="./img/17.png"/>
 					<img class="only" src="./img/circle_12.png"/>
 				</div>
-				<div class="layer timer-area" data-depth="0">
-					<div ng-include="'views/countdown.html'"></div>
+				<div class="layer now-upcoming" data-depth="0">
+					<button class="btn btn-success" ng-click="showModal('now')"style="font-weight:bold;" >Events Now</button>
+					<a style="display:block" href="Schedule.xlsx" target="_blank"><button style="font-weight:bold;" class="btn btn-primary">Schedule</button></a>
+					<button class="btn btn-warning" style="font-weight:bold;" ng-click="showModal('upcoming')">Events upcoming</button>
 				</div>
+				<!-- <div ng-include="'views/countdown.html'"></div> -->
+				
 				<div class="layer social-icons" data-depth="0.04">
 					<a href="http://www.facebook.com/engineernitk" target="_blank"><div class="wrapper-fb">
 						<i class="fa fa-facebook"></i>
@@ -195,7 +199,7 @@
 					</a>
 				</div>
 				<div class="layer downloadbtn" data-depth='0.07'>
-					<a href="Schedule.xlsx" target="_blank"><button class="btn btn-success b-r-0">Schedule</button></a>
+					
 				</div>
 				<div class="layer" data-depth="0.0"><div id="particles-js"></div></div>
 			</div>
@@ -241,6 +245,7 @@
 		<script type="text/javascript" src="ng/ctrl/OtherController.js"></script>
 		<script type="text/javascript" src="ng/ctrl/RegisterController.js"></script>
 		<script type="text/javascript" src="ng/ctrl/FormFillController.js"></script>
+		<script type="text/javascript" src="ng/ctrl/updatesController.js"></script>
 		
 		<!-- our custom scripts  -->
 		<script type="text/javascript" src="js/custom.js"></script>

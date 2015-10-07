@@ -62,6 +62,12 @@ var Engi;
 		})
 		.when('/hospi', {
 			templateUrl: './views/leaf.html?'+Math.random()*Math.random()
+		})
+		.when('/now', {
+			templateUrl: './views/updates.html?'+Math.random()*Math.random()
+		})
+		.when('/upcoming', {
+			templateUrl: './views/updates.html?'+Math.random()*Math.random()
 		});
 
 		$sceDelegateProvider.resourceUrlWhitelist([

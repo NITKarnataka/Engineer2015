@@ -524,8 +524,11 @@ body > :not(.pace), body:before, body:after {
   height:2%!important;width:3%!important;left:78.5%!important;top:10%!important;z-index:1000;
 }
 .b-r-0{
-border-radius: 12px;
-color: black;
-padding: 5px 8px;
-line-height: 15px;
+}
+.now-upcoming{
+  display:flex!important;justify-content:space-between;z-index:10000;left:33.33%!important;width:33.33%!important;top:13%!important;height: 8%!important;
+}
+.now-upcoming a,button{
+  height: 100%;
+  font-weight: bold;
 }
