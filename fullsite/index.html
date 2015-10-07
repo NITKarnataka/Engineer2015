@@ -157,9 +157,13 @@
 					<img class="only" src="./img/circle_12.png"/>
 				</div>
 				<div class="layer now-upcoming" data-depth="0">
-					<button class="btn btn-success" ng-click="showModal('now')"style="font-weight:bold;" >Events Now</button>
-					<a style="display:block" href="Schedule.xlsx" target="_blank"><button style="font-weight:bold;" class="btn btn-primary">Schedule</button></a>
-					<button class="btn btn-warning" style="font-weight:bold;" ng-click="showModal('upcoming')">Events upcoming</button>
+					<button class="btn btn-success" ng-click="showModal('now')"style="font-weight:bold;height:75px;width:75px;border-radius:50%;white-space: pre-line;line-height:14px;background-color:rgba(55, 52, 52, 0.5);border:5px solid #5cb85c;font-size: 13px;" >Events Now
+					</button>
+					<a style="display:block;" href="Schedule.xlsx" target="_blank">
+						<button style="font-weight:bold;height:75px;width:75px;border-radius:50%;white-space: pre-line;padding:4px;line-height:14px;background-color:rgba(55, 52, 52, 0.5);border:5px solid #337ab7;font-size: 13px;" class="btn btn-primary">Schedule</button>
+					</a>
+					<button class="btn btn-warning" style="font-weight:bold;height:75px;width:75px;border-radius:50%;white-space: pre-line;line-height:14px;background-color:rgba(55, 52, 52, 0.5);border:5px solid #f0ad4e;font-size:13px;padding:0" ng-click="showModal('upcoming')">Events upcoming
+					</button>
 				</div>
 				<!-- <div ng-include="'views/countdown.html'"></div> -->
 				
