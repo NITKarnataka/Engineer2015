@@ -42,7 +42,7 @@ Engi.controller('UpdatesController', function($http,$rootScope,$scope, $timeout,
     $scope.titlePage =  'Upcoming Events'
   }
   if($scope.titlePage=='Current Events')
-  $scope.obj=[{name:"Inauguration",time:"18:00",location:"SJA",committee:"Inauguration Committee",pic:"inaug.jpg"}]
+  $scope.obj=[]
   console.log($scope.obj)
 
 })
