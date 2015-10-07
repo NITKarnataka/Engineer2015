@@ -177,7 +177,7 @@
 							<td>{{:: $index+1}}</td>
 							<td ng-if="showPaid">
 								<div class="col-md-12">
-									<button class="btn {{parseInt(participant.send)?'btn-success':'btn-danger'}}" ng-click="paid(participant.id,parseInt(participant.send))">{{parseInt(participant.send)?'Paid':'Dint Pay'}}</button>
+									<button class="btn {{parseInt(participant.send)?'btn-success':'btn-danger'}}" ng-click="paid(participant.id,participant.send)">{{parseInt(participant.send)?'Paid':'Dint Pay'}}</button>
 								</div>
 								<div class="col-md-12" ng-if="parseInt(participant.send)">
 									<button class="btn btn-warning" ng-click="mistake(participant.id)">By Mistake</button>
@@ -372,7 +372,7 @@
 			    }
 
 			    $scope.paid = function(id,num){
-			    	if(num==0){
+			    	if(parseInt(num)==0){
 					<?php echo "var uname = '".$un."'"; ?>;
 			    	<?php echo "var pwd = '".$pwd."'"; ?>;
 			    		$http.post('wpayment.php',{"id":id ,"uname":uname,"pwd":pwd,"send":1})
