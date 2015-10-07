@@ -199,7 +199,7 @@
 		</body>
 		<script type="text/javascript">
 			 Register = angular.module('Register', []);
-			 Register.controller('RegisterController', function($scope, $location,$http,$route) {
+			 Register.controller('RegisterController', function($scope, $location,$http) {
 				$scope.events = <?php echo json_encode($arr); ?>;
 				$scope.details = <?php echo json_encode($final); ?>;
 				$scope.count = <?php echo json_encode($count); ?>;
@@ -384,7 +384,7 @@
 										alert('some error occured try again..');
 								}
 							});
-						$route.reload();
+						location.reload();
 			    	}
 			    }
 
@@ -400,7 +400,7 @@
 									alert('some error occured try again..');
 							}
 						});
-					$route.reload();
+					location.reload();
 				}
 
 			 });
