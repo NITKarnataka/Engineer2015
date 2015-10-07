@@ -11,6 +11,8 @@
 			$_SESSION['logged']=$var['id'];
 			$_SESSION['pwd']=$pwd;
 			$_SESSION['un']=$uname;
+			if($var['id']==5)
+				header('Location: updates.php');
 			header('Location: home.php');
 		}else{
 			$_SESSION['logged'] = 0;

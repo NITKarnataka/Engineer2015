@@ -7,6 +7,9 @@
 	}
 	$pwd = $_SESSION['pwd'];
 	$un = $_SESSION['un'];
+	if($logged==5){
+		header('Location: updates.php');
+	}
 	if($logged==1){
 		$qstring =" 1 ";
 		$q2string = "";
