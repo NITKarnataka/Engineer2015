@@ -520,3 +520,12 @@ body > :not(.pace), body:before, body:after {
     transition: opacity .4s ease-in-out .1s!important;
 }
 
+.downloadbtn{
+  height:2%!important;width:3%!important;left:78.5%!important;top:10%!important;z-index:1000;
+}
+.b-r-0{
+border-radius: 12px;
+color: black;
+padding: 5px 8px;
+line-height: 15px;
+}
