@@ -384,7 +384,6 @@
 										alert('some error occured try again..');
 								}
 							});
-						location.reload();
 			    	}
 			    }
 
@@ -400,7 +399,6 @@
 									alert('some error occured try again..');
 							}
 						});
-					location.reload();
 				}
 
 			 });
