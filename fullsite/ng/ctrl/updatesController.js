@@ -45,7 +45,7 @@ Engi.controller('UpdatesController', function($http,$rootScope,$scope, $timeout,
   var init = function(){
     if($scope.thisName == '/upcoming')
       var type = 'upcoming';
-    if($scope.thisName == '/current')
+    if($scope.thisName == '/now')
       var type = 'current';
     $http.post('getupdates.php',{"type":type})
       .success(function(data){
