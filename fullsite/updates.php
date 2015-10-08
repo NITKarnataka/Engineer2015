@@ -199,7 +199,7 @@
 			$scope.makeLive = false;
 		}
 		$scope.toggleMakeLive = function(){
-			$scope.makeLive= !(angular.copy($scope.makeLive);
+			$scope.makeLive= !(angular.copy($scope.makeLive));
 			$scope.showUpcoming = false;
 			$scope.showLive = false;
 		}
