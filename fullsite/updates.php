@@ -66,8 +66,20 @@
 					<input type="text" ng-model="event.news" class="form-control form-group" placeholder = 'New News'/>
 				</div>
 			</td>
-			<td></td>
-			<td></td>
+			<td>
+				<div class="col-md-12">
+					<button ng-click="toggleLive()" class="btn {{event.current=='0'?'btn-primary':'btn-success'}}">
+						{{event.current=='0'?'Make Live':'Remove Live'}}
+					</button>
+				</div>
+			</td>
+			<td>
+				<div class="col-md-12">
+					<button ng-click="toggleUpcoming()" class="btn {{event.upcoming=='0'?'btn-primary':'btn-success'}}">
+						{{event.upcoming=='0'?'Make UpComing':'Remove Upcoming'}}
+					</button>
+				</div>
+			</td>
 		</tr>
 	</table>
 </body>
