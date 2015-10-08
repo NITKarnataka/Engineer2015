@@ -107,7 +107,7 @@
 					}
 				});
 		}
-		$scope.toggleLive = function(obj,id){
+		$scope.toggleUpcoming = function(obj,id){
 			if(parseInt(obj.upcoming)==0)
 				obj.upcoming = 1;
 			else
