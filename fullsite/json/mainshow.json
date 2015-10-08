@@ -1,1 +1,23 @@
-[{"name":"Main Show","description":"Coming Soon. We will keep you updated."}]
+[
+    {
+        "name": "Main Show"
+    },
+    {
+        "name": "DJ Night",
+        "pic": "djnight.jpg",
+        "link": "djnight",
+        "description": "Party Hard this DJ night with DJ Suparna"
+    },
+    {
+        "name": "Comedy Nights",
+        "pic": "comedynights.jpg",
+        "link": "comedynights",
+        "description": ""
+    },
+    {
+        "name": "Lagori",
+        "pic": "lagori.jpg",
+        "link": "lagori",
+        "description": ""
+    }
+]

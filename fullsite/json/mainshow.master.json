@@ -1,0 +1,95 @@
+[
+    {
+        "name": "Lagori",
+        "link": "lagori",
+        "banner": "mainshow.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Lagori is a Folk / Fusion Rock band from Bangalore. The band consist a group of musicians with varied musical influences, who have come together to dish out foot tapping, soul stirring music. Lagori makes Indian music with a twist, melodic and intense and at the same time fun and energetic. Although Lagori draws influences from the flavour of each musician - ranging from Hindustani, Soul, Funk, Rock, Blues and Metal, the end result is a unique sound which at the same time has a tinge of familiarity to it. While the band uses Hindi to communicate their inspirations and message, the music is something that everyone - despite lingual differences - will understand.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Show Timings",
+                "subdescription": "Sunday,11th October from 7:00 PM onwards!",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "DJ Night",
+        "link": "djnight",
+        "banner": "mainshow.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "DJ night by DJ Suparna a Fun loving, energetic DJ, who loves to play house / electro / psy among other generes and can make the crowd dance to her tunes.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Show Timings",
+                "subdescription": "Saturday,10th October from 7:00 PM onwards!",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    },
+    {
+        "name": "Comedy Nights",
+        "link": "comedynights",
+        "banner": "mainshow.jpg",
+        "subdesc": [
+            {
+                "subtitle": "Overview",
+                "subdescription": "Experience stand up comedy like never seen before by one of the finest comedian of the country <b>Rajnish Trivedi</b>. Rajnish Trivedi has participated in many \nTV Serials & Interviews including the likes of The Great Indian Laughter Challenge Part 1 and The Great Indian Laughter Champion to name a few. Come enjoy the stunning , mind chilling performance by Rajnish Trivedi.",
+                "subimage": ""
+            },
+            {
+                "subtitle": "Show Timings",
+                "subdescription": "Friday,9th October from 7:00 PM onwards!",
+                "subimage": ""
+            }
+        ],
+        "list": [
+            {
+                "title": "",
+                "items": [
+                    ""
+                ]
+            }
+        ],
+        "subimage": [
+            {
+                "title": "",
+                "link": ""
+            }
+        ]
+    }
+]
