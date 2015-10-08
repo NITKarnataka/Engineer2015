@@ -43,7 +43,7 @@
 			<th>Toggle Live</th>
 			<th>Toggle Upcoming</th>
 		</tr>
-		<tr ng-repeat="event in events | orderBy: date ">
+		<tr ng-repeat="event in events | orderBy: 'date' ">
 			<td>{{:: $index+1}}</td>
 			<td>{{:: event.date}}</td>
 			<td>{{:: event.day}}</td>
