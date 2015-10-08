@@ -16,6 +16,20 @@
 	while($var = mysql_fetch_assoc($query_run)){
 		array_push($res, $var);
 	}
+	$query2 = "SELECT * FROM `Sheet1` WHERE `current`='1'";
+	$query3 = "SELECT * FROM `Sheet1` WHERE `upcoming`='1'";
+
+	$query_run2 = mysql_query($query2);
+	$res2 = array();
+	while($var1 = mysql_fetch_assoc($query_run2)){
+		array_push($res2, $var1);
+	}
+
+	$query_run3 = mysql_query($query3);
+	$res3 = array();
+	while($var2 = mysql_fetch_assoc($query_run3)){
+		array_push($res3, $var2);
+	}
 
 ?>
 <html ng-app="Update">
@@ -42,6 +56,7 @@
 		</div>
 	</div>
 	<div ng-if="showLive">
+		<h3>Live Events</h3>
 		<table class="table table-striped">
 			<tr>
 				<th>slno.</th>
@@ -55,7 +70,7 @@
 				<th>New Time</th>
 				<th>News</th>
 			</tr>
-			<tr ng-repeat="event in events | orderBy: 'date' ">
+			<tr ng-repeat="event in llist | orderBy: 'date' ">
 				<td>{{:: $index+1}}</td>
 				<td>{{:: event.date}}</td>
 				<td>{{:: event.day}}</td>
@@ -70,6 +85,7 @@
 		</table>
 	</div>
 	<div ng-if="showUpcoming">
+		<h3>Upcoming Events</h3>
 		<table class="table table-striped">
 			<tr>
 				<th>slno.</th>
@@ -83,7 +99,7 @@
 				<th>New Time</th>
 				<th>News</th>
 			</tr>
-			<tr ng-repeat="event in events | orderBy: 'date' ">
+			<tr ng-repeat="event in ulist | orderBy: 'date' ">
 				<td>{{:: $index+1}}</td>
 				<td>{{:: event.date}}</td>
 				<td>{{:: event.day}}</td>
@@ -160,6 +176,14 @@
 		$scope.events = <?php echo json_encode($res); ?>;
 		for(var i =0 ;i <$scope.events.length ;i++){
 			$scope.events[i].date = parseInt(angular.copy($scope.events[i].date));
+		}
+		$scope.llist = <?php echo json_encode($res2); ?>;
+		for(var i =0 ;i <$scope.llist.length ;i++){
+			$scope.llist[i].date = parseInt(angular.copy($scope.llist[i].date));
+		}
+		$scope.ulist = <?php echo json_encode($res3); ?>;
+		for(var i =0 ;i <$scope.ulist.length ;i++){
+			$scope.ulist[i].date = parseInt(angular.copy($scope.ulist[i].date));
 		}
 		$scope.showLive = false;
 		$scope.showUpcoming  = false;
