@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript"
+  		src="http://www.maths.nottingham.ac.uk/personal/drw/LaTeXMathML.js">
+  	</script>
+</head>
+
+<body>
+	<div class="nav">
+		<div class="container">
+		<ul class="pull-left">
+			<li><a href="Home.html">Simplicity 2015</a></li>
+			<li><a href="Question1.html">Question 1</a></li>
+			<li><a href="Question2.html">Question 2</a></li>
+			<li><a href="Question3.html">Question 3</a></li>
+			<li><a href="Question4.html">Question 4</a></li>
+			<li><a href="Question5.html">Question 5</a></li>
+			<li><a href="Question6.html">Question 6</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div class="Problem">
+		<div class = "container">
+			<h3>Question 1 - Algorithms</h3>
+			<p>You are given an $m\times n$ grid of numbers. Each number in the grid represents the weight of that node in the grid. You have to traverse from the top of the grid to the bottom of the grid while taking the path which offers the least resistance.</p>
+			<ui>
+			<li>You are allowed to start anywhere at the top of the grid and finish anywhere in the bottom.</li>
+			<li>You can travel only in three directions the immediate downward-left direction, the immediate downward-right direction and the immediate downward directions.</li>
+			<li>You must find the path which contains the least weight along the journey. Find the total weight of the path with the least resistance.</li>
+			<li>The input is given as a csv file. Here $m = 1000$ and $n = 1000$. All weight values are positive and are lesser than $200$.</li><br>
+
+			<p> For example<br>
+			Let the given grid be:<br>
+			$\begin{array}{cc}
+				3&	2&	4&	1&	8\\
+				41&	5&	11&	6&	15\\
+				6&	13&	10&	33&	19\\
+			\end{array}$
+
+<br><br>
+			Consider the element $3$, in the downward direction it can traverse to $41$ and the downward right direction to $5$. Hence it can access only these two elements. Similarly for the element $2$, the only accessable elements are $41$, $5$ and $11$. And for element $11$ the only accessable elemets are $13$, $10$, $33$.
+			Hence the shortest path in the above case is $2 + 5 + 6 = 13$.
+
+			A $1000$ by $1000$ element matrix is provided. Please download the <a href="Q1Input.csv">csv file</a> as your input. Mail the answer to <a href = "mailto:simplicity.tronix15@gmail.com">simplicity.tronix15@gmail.com</a>.</p>
+		</div>
+	</div>
+</body>
+</html>
