@@ -20,10 +20,10 @@
                     <div class="portfolio-img img-responsive" style="background-image:url('img/{{t.pic}}')"></div>
                       <div class="overlay-content">
                         <div class="description">
-                          <div><div class="col-xs-4">Location </div><div class="col-xs-8">: {{t.nlocation==''? t.location:t.nlocation}}</div></div>
-                          <div><div class="col-xs-4">Time </div><div class="col-xs-8">: {{t.ntime==''?t.time:t.ntime}}</div></div>
-                          <div><div class="col-xs-4">Committee </div><div class="col-xs-8">: {{t.committee}}</div></div>
-                          <div class="col-xs-4" ng-if="t.news!=''">News </div><div class="col-xs-8" ng-if="t.news!=''">: {{t.news}}</div></div>
+                          <div>Location&nbsp; : {{t.nlocation==''? t.location:t.nlocation}}</div>
+                          <div>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{t.ntime==''?t.time:t.ntime}}</div>
+                          <div>Committee : {{t.committee}}</div>
+                          <div ng-if="t.news!=''">News&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{t.news}}</div>
                         </div>
                       </div>
                   </div>
