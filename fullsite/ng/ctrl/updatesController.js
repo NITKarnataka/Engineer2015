@@ -49,7 +49,8 @@ Engi.controller('UpdatesController', function($http,$rootScope,$scope, $timeout,
       var type = 'current';
     $http.post('getupdates.php',{"type":type})
       .success(function(data){
-        console.log(data)
+        console.log(data);
+        $scope.obj= data;
       });
   }
 
