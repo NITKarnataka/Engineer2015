@@ -42,7 +42,21 @@ Engi.controller('UpdatesController', function($http,$rootScope,$scope, $timeout,
     $scope.titlePage =  'Upcoming Events'
   }
   if($scope.titlePage=='Current Events')
-  $scope.obj=[]
-  console.log($scope.obj)
+
+  var init = function(){
+    if($scope.thisName == '/upcoming')
+      var type = upcoming;
+    if($scope.thisName == '/current')
+      var type = current;
+    $http.post('getupdates.php',{"type":type})
+      .success(function(data) {
+        console.log(data)
+      });
+  }
+
+  init();
+
+  $scope.obj=[];
+
 
 })
