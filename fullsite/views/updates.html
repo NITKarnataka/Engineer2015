@@ -23,14 +23,14 @@
                           <div><div class="col-xs-4">Location </div><div class="col-xs-8">: {{t.nlocation==''? t.location:t.nlocation}}</div></div>
                           <div><div class="col-xs-4">Time </div><div class="col-xs-8">: {{t.time==''?t.ntime:t.time}}</div></div>
                           <div><div class="col-xs-4">Committee </div><div class="col-xs-8">: {{t.committee}}</div></div>
-                          <div class="col-xs-4" ng-if="t.news!=''">News </div><div class="col-xs-8">: {{t.news}}</div></div>
+                          <div class="col-xs-4" ng-if="t.news!=''">News </div><div class="col-xs-8" g-if="t.news!=''">: {{t.news}}</div></div>
                         </div>
                       </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
                   <div ng-click="">
-                    <h4>{{t.name}}</h4>
+                    <h4>{{t.event}}</h4>
                   </div>
                 </div>
               </div>
