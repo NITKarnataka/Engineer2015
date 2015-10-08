@@ -8,7 +8,6 @@
 	if($logged!=5){
 		header("Location: home.php");
 	}
-	echo $logged;
 	$query  = "SELECT * FROM `Sheet1` WHERE 1";
 	$query_run = mysql_query($query);
 	$res = array();
@@ -63,6 +62,9 @@
 	Update = angular.module('Update', []);
 	Update.controller('UpdateController', function($scope, $location,$http) {
 		$scope.events = <?php echo json_encode($res); ?>;
+		for(var i =0 ;i <$scope.events.length ;i++){
+			$scope.events[i].date = parseInt(angular.copy($scope.events[i].date));
+		}
 	});
 </script>
 </html>
