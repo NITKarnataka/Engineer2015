@@ -4,7 +4,7 @@
 	$formInput= file_get_contents( 'php://input' );
 	$formData = json_decode( $formInput );
 
-	if($formData->type="upcoming"){
+	if($formData->type=="upcoming"){
 		$query2 = "SELECT * FROM `Sheet1` WHERE `".$formData->type."`='1'";
 		$query_run2 = mysql_query($query2);
 		$res1 = array();
@@ -13,7 +13,7 @@
 		}
 	}
 
-	if($formData->type="current"){
+	if($formData->type=="current"){
 		$query3 = "SELECT * FROM `Sheet1` WHERE `current`='1'";
 		$query_run3 = mysql_query($query3);
 		$res1 = array();
