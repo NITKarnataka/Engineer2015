@@ -1,9 +1,10 @@
 <?php
 	require 'connect_db.php';
 	$logged=$_SESSION['logged'];
-	if(empty($logged)&&$logged!=5){
+	if(empty($logged)){
 		header("Location: clogin.php");
 	}
+	echo $logged;
 	$query  = "SELECT * FROM `Sheet1` WHERE 1";
 	$query_run = mysql_query($query);
 	$res = array();
