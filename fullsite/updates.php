@@ -50,10 +50,22 @@
 			<td>{{:: event.time}}</td>
 			<td>{{:: event.event}}</td>
 			<td>{{:: event.committee}}</td>
-			<td>{{:: event.location}}
-			<td>{{:: event.nlocation}}</td>
-			<td>{{:: event.ntime}}</td>
-			<td>{{:: event.news}}</td>
+			<td>{{:: event.location}}</td>
+			<td>
+				<div class="col-md-12">
+					<input type="text" ng-model="event.nlocation" class="form-control form-group" placeholder = 'New Locaiton'/>
+				</div>
+			</td>
+			<td>
+				<div class="col-md-12">
+					<input type="text" ng-model="event.ntime" class="form-control form-group" placeholder = 'New Time'/>
+				</div>
+			</td>
+			<td>
+				<div class="col-md-12">
+					<input type="text" ng-model="event.news" class="form-control form-group" placeholder = 'New News'/>
+				</div>
+			</td>
 			<td></td>
 			<td></td>
 		</tr>
