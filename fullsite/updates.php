@@ -2,6 +2,8 @@
 	session_start();
 	require 'connect_db.php';
 	$logged=$_SESSION['logged'];
+	$un =  $_SESSION['un'];
+	$pwd = $_SESSION['pwd'];
 	if(empty($logged)&&!($logged>=1)){
 		header("Location: clogin.php");
 	}
