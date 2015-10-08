@@ -5,7 +5,7 @@
 	$formData = json_decode( $formInput );
 
 	if($formData->type=="upcoming"){
-		$query2 = "SELECT * FROM `Sheet1` WHERE `".$formData->type."`='1'";
+		$query2 = "SELECT * FROM `Sheet1` WHERE `upcoming`='1'";
 		$query_run2 = mysql_query($query2);
 		$res1 = array();
 		while($var1 = mysql_fetch_assoc($query_run2)){
