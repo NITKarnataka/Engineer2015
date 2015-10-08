@@ -44,6 +44,8 @@
 	</style>
 </head>
 <body ng-controller="UpdateController">
+	<h5><a href="logout.php">Logout</a></h5>
+	<br>
 	<div class="row">
 		<div class="col-md-4">
 			<button class="btn {{showLive?'btn-danger':'btn-primary'}} form-group" ng-click="toggleShowLive()">{{ showLive?'Hide Live':'Show Live'}}</button>
