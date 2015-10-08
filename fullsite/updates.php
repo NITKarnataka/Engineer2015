@@ -30,60 +30,129 @@
 	</style>
 </head>
 <body ng-controller="UpdateController">
-	<table class="table table-striped">
-		<tr>
-			<th>slno.</th>
-			<th>Date</th>
-			<th>Day</th>
-			<th>Event Time</th>
-			<th>Event Name</th>
-			<th>Event Committee</th>
-			<th>Location</th>
-			<th>New location</th>
-			<th>New Time</th>
-			<th>News</th>
-			<th>Toggle Live</th>
-			<th>Toggle Upcoming</th>
-		</tr>
-		<tr ng-repeat="event in events | orderBy: 'date' ">
-			<td>{{:: $index+1}}</td>
-			<td>{{:: event.date}}</td>
-			<td>{{:: event.day}}</td>
-			<td>{{:: event.time}}</td>
-			<td>{{:: event.event}}</td>
-			<td>{{:: event.committee}}</td>
-			<td>{{:: event.location}}</td>
-			<td>
-				<div class="col-md-12">
-					<input type="text" ng-model="event.nlocation" class="form-control form-group" placeholder = 'New Locaiton'/>
-				</div>
-			</td>
-			<td>
-				<div class="col-md-12">
-					<input type="text" ng-model="event.ntime" class="form-control form-group" placeholder = 'New Time'/>
-				</div>
-			</td>
-			<td>
-				<div class="col-md-12">
-					<input type="text" ng-model="event.news" class="form-control form-group" placeholder = 'New News'/>
-				</div>
-			</td>
-			<td>
-				<div class="col-md-12">
-					<button ng-click="toggleLive(event,event.id)" class="btn {{event.current=='0'?'btn-primary':'btn-success'}}">
-						{{event.current=='0'?'Make Live':'Remove Live'}}
-					</button>
-				</div>
-			</td>
-			<td>
-				<div class="col-md-12">
-					<button ng-click="toggleUpcoming(event,event.id)" class="btn {{event.upcoming=='0'?'btn-primary':'btn-success'}}">
-						{{event.upcoming=='0'?'Make UpComing':'Remove Upcoming'}}
-					</button>
-				</div>
-			</td>
-		</tr>
-	</table>
+	<div class="row">
+		<div class="col-md-4">
+			<button class="btn {{showLive?'btn-danger':'btn-primary'}} form-group" ng-click="toggleShowLive()">{{ showLive?'Hide Live':'Show Live'}}</button>
+		</div>
+		<div class="col-md-4">
+			<button class="btn {{showUpcoming?'btn-danger':'btn-primary'}} form-group" ng-click="toggleShowUpcoming()">{{ showLive?'Hide Upcoming':'Show Upcoming'}}</button>
+		</div>
+		<div class="col-md-4">
+			<button class="btn {{makeLive?'btn-danger':'btn-primary'}} form-group" ng-click="toggleMakeLive()">{{ makeLive?'Hide Make Live/Upcoming':'Show Make Live/Upcoming'}}</button>
+		</div>
+	</div>
+	<div ng-if="showLive">
+		<table class="table table-striped">
+			<tr>
+				<th>slno.</th>
+				<th>Date</th>
+				<th>Day</th>
+				<th>Event Time</th>
+				<th>Event Name</th>
+				<th>Event Committee</th>
+				<th>Location</th>
+				<th>New location</th>
+				<th>New Time</th>
+				<th>News</th>
+			</tr>
+			<tr ng-repeat="event in events | orderBy: 'date' ">
+				<td>{{:: $index+1}}</td>
+				<td>{{:: event.date}}</td>
+				<td>{{:: event.day}}</td>
+				<td>{{:: event.time}}</td>
+				<td>{{:: event.event}}</td>
+				<td>{{:: event.committee}}</td>
+				<td>{{:: event.location}}</td>
+				<td>{{:: event.location}}</td>
+				<td>{{:: event.location}}</td>
+				<td>{{:: event.location}}</td>
+			</tr>
+		</table>
+	</div>
+	<div ng-if="showUpcoming">
+		<table class="table table-striped">
+			<tr>
+				<th>slno.</th>
+				<th>Date</th>
+				<th>Day</th>
+				<th>Event Time</th>
+				<th>Event Name</th>
+				<th>Event Committee</th>
+				<th>Location</th>
+				<th>New location</th>
+				<th>New Time</th>
+				<th>News</th>
+			</tr>
+			<tr ng-repeat="event in events | orderBy: 'date' ">
+				<td>{{:: $index+1}}</td>
+				<td>{{:: event.date}}</td>
+				<td>{{:: event.day}}</td>
+				<td>{{:: event.time}}</td>
+				<td>{{:: event.event}}</td>
+				<td>{{:: event.committee}}</td>
+				<td>{{:: event.location}}</td>
+				<td>{{:: event.location}}</td>
+				<td>{{:: event.location}}</td>
+				<td>{{:: event.location}}</td>
+			</tr>
+		</table>
+	</div>
+	<div ng-if="makeLive">
+		<table class="table table-striped">
+			<tr>
+				<th>slno.</th>
+				<th>Date</th>
+				<th>Day</th>
+				<th>Event Time</th>
+				<th>Event Name</th>
+				<th>Event Committee</th>
+				<th>Location</th>
+				<th>New location</th>
+				<th>New Time</th>
+				<th>News</th>
+				<th>Toggle Live</th>
+				<th>Toggle Upcoming</th>
+			</tr>
+			<tr ng-repeat="event in events | orderBy: 'date' ">
+				<td>{{:: $index+1}}</td>
+				<td>{{:: event.date}}</td>
+				<td>{{:: event.day}}</td>
+				<td>{{:: event.time}}</td>
+				<td>{{:: event.event}}</td>
+				<td>{{:: event.committee}}</td>
+				<td>{{:: event.location}}</td>
+				<td>
+					<div class="col-md-12">
+						<input type="text" ng-model="event.nlocation" class="form-control form-group" placeholder = 'New Locaiton'/>
+					</div>
+				</td>
+				<td>
+					<div class="col-md-12">
+						<input type="text" ng-model="event.ntime" class="form-control form-group" placeholder = 'New Time'/>
+					</div>
+				</td>
+				<td>
+					<div class="col-md-12">
+						<input type="text" ng-model="event.news" class="form-control form-group" placeholder = 'New News'/>
+					</div>
+				</td>
+				<td>
+					<div class="col-md-12">
+						<button ng-click="toggleLive(event,event.id)" class="btn {{event.current=='0'?'btn-primary':'btn-success'}}">
+							{{event.current=='0'?'Make Live':'Remove Live'}}
+						</button>
+					</div>
+				</td>
+				<td>
+					<div class="col-md-12">
+						<button ng-click="toggleUpcoming(event,event.id)" class="btn {{event.upcoming=='0'?'btn-primary':'btn-success'}}">
+							{{event.upcoming=='0'?'Make UpComing':'Remove Upcoming'}}
+						</button>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 <script type="text/javascript">
 	Update = angular.module('Update', []);
@@ -91,6 +160,24 @@
 		$scope.events = <?php echo json_encode($res); ?>;
 		for(var i =0 ;i <$scope.events.length ;i++){
 			$scope.events[i].date = parseInt(angular.copy($scope.events[i].date));
+		}
+		$scope.showLive = false;
+		$scope.showUpcoming  = false;
+		$scope.makeLive = false;
+		$scope.toggleShowLive = function(){
+			$scope.showLive = !(angular.copy($scope.showLive));
+			$scope.showUpcoming = false;
+			$scope.makeLive = false;
+		}
+		$scope.toggleShowUpcoming = function(){
+			$scope.showUpcoming = !(angular.copy($scope.showUpcoming));
+			$scope.showLive = false;
+			$scope.makeLive = false;
+		}
+		$scope.toggleMakeLive = function(){
+			$scope.makeLive= !(angular.copy($scope.makeLive);
+			$scope.showUpcoming = false;
+			$scope.showLive = false;
 		}
 		$scope.toggleLive = function(obj,id){
 			if(parseInt(obj.current)==0)
