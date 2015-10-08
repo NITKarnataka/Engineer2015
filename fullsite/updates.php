@@ -78,9 +78,9 @@
 				<td>{{:: event.event}}</td>
 				<td>{{:: event.committee}}</td>
 				<td>{{:: event.location}}</td>
-				<td>{{:: event.location}}</td>
-				<td>{{:: event.location}}</td>
-				<td>{{:: event.location}}</td>
+				<td>{{:: event.nlocation}}</td>
+				<td>{{:: event.ntime}}</td>
+				<td>{{:: event.news}}</td>
 			</tr>
 		</table>
 	</div>
@@ -107,9 +107,9 @@
 				<td>{{:: event.event}}</td>
 				<td>{{:: event.committee}}</td>
 				<td>{{:: event.location}}</td>
-				<td>{{:: event.location}}</td>
-				<td>{{:: event.location}}</td>
-				<td>{{:: event.location}}</td>
+				<td>{{:: event.nlocation}}</td>
+				<td>{{:: event.ntime}}</td>
+				<td>{{:: event.news}}</td>
 			</tr>
 		</table>
 	</div>
