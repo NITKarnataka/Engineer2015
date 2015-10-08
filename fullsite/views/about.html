@@ -1,31 +1,4 @@
 <link rel="stylesheet" type="text/css" href="css/nav.css">
-<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript">
-    var a = 0;
-    $('.navbar-toggle').on('click',function(){
-        a++;
-        if(a%2==1){
-          $('.nav.navbar-nav').css('display','block');
-          $('.navbar-collapse.collapse,.menuItem,.menuItem a').css('display','block');
-        }
-    })
-</script>
-<style>
-@media(max-width: 400px){
-    .nav.navbar-nav,.navbar-collapse.collapse,.menuItem,.menuItem a{
-        display: none;
-    }
-    .menu{
-        z-index: 10000;
-    }
-    .wrapper-about{
-        padding-left: 40px;
-        overflow-x : hidden;
-    }
-}
-
-</style>
 <div id="overflow-hidden" du-scroll-container>
     <div id="closebt-container" class="close-animatedModal">
         <img class="closebt" src="./img/closebt.svg" ng-click="closeHome()">
@@ -434,7 +407,6 @@ $( '#ri-grid' ).gridrotator( {
         margin:0px auto;
         position: relative;
         height: auto;
-
     }
     .ri-grid ul {
         list-style: none;
@@ -875,7 +847,6 @@ $( '#ri-grid' ).gridrotator( {
                     if(objn == 0) {
                         console.log('error:needs arguments');
                     }
-
                     itemClass = options.itemClass;
                     itemHover = options.itemHover;
                     if(options.topMargin != null) {
@@ -933,12 +904,8 @@ $( '#ri-grid' ).gridrotator( {
                                     bottomView(i);
                                 }
                             }
-
                         }
                     }   
-
-
-
                 if(vartop < varscroll + topMargin && !($('navbar-wrapper').hasClass('top0'))){
                     $('.stuckMenu').addClass('isStuck');
                     $('.stuckMenu').next().closest('div').css({
@@ -951,10 +918,8 @@ $( '#ri-grid' ).gridrotator( {
                         'width': '100%',
                         'z-index':'111'
                     }, 10, function(){
-
                     });
                 };
-
                 if(varscroll + topMargin < vartop){
                     $('.stuckMenu').removeClass('isStuck');
                     $('.stuckMenu').next().closest('div').css({
@@ -962,10 +927,8 @@ $( '#ri-grid' ).gridrotator( {
                     }, 10);
                     $('.stuckMenu').css({"position":"relative","top":"0px"});
                 };
-
             });
         });
-
     });
                       jQuery(function ($) {
                 $(document).ready( function() {
@@ -988,7 +951,6 @@ $( '#ri-grid' ).gridrotator( {
 // </script>
  <script type="text/javascript">
 //               //initiating jQuery  
-
 //             </script>
 <style>
 .isStuck{
