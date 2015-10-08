@@ -68,14 +68,14 @@
 			</td>
 			<td>
 				<div class="col-md-12">
-					<button ng-click="toggleLive()" class="btn {{event.current=='0'?'btn-primary':'btn-success'}}">
+					<button ng-click="toggleLive(event,event.id)" class="btn {{event.current=='0'?'btn-primary':'btn-success'}}">
 						{{event.current=='0'?'Make Live':'Remove Live'}}
 					</button>
 				</div>
 			</td>
 			<td>
 				<div class="col-md-12">
-					<button ng-click="toggleUpcoming()" class="btn {{event.upcoming=='0'?'btn-primary':'btn-success'}}">
+					<button ng-click="toggleUpcoming(event,event.id)" class="btn {{event.upcoming=='0'?'btn-primary':'btn-success'}}">
 						{{event.upcoming=='0'?'Make UpComing':'Remove Upcoming'}}
 					</button>
 				</div>
@@ -89,6 +89,41 @@
 		$scope.events = <?php echo json_encode($res); ?>;
 		for(var i =0 ;i <$scope.events.length ;i++){
 			$scope.events[i].date = parseInt(angular.copy($scope.events[i].date));
+		}
+		$scope.toggleLive = function(obj,id){
+			if(parseInt(obj.current)==0)
+				obj.current = 1;
+			else
+				obj.current = 0;
+			<?php echo "var uname = '".$un."'"; ?>;
+			<?php echo "var pwd = '".$pwd."'"; ?>;
+		 	$http.post('updateevent.php',{"id":id ,"uname":uname,"pwd":pwd,"current":obj.current,"upcoming":obj.upcoming,"news":obj.news,"ntime":obj.ntime,"nlocation":obj.nlocation})
+		 		.success(function(data) {
+					if(data.success!=''){
+						if(data.success==true)
+							alert('changed!');
+						else
+							alert('some error occured try again..');
+					}
+				});
+		}
+		$scope.toggleLive = function(obj,id){
+			if(parseInt(obj.upcoming)==0)
+				obj.upcoming = 1;
+			else
+				obj.upcoming = 0;
+
+			<?php echo "var uname = '".$un."'"; ?>;
+	    	<?php echo "var pwd = '".$pwd."'"; ?>;
+			$http.post('updateevent.php',{"id":id ,"uname":uname,"pwd":pwd,"current":obj.current,"upcoming":obj.upcoming,"news":obj.news,"ntime":obj.ntime,"nlocation":obj.nlocation})
+		 		.success(function(data) {
+					if(data.success!=''){
+						if(data.success==true)
+							alert('changed!');
+						else
+							alert('some error occured try again..');
+					}
+				});
 		}
 	});
 </script>
