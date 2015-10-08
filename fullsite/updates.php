@@ -48,6 +48,7 @@
 			<td>{{:: event.date}}</td>
 			<td>{{:: event.day}}</td>
 			<td>{{:: event.time}}</td>
+			<td>{{:: event.event}}</td>
 			<td>{{:: event.committee}}</td>
 			<td>{{:: event.location}}
 			<td>{{:: event.nlocation}}</td>
