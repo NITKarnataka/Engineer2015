@@ -1,8 +1,12 @@
 <?php
+	session_start();
 	require 'connect_db.php';
 	$logged=$_SESSION['logged'];
-	if(empty($logged)){
+	if(empty($logged)&&!($logged>=1)){
 		header("Location: clogin.php");
+	}
+	if($logged!=5){
+		header("Location: home.php");
 	}
 	echo $logged;
 	$query  = "SELECT * FROM `Sheet1` WHERE 1";
