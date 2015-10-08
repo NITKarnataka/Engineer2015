@@ -1,4 +1,31 @@
 <link rel="stylesheet" type="text/css" href="css/nav.css">
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var a = 0;
+    $('.navbar-toggle').on('click',function(){
+        a++;
+        if(a%2==1){
+          $('.nav.navbar-nav').css('display','block');
+          $('.navbar-collapse.collapse,.menuItem,.menuItem a').css('display','block');
+        }
+    })
+</script>
+<style>
+@media(max-width: 400px){
+    .nav.navbar-nav,.navbar-collapse.collapse,.menuItem,.menuItem a{
+        display: none;
+    }
+    .menu{
+        z-index: 10000;
+    }
+    .wrapper-about{
+        padding-left: 40px;
+        overflow-x : hidden;
+    }
+}
+
+</style>
 <div id="overflow-hidden" du-scroll-container>
     <div id="closebt-container" class="close-animatedModal">
         <img class="closebt" src="./img/closebt.svg" ng-click="closeHome()">
