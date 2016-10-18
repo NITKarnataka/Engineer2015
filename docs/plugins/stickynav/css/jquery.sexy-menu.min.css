@@ -1,0 +1,20 @@
+/*! sexymenu.js, 0.1.0: 14-04-2014 */
+
+.sexy-menu {
+position: fixed;
+background: #fff;
+top: 0;
+left: 0;
+right: 0;
+transition: all .5s ease-out
+}
+.sexy-menu.detached {
+margin-top: -100px;
+opacity: 0;
+filter: alpha(opacity=0)
+}
+.sexy-menu.visible {
+margin-top: 0;
+opacity: 1;
+filter: alpha(opacity=1)
+}

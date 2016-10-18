@@ -1,3 +1,2 @@
-# ignore these files
-dwsync.xml
-fullsite/connect_db.php
+*dwsync.xml
+*connect_db.php
